@@ -1,0 +1,73 @@
+{
+	"manifest_version": 3,
+	"name": "FU Autokit",
+	"version": "6.9",
+	"description": "Tự động hóa việc đăng nhập vào các trang web ĐH FPT, bao gồm FAP, CMS, DNG, FLM, Library,vv WIP",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://fap.fpt.edu.vn/Default.aspx/*",
+				"https://fap.fpt.edu.vn/"
+			],
+			"js": ["./content/fap_login.js"],
+			"world": "MAIN"
+		}, 
+
+		{
+			"matches": [
+				"https://cmshn.fpt.edu.vn/*",
+				"https://cmshn.fpt.edu.vn/login/index.php"
+			],
+			"js": ["./content/cms_login.js"],
+			"world": "MAIN"
+		},
+
+		{
+			"matches": [
+				"https://dng.fpt.edu.vn/"
+			],
+			"js":["./content/dng_login.js"],
+			"world": "MAIN"
+		},
+
+		{
+			"matches": [
+				"https://flm.fpt.edu.vn/",
+				"https://flm.fpt.edu.vn/DefaultSignin"
+			],
+			"js":["./content/flm_login.js"],
+			"world": "MAIN"
+		},
+
+		{
+			"matches": [
+				"https://library.fpt.edu.vn/"
+			],
+			"js":["./content/library_login.js"],
+			"world": "MAIN"
+		},
+
+		{
+			"matches": [
+				"https://library.fpt.edu.vn/Auth/Login"
+			],
+			"js":["./content/process_library.js"],
+			"world": "MAIN"
+		},
+
+		{
+			"matches": [
+				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
+				"https://accounts.google.com/o/oauth2/auth*cmshn.fpt.edu.vn*"
+			],
+			"js": ["./content/google.js"],
+			"world": "MAIN"
+		}
+	],
+	"icons": {
+		"16": "./assets/js_icon.png",
+		"32": "./assets/js_icon.png",
+		"48": "./assets/js_icon.png",
+		"128": "./assets/js_icon.png"
+	}
+}
