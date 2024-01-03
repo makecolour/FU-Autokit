@@ -1,6 +1,6 @@
 var check = false;
 var divs = document.querySelectorAll('.login'); 
-if(divs.length >0)
+if(divs.length>0)
 {
     check = true;
 }
