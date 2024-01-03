@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"version": "6.9",
-	"description": "Tự động hóa việc đăng nhập vào các trang web ĐH FPT, bao gồm FAP, CMS, DNG, FLM, Library,vv WIP",
+	"description": "Tự động hóa việc đăng nhập vào các trang web ĐH FPT, bao gồm FAP, CMS, DNG, FLM, Library, vv",
 	"content_scripts": [
 		{
 			"matches": [
