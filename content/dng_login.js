@@ -13,7 +13,7 @@
 
 const main = async() => {
   const rollnum = await getFromStorage('STUDENT_ROLL', '');
-  document.getElementById("StudentId").setAttribute("value", rollnum+"");
+  document.getElementById("StudentId").setAttribute("value", rollnum);
 }
 main();
 
@@ -34,3 +34,4 @@ input.addEventListener("keypress", function(event) {
     };
   }
 });
+//WIP

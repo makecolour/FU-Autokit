@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"version": "6.9",
-	"description": "Tự động hóa việc đăng nhập vào các trang web ĐH FPT, bao gồm FAP, CMS, DNG, FLM, Library, vv",
+	"description": "Địt vào mồm tư bản",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
@@ -13,8 +13,7 @@
 				"https://fap.fpt.edu.vn/"
 			],
 			"js": ["./utils/storage.js",
-				"./content/fap_login.js"],
-				"world": "MAIN"
+				"./content/fap_login.js"]
 		}, 
 
 		{
