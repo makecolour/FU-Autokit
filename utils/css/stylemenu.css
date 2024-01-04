@@ -1,6 +1,5 @@
 body {
     width: 400px;
-    height: 400px;
 }
 
 h1{
@@ -12,6 +11,22 @@ h1{
 .myDiv{
 	display:none;
 }  
+
+.form-check{
+
+}
+
+.form-check-label {
+    display: inline-block;
+     vertical-align: top;
+     margin-right: 3%;
+     margin-left: 5%;
+ }
+ .form-check-input {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100%;
+ }
 
 form{
 

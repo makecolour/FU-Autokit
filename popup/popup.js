@@ -2,6 +2,27 @@ const settingForm = document.querySelector('form');
 const emailInput = document.querySelector('#email');
 // const autoLoginCheckbox = document.querySelector('#auto-login');
 
+        const btn = document.querySelector('#btn');        
+        const radioButtons = document.querySelectorAll('input[name="gen"]');
+        btn.addEventListener("click", () => {
+            let selected;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selected = radioButton.value;
+                    break;
+                }
+            }
+            // show the output:
+			if (selected == "K19")
+			{
+				output.innerHTML = selected ? `Cút mẹ mày đi` : `Chưa chọn khóa`;
+			}
+			else
+			{
+				
+			}
+        });
+
 settingForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const email = e.target.email.value;
@@ -24,3 +45,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 	// const autoLogin = await getFromStorage('AUTO_LOGIN', false);
 	// autoLoginCheckbox.checked = autoLogin;
 });
+
+
