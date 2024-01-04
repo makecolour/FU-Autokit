@@ -11,6 +11,11 @@
 // }
 // next_letter();
 
+const main = async() => {
+  const rollnum = await getFromStorage('STUDENT_ROLL', '');
+  
+}
+main();
  //Get the paragraph to add attribute.
  let doc = document.getElementById("StudentId");
            
