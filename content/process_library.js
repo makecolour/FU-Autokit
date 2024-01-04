@@ -1,7 +1,7 @@
 const main = async () => {
-    const roll = await getFromStorage('STUDENT_ROLL', '');
-	const password = await getFromStorage('STUDENT_PASS', '');
-    document.getElementById("Username").setAttribute("value", roll);
-    document.getElementById("Password").setAttribute("value", password);
+    const id = await getFromStorage('STUDENT_ROLL', '');
+    const pass = await getFromStorage('STUDENT_PASS', '');
+    document.getElementById("Username").setAttribute("value", id);
+    document.getElementById("Password").setAttribute("value", pass);
 }
 main();

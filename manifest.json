@@ -56,8 +56,7 @@
 				"https://library.fpt.edu.vn/Auth/Login"
 			],
 			"js":["./utils/storage.js",
-				"./content/process_library.js"],
-			"world": "MAIN"
+				"./content/process_library.js"]
 		},
 
 		{
