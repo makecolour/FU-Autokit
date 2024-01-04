@@ -2,33 +2,31 @@ body {
     width: 400px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
 }
 
-.myDiv{
-	margin-left: 4%;
+.myDiv {
+    margin-left: 4%;
     margin-right: 4%;
-}  
-
-.form-check{
-
+    display: none;
 }
 
 .form-check-label {
     display: inline-block;
-     vertical-align: top;
-     margin-right: 3%;
-     margin-left: 5%;
- }
- .form-check-input {
+    vertical-align: top;
+    margin-right: 3%;
+    margin-left: 5%;
+}
+
+.form-check-input {
     display: inline-block;
     vertical-align: top;
     margin-left: 100%;
- }
+}
 
-form{
-
+#k5 {
+    display: none;
 }

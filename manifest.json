@@ -61,10 +61,12 @@
 		{
 			"matches": [
 				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
-				"https://accounts.google.com/o/oauth2/auth*cmshn.fpt.edu.vn*"
+				"https://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*"
 			],
-			"js": ["./content/google.js"],
-			"world": "MAIN"
+			"js": [
+				"./utils/storage.js",
+				"./content/google.js"
+			]
 		},
 		{
 			"matches": [
