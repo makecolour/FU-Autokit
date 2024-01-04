@@ -9,7 +9,8 @@ h1{
 }
 
 .myDiv{
-	display:none;
+	margin-left: 4%;
+    margin-right: 4%;
 }  
 
 .form-check{
