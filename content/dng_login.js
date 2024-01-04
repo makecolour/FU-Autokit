@@ -13,21 +13,9 @@
 
 const main = async() => {
   const rollnum = await getFromStorage('STUDENT_ROLL', '');
-  
+  document.getElementById("StudentId").setAttribute("value", rollnum+"");
 }
 main();
- //Get the paragraph to add attribute.
- let doc = document.getElementById("StudentId");
-           
- //Creating a class attribute.
- let attr = document.createAttribute("value");
-
- //Setting the value of class attribute.
- attr.value = "value";
-
- //Adding class attribute to paragraph.
- doc.setAttributeNode(attr);
- doc.setAttribute("value", "HE180534");
 
 // Get the input field
 var input = document.getElementById("StudentId");

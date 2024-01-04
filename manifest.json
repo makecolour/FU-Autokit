@@ -74,7 +74,15 @@
 			],
 			"js": ["./content/feedback.js"],
 			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://fu-edunext.fpt.edu.vn/*"
+			],
+			"js": ["./content/edunext_login.js"],
+			"world": "MAIN"
 		}
+
 	],
 	"permissions": [
 		"storage"

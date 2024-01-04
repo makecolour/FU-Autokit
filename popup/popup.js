@@ -25,7 +25,6 @@ btn.addEventListener("click", () => {
 	}
 	else {
 		output.innerHTML = `Chưa chọn`;
-
 	}
 });
 
