@@ -1,0 +1,18 @@
+body {
+    width: 400px;
+    height: 400px;
+}
+
+h1{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.myDiv{
+	display:none;
+}  
+
+form{
+
+}

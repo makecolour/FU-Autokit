@@ -1,15 +1,15 @@
-var demo_input = document.getElementById("StudentId");
+// var demo_input = document.getElementById("StudentId");
 
-var type_this = "HE180534";
-var index = 0;
+// var type_this = "HE180534";
+// var index = 0;
 
-window.next_letter = function() {
-    if (index <= type_this.length) {
-        demo_input.value = type_this.substr(0, index++);
-        setTimeout("next_letter()", 50);
-    }
-}
-next_letter();
+// window.next_letter = function() {
+//     if (index <= type_this.length) {
+//         demo_input.value = type_this.substr(0, index++);
+//         setTimeout("next_letter()", 50);
+//     }
+// }
+// next_letter();
 
  //Get the paragraph to add attribute.
  let doc = document.getElementById("StudentId");
