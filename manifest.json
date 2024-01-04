@@ -12,8 +12,9 @@
 				"https://fap.fpt.edu.vn/Default.aspx/*",
 				"https://fap.fpt.edu.vn/"
 			],
-			"js": ["./content/fap_login.js"],
-			"world": "MAIN"
+			"js": ["./utils/storage.js",
+				"./content/fap_login.js"],
+				"world": "MAIN"
 		}, 
 
 		{
@@ -30,8 +31,7 @@
 				"https://dng.fpt.edu.vn/"
 			],
 			"js":["./utils/storage.js",
-				"./content/dng_login.js"],
-			"world": "MAIN"
+				"./content/dng_login.js"]
 		},
 
 		{
@@ -69,6 +69,18 @@
 				"./content/google.js"
 			]
 		},
+
+		{
+			"matches": [
+				"https://accounts.google.com/gsi/select?*fu-edunext.fpt.edu.vn*",
+				"https://accounts.google.com/gsi/select?*flm.fpt.edu.vn*"
+			],
+			"js": [
+				"./utils/storage.js",
+				"./content/gsi.js"
+			]
+		},
+
 		{
 			"matches": [
 				"https://fap.fpt.edu.vn/Feedback/*"
@@ -78,10 +90,17 @@
 		},
 		{
 			"matches": [
-				"https://fu-edunext.fpt.edu.vn/*"
+				"https://fu-edunext.fpt.edu.vn/"
 			],
 			"js": ["./content/edunext_login.js"],
 			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://fu-edunext.fpt.edu.vn/login"
+			],
+			"js":["./utils/storage.js",
+				"./content/edunext_process.js"]
 		}
 
 	],
