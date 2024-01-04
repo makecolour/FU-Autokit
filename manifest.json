@@ -12,8 +12,9 @@
 				"https://fap.fpt.edu.vn/Default.aspx/*",
 				"https://fap.fpt.edu.vn/"
 			],
-			"js": ["./utils/storage.js",
+			"js": [//"./utils/storage.js",
 				"./content/fap_login.js"]
+			, "world": "MAIN"
 		}, 
 
 		{
