@@ -29,7 +29,8 @@
 			"matches": [
 				"https://dng.fpt.edu.vn/"
 			],
-			"js":["./content/dng_login.js"],
+			"js":["./utils/storage.js",
+				"./content/dng_login.js"],
 			"world": "MAIN"
 		},
 
@@ -54,7 +55,8 @@
 			"matches": [
 				"https://library.fpt.edu.vn/Auth/Login"
 			],
-			"js":["./content/process_library.js"],
+			"js":["./utils/storage.js",
+				"./content/process_library.js"],
 			"world": "MAIN"
 		},
 
