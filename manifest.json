@@ -12,9 +12,9 @@
 				"https://fap.fpt.edu.vn/Default.aspx/*",
 				"https://fap.fpt.edu.vn/"
 			],
-			"js": [//"./utils/storage.js",
+			"js": ["./utils/storage.js",
 				"./content/fap_login.js"]
-			, "world": "MAIN"
+			// , "world": "MAIN"
 		}, 
 
 		{
@@ -32,6 +32,15 @@
 			],
 			"js":["./utils/storage.js",
 				"./content/dng_login.js"]
+		},
+
+		{
+			"matches": [
+				"https://accounts.google.com/v3/signin/identifier?*fap.fpt.edu.vn*",
+				"https://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*"
+			],
+			"js":["./utils/storage.js",
+				"./content/auto_login.js"]
 		},
 
 		{

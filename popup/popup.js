@@ -76,4 +76,4 @@ function myFunction() {
 	}
 };
 
-
+document.getElementById("bgm").volume = 0.1;

@@ -5,7 +5,7 @@ for (var i = 0; i < options.length; i++) {
     break;
   }
 }
-document.getElementById("K4efff").click();
+document.querySelector(".nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
 // var divs = document.querySelectorAll('.nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb'); 
 //     for (i = 0; i < divs.length; ++i) {
 //         divs[i].click();
