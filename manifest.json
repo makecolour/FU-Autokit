@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"version": "6.9",
-	"description": "Địt vào mồm tư bản",
+	"description": "Em yêu 4 bản",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
@@ -54,6 +54,15 @@
 			],
 			"js": [
 				"./content/flm_login.js"
+			],
+			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://flm.fpt.edu.vn/gui/Home"
+			],
+			"js": [
+				"./content/flm_setLang.js"
 			],
 			"world": "MAIN"
 		},
@@ -122,7 +131,7 @@
 				"https://fu-edunext.fpt.edu.vn/"
 			],
 			"js": [
-				"./content/edunext_login.js"
+				"./content/edunext_redirect.js"
 			],
 			"world": "MAIN"
 		},
@@ -140,9 +149,10 @@
 				"https://fu-edunext.fpt.edu.vn/login"
 			],
 			"js": [
-				"./utils/storage.js",
+				//"./utils/storage.js",
 				"./content/edunext_process.js"
 			]
+			,"world" :"MAIN"
 		}
 	],
 	"permissions": [

@@ -8,7 +8,6 @@ if (window.location.href != "https://cmshn.fpt.edu.vn/login/index.php" && check 
 }
 else {
     var divs = document.querySelectorAll('.btn-secondary');
-
     for (i = 0; i < divs.length; ++i) {
         divs[i].click();
     };
