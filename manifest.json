@@ -13,10 +13,9 @@
 				"https://fap.fpt.edu.vn/"
 			],
 			"js": [
-				"./utils/storage.js",
 				"./content/fap_login.js"
 			]
-			// , "world": "MAIN"
+			, "world": "MAIN"
 		},
 		{
 			"matches": [
@@ -30,7 +29,7 @@
 		},
 		{
 			"matches": [
-				"https://dng.fpt.edu.vn/"
+				"https://dng.fpt.edu.vn/*"
 			],
 			"js": [
 				"./utils/storage.js",

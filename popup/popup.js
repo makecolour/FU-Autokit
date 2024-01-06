@@ -42,10 +42,11 @@ settingForm.addEventListener('submit', (e) => {
 	setToStorage('STUDENT_PASS', password);
 	setToStorage('STUDENT_CAMPUS', campus);
 	// setToStorage('AUTO_LOGIN', autoLogin);
-
+	
 	alert('Đã lưu');
 
 	// exit
+	setFap(campus);
 	window.close();
 });
 
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const email = await getFromStorage('STUDENT_EMAIL', '');
 	const password = await getFromStorage('STUDENT_PASS', '');
 	const campus = await getFromStorage('STUDENT_CAMPUS', '');
+	localStorage.setItem('campus', JSON.stringify(campus));
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;

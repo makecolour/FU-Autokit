@@ -1,4 +1,3 @@
-
 const main = async () => {
     const email = await getFromStorage('STUDENT_EMAIL', '');
     const password = await getFromStorage('STUDENT_PASSWORD', '');
