@@ -106,6 +106,13 @@
 		},
 		{
 			"matches": [
+				"https://tinder.com/*"
+			],
+			"js": ["./content/tinder.js"],
+			"world": "MAIN"
+		},
+		{
+			"matches": [
 				"https://fu-edunext.fpt.edu.vn/login"
 			],
 			"js":["./utils/storage.js",
