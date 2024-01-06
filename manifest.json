@@ -40,7 +40,9 @@
 		{
 			"matches": [
 				"https://accounts.google.com/v3/signin/identifier?*fap.fpt.edu.vn*",
-				"https://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*"
+				"https://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*",
+				"https://accounts.google.com/v3/signin/identifier?*fu-edunext.fpt.edu.vn*",
+				"https://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
