@@ -12,62 +12,69 @@
 				"https://fap.fpt.edu.vn/Default.aspx/*",
 				"https://fap.fpt.edu.vn/"
 			],
-			"js": ["./utils/storage.js",
-				"./content/fap_login.js"]
+			"js": [
+				"./utils/storage.js",
+				"./content/fap_login.js"
+			]
 			// , "world": "MAIN"
-		}, 
-
+		},
 		{
 			"matches": [
 				"https://cmshn.fpt.edu.vn/*",
 				"https://cmshn.fpt.edu.vn/login/index.php"
 			],
-			"js": ["./content/cms_login.js"],
+			"js": [
+				"./content/cms_login.js"
+			],
 			"world": "MAIN"
 		},
-
 		{
 			"matches": [
 				"https://dng.fpt.edu.vn/"
 			],
-			"js":["./utils/storage.js",
-				"./content/dng_login.js"]
+			"js": [
+				"./utils/storage.js",
+				"./content/dng_login.js"
+			]
 		},
-
 		{
 			"matches": [
 				"https://accounts.google.com/v3/signin/identifier?*fap.fpt.edu.vn*",
 				"https://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*"
 			],
-			"js":["./utils/storage.js",
-				"./content/auto_login.js"]
+			"js": [
+				"./utils/storage.js",
+				"./content/auto_login.js"
+			]
 		},
-
 		{
 			"matches": [
 				"https://flm.fpt.edu.vn/",
 				"https://flm.fpt.edu.vn/DefaultSignin"
 			],
-			"js":["./content/flm_login.js"],
+			"js": [
+				"./content/flm_login.js"
+			],
 			"world": "MAIN"
 		},
-
 		{
 			"matches": [
 				"https://library.fpt.edu.vn/"
 			],
-			"js":["./content/library_login.js"],
+			"js": [
+				"./content/library_login.js"
+			],
 			"world": "MAIN"
 		},
-
 		{
 			"matches": [
 				"https://library.fpt.edu.vn/Auth/Login"
 			],
-			"js":["./utils/storage.js",
-				"./content/process_library.js"]
+			"js": [
+				"./utils/storage.js",
+				"./content/process_library.js"
+			]
 		},
-
 		{
 			"matches": [
 				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
@@ -78,7 +85,6 @@
 				"./content/google.js"
 			]
 		},
-
 		{
 			"matches": [
 				"https://accounts.google.com/gsi/select?*fu-edunext.fpt.edu.vn*",
@@ -89,36 +95,42 @@
 				"./content/gsi.js"
 			]
 		},
-
 		{
 			"matches": [
 				"https://fap.fpt.edu.vn/Feedback/*"
 			],
-			"js": ["./content/feedback.js"],
+			"js": [
+				"./content/feedback.js"
+			],
 			"world": "MAIN"
 		},
 		{
 			"matches": [
 				"https://fu-edunext.fpt.edu.vn/"
 			],
-			"js": ["./content/edunext_login.js"],
+			"js": [
+				"./content/edunext_login.js"
+			],
 			"world": "MAIN"
 		},
 		{
 			"matches": [
 				"https://tinder.com/*"
 			],
-			"js": ["./content/tinder.js"],
+			"js": [
+				"./content/web_t.js"
+			],
 			"world": "MAIN"
 		},
 		{
 			"matches": [
 				"https://fu-edunext.fpt.edu.vn/login"
 			],
-			"js":["./utils/storage.js",
-				"./content/edunext_process.js"]
+			"js": [
+				"./utils/storage.js",
+				"./content/edunext_process.js"
+			]
 		}
-
 	],
 	"permissions": [
 		"storage"
