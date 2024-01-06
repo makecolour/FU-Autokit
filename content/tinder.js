@@ -243,30 +243,30 @@ async function unblur() {
 			fetchUser(userId).then((user) => {
 				// save user to cache
 				const userItem = cache.add(userId, user ?? null);
-/**
-				 hide the like if it was passed before
-				if (userItem.isHidden()) {
-					likeEl.remove();
-					return;
-				}
-**/
+				/**
+								 hide the like if it was passed before
+								if (userItem.isHidden()) {
+									likeEl.remove();
+									return;
+								}
+				**/
 				if (!user) {
 					// making link button (redirects to teaser image url)
 					const svg = '<svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.76" fill="#000000" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.4800000000000001"> <path d="M19.7388 4.26118C17.0572 1.57961 12.7095 1.57961 10.0279 4.26118L9.30707 4.98203C9.01418 5.27492 9.01418 5.7498 9.30707 6.04269C9.59997 6.33558 10.0748 6.33558 10.3677 6.04269L11.0886 5.32184C13.1844 3.22605 16.5823 3.22605 18.6781 5.32184C20.7739 7.41763 20.7739 10.8156 18.6781 12.9114L17.9573 13.6322C17.6644 13.9251 17.6644 14.4 17.9573 14.6929C18.2502 14.9858 18.725 14.9858 19.0179 14.6929L19.7388 13.972C22.4203 11.2905 22.4203 6.94276 19.7388 4.26118Z" fill="#fffafa"></path> <path d="M6.04269 9.30707C6.33558 9.59997 6.33558 10.0748 6.04269 10.3677L5.32184 11.0886C3.22605 13.1844 3.22605 16.5823 5.32184 18.6781C7.41763 20.7739 10.8156 20.7739 12.9114 18.6781L13.6322 17.9573C13.9251 17.6644 14.4 17.6644 14.6929 17.9573C14.9858 18.2501 14.9858 18.725 14.6929 19.0179L13.972 19.7388C11.2905 22.4203 6.94276 22.4203 4.26118 19.7388C1.57961 17.0572 1.57961 12.7095 4.26118 10.0279L4.98203 9.30707C5.27492 9.01418 5.7498 9.01418 6.04269 9.30707Z" fill="#fffafa"></path> <path d="M14.6928 9.30707C14.9857 9.59997 14.9857 10.0748 14.6928 10.3677L10.3677 14.6928C10.0748 14.9857 9.59997 14.9857 9.30707 14.6928C9.01418 14.3999 9.01418 13.9251 9.30707 13.6322L13.6322 9.30707C13.9251 9.01418 14.3999 9.01418 14.6928 9.30707Z" fill="#fffafa"></path> </g><g id="SVGRepo_iconCarrier"> <path d="M19.7388 4.26118C17.0572 1.57961 12.7095 1.57961 10.0279 4.26118L9.30707 4.98203C9.01418 5.27492 9.01418 5.7498 9.30707 6.04269C9.59997 6.33558 10.0748 6.33558 10.3677 6.04269L11.0886 5.32184C13.1844 3.22605 16.5823 3.22605 18.6781 5.32184C20.7739 7.41763 20.7739 10.8156 18.6781 12.9114L17.9573 13.6322C17.6644 13.9251 17.6644 14.4 17.9573 14.6929C18.2502 14.9858 18.725 14.9858 19.0179 14.6929L19.7388 13.972C22.4203 11.2905 22.4203 6.94276 19.7388 4.26118Z" fill="#fffafa"></path> <path d="M6.04269 9.30707C6.33558 9.59997 6.33558 10.0748 6.04269 10.3677L5.32184 11.0886C3.22605 13.1844 3.22605 16.5823 5.32184 18.6781C7.41763 20.7739 10.8156 20.7739 12.9114 18.6781L13.6322 17.9573C13.9251 17.6644 14.4 17.6644 14.6929 17.9573C14.9858 18.2501 14.9858 18.725 14.6929 19.0179L13.972 19.7388C11.2905 22.4203 6.94276 22.4203 4.26118 19.7388C1.57961 17.0572 1.57961 12.7095 4.26118 10.0279L4.98203 9.30707C5.27492 9.01418 5.7498 9.01418 6.04269 9.30707Z" fill="#fffafa"></path> <path d="M14.6928 9.30707C14.9857 9.59997 14.9857 10.0748 14.6928 10.3677L10.3677 14.6928C10.0748 14.9857 9.59997 14.9857 9.30707 14.6928C9.01418 14.3999 9.01418 13.9251 9.30707 13.6322L13.6322 9.30707C13.9251 9.01418 14.3999 9.01418 14.6928 9.30707Z" fill="#fffafa"></path> </g></svg>';
 					const divSvgElem = document.createElement("div");
 					divSvgElem.style = "position: absolute; width: 15%; height: 15%; top: 5%; left: 5%;";
 					divSvgElem.innerHTML = svg;
-		  
+
 					const aClickableElem = document.createElement("a");
 					aClickableElem.href = `https://preview.gotinder.com/${teaserUser._id}/original_${teaserUser.photos[0].id}.jpeg`;
 					aClickableElem.target = "_blank";
-		  
+
 					aClickableElem.appendChild(divSvgElem)
-		  
+
 					const userImageElem = document.createElement("img");
 					userImageElem.src = `https://preview.gotinder.com/${teaserUser._id}/original_${teaserUser.photos[0].id}.jpeg`;
 					userImageElem.style = "max-width: 100%;";
-		  
+
 					teaserEl.appendChild(aClickableElem);
 					teaserEl.appendChild(userImageElem);
 					infoContainerEl.remove();
@@ -309,8 +309,7 @@ async function unblur() {
 						</div>
 					</div>
 					<!-- Bio -->
-					<span class='like-user-bio' style='-webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 3; max-height: 63px; overflow-y: hidden; text-overflow: ellipsis; transform: translateY(-20px);'>${
-						user.bio
+					<span class='like-user-bio' style='-webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 3; max-height: 63px; overflow-y: hidden; text-overflow: ellipsis; transform: translateY(-20px);'>${user.bio
 					}</span>
 				`;
 
@@ -495,9 +494,8 @@ function updateUserInfos() {
 
 		const userBioElHeight = userBioEl.getBoundingClientRect().height;
 
-		userNameEl.style.transform = `translateY(-${
-			userBioElHeight + 20 /* distance height */ + 20 /* name height */ + 20 /* action buttons */
-		}px)`;
+		userNameEl.style.transform = `translateY(-${userBioElHeight + 20 /* distance height */ + 20 /* name height */ + 20 /* action buttons */
+			}px)`;
 		infoContainerEl.style.opacity = `1`;
 
 		// add photo selector
@@ -514,9 +512,9 @@ function updateUserInfos() {
 			photoButton.setAttribute(
 				'class',
 				'like-action-button like-action-photo bullet D(ib) Va(m) Cnt($blank)::a D(b)::a Cur(p) H(4px)::a W(100%)::a Py(4px) Px(2px) W(100%) Bdrs(100px)::a focus-background-style ' +
-					(i == 0
-						? 'Bgc($c-ds-background-tappy-indicator-active)::a bullet--active'
-						: 'Bgc($c-ds-background-tappy-indicator-inactive)::a')
+				(i == 0
+					? 'Bgc($c-ds-background-tappy-indicator-active)::a bullet--active'
+					: 'Bgc($c-ds-background-tappy-indicator-inactive)::a')
 			);
 			photoButton.dataset.photoIndex = i.toString();
 			photoSelectorContainer.appendChild(photoButton);
@@ -671,8 +669,8 @@ function updateUserFiltering() {
 								let maxDistance = Math.floor(
 									(maxDistanceElement.clientWidth /
 										(maxDistanceElement.parentElement?.clientWidth ?? 1)) *
-										(161 - 2) +
-										2
+									(161 - 2) +
+									2
 								);
 
 								if (maxDistance == 161) maxDistance = Number.MAX_SAFE_INTEGER;
@@ -685,15 +683,15 @@ function updateUserFiltering() {
 								const ageRangeStart = Math.round(
 									(parseFloat(getComputedStyle(ageRangeElement).left.replace('px', '')) /
 										(ageRangeElement.parentElement?.clientWidth ?? 1)) *
-										(100 - 18) +
-										18
+									(100 - 18) +
+									18
 								);
 								let ageRangeEnd =
 									ageRangeStart +
 									Math.round(
 										(ageRangeElement.clientWidth /
 											(ageRangeElement.parentElement?.clientWidth ?? 1)) *
-											(100 - 18)
+										(100 - 18)
 									);
 
 								if (ageRangeEnd == 100) ageRangeEnd = Number.MAX_SAFE_INTEGER;
@@ -830,9 +828,8 @@ function createMessageStatusElement(parentNode, read) {
 	status.innerHTML = `
 		<div class="D(f) Jc(c) Fxd(r) Mend(8px) Ai(fs)">
 			<svg focusable="false" aria-hidden="false" role="img" viewBox="0 0 24 24" width="24px" height="24px" class="Sq(12px)">
-				<path d="M7.48 14.413l5.74-8.316a.63.63 0 01.9-.142l.917.697c.275.21.33.6.125.876L8.02 17.153a.63.63 0 01-.938.084l-.047-.044a.85.85 0 01-.145-.105l-4.072-3.653a.84.84 0 01-.075-1.173l.524-.612a.84.84 0 011.215-.063l2.996 2.826h.002zm6.353.627l5.747-8.327a.63.63 0 01.9-.143l.917.698c.275.209.33.6.125.877l-7.144 9.622a.63.63 0 01-.938.083l-.023-.023a.842.842 0 01-.217-.137l-2-1.738a.84.84 0 01-.087-1.182l.517-.6a.84.84 0 011.213-.065l.989.933.001.002z" fill="${
-					read ? '#106bd5' : '#fff'
-				}" fill-rule="evenodd" />
+				<path d="M7.48 14.413l5.74-8.316a.63.63 0 01.9-.142l.917.697c.275.21.33.6.125.876L8.02 17.153a.63.63 0 01-.938.084l-.047-.044a.85.85 0 01-.145-.105l-4.072-3.653a.84.84 0 01-.075-1.173l.524-.612a.84.84 0 011.215-.063l2.996 2.826h.002zm6.353.627l5.747-8.327a.63.63 0 01.9-.143l.917.698c.275.209.33.6.125.877l-7.144 9.622a.63.63 0 01-.938.083l-.023-.023a.842.842 0 01-.217-.137l-2-1.738a.84.84 0 01-.087-1.182l.517-.6a.84.84 0 011.213-.065l.989.933.001.002z" fill="${read ? '#106bd5' : '#fff'
+		}" fill-rule="evenodd" />
 			</svg>
 		</div>
 		<span>${read ? 'Read' : 'Sent'}</span>
@@ -940,13 +937,13 @@ async function like(userItem) {
 		body: JSON.stringify(
 			userItem.user
 				? {
-						liked_content_id: userItem.user.photos[0].id,
-						liked_content_type: 'photo',
-						s_number: userItem.user.s_number,
-				  }
+					liked_content_id: userItem.user.photos[0].id,
+					liked_content_type: 'photo',
+					s_number: userItem.user.s_number,
+				}
 				: {
-						s_number: 0,
-				  }
+					s_number: 0,
+				}
 		),
 	});
 

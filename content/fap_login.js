@@ -3,7 +3,7 @@ function login(campus){
 	if(selectEl.value != campus)
 	{
 		selectEl.value = campus;
-		
+		__doPostBack('ctl00$mainContent$ddlCampus','');
 	}
 	console.log(campus);
 	const loginBtn = document.querySelector("#ctl00_mainContent_btnLogin");		

@@ -7,7 +7,7 @@ const main = async () => {
 		// click on email
 		emailEl.click();
 	}
-	
+
 	if (emailEl1) {
 		emailEl1.click();
 	}
