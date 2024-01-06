@@ -14,8 +14,9 @@
 			],
 			"js": [
 				"./content/fap_login.js"
+				, "./utils/storage.js"
 			]
-			, "world": "MAIN"
+			//, "world": "MAIN"
 		},
 		{
 			"matches": [
@@ -53,6 +54,19 @@
 			],
 			"js": [
 				"./content/flm_login.js"
+			],
+			"world": "MAIN"
+		},
+		{
+			"matches": [
+				"https://flm.fpt.edu.vn/gui/role/student/ListCurriculum",
+				"https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement",
+				"https://flm.fpt.edu.vn/gui/tool/AllPrequisiteSubject",
+				"https://flm.fpt.edu.vn/gui/tool/AllCorollarySubject"
+			],
+			"js": [
+				"./content/flm_autocomplete.js",
+				"./utils/css/autocomplete.css"
 			],
 			"world": "MAIN"
 		},
