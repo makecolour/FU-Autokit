@@ -24,10 +24,12 @@
 //     document.getElementById(":r3:").setAttribute("value", password);
 // }
 // main();
-var divs = document.querySelectorAll('nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb');
-setTimeout(() => {
-  for (i = 0; i < divs.length; ++i) {
-    divs[i].click();
-    console.log("success");
-  }
-}, 1000);
+var divs = document.querySelectorAll("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
+console.log(divs); 
+// setTimeout(() => {
+//   for (i = 0; i < divs.length; ++i) {
+//     divs[i].click();
+//     console.log("success");
+//   }
+//   document.querySelector(".fmcmS").click();
+// }, 1000);
