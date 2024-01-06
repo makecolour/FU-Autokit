@@ -1075,10 +1075,7 @@ async function main() {
 	// check if running as a userscript
 	if (typeof GM_info === 'undefined') {
 		console.warn(
-			'[TINDER DEBLUR]: The only supported way of running this script is through a userscript management browser addons like Violentmonkey, Tampermonkey or Greasemonkey!'
-		);
-		console.warn(
-			'[TINDER DEBLUR]: Script was not terminated, but you should really look into the correct way of running it.'
+			'Ươm mầm các tài năng quẹt phải'
 		);
 	}
 
