@@ -13,8 +13,11 @@
 
 const main = async() => {
   const rollnum = await getFromStorage('STUDENT_ROLL', '');
-  document.getElementById("StudentId").setAttribute("value", rollnum);
-}
+  const attr = document.createAttribute("value");
+  attr.value = rollnum;
+  const fill = document.getElementById("StudentId");
+  fill.setAttribute(attr);
+  fill.value = rollnum;
 main();
 
 // Get the input field
