@@ -14,9 +14,9 @@
 			],
 			"js": [
 				"./content/fap_login.js"
-				, "./utils/storage.js"
+				//, "./utils/storage.js"
 			]
-			//, "world": "MAIN"
+			, "world": "MAIN"
 		},
 		{
 			"matches": [

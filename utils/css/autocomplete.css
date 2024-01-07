@@ -1,11 +1,11 @@
-* {
+/* * {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-}
+} */
 
 body {
-  font: 16px Arial;  
+  font: 16px ;  
 }
 
 /*the container must be positioned relative:*/
