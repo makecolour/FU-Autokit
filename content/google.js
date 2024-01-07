@@ -2,6 +2,13 @@ const main = async () => {
 	const email = await getFromStorage('STUDENT_EMAIL', '');
 	const emailEl = document.querySelector('.wLBAL[data-email="' + email + '"]');
 	const emailEl1 = document.querySelector('.wLBAL[data-email="' + email.toLowerCase() + '"]');
+	// const emailEl2 = document.getElementsByClassName('lCoei YZVTmd SmR8');
+	// for(var i = 0; i < emailEl2.length; i++) {
+	// 	if(emailEl2[i].data-identifier=email.toLowerCase())
+	// 	{
+	// 		emailEl2[i].click();
+	// 	}
+	// }
 
 	if (emailEl) {
 		// click on email

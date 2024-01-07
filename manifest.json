@@ -76,7 +76,9 @@
 				"https://flm.fpt.edu.vn/gui/tool/AllCorollarySubject"
 			],
 			"js": [
-				"./content/flm_autocomplete.js",
+				"./content/flm_autocomplete.js"
+			],
+			"css":[
 				"./utils/css/autocomplete.css"
 			],
 			"world": "MAIN"
@@ -155,12 +157,25 @@
 				"https://fu-edunext.fpt.edu.vn/login"
 			],
 			"js": [
-				//"./utils/storage.js",
 				"./content/edunext_process.js"
 			]
 			,"world" :"MAIN"
 		}
+		,{
+			"matches": [
+			  "https://fap.fpt.edu.vn/Grade/StudentTranscript.aspx",
+			  "http://fap.fpt.edu.vn/Grade/StudentTranscript.aspx"
+			],
+			"css": [
+			  "./utils/css/gpa.css"
+			],
+			"js": [
+			  "content/gpa_logic.js"
+			],
+			"run_at": "document_end"
+		  }
 	],
+
 	"permissions": [
 		"storage"
 	],
