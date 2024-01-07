@@ -1,2 +1,2 @@
-document.getElementById("language").value = 'vi';
+// document.getElementById("language").value = 'vi';
 //TODO

@@ -61,10 +61,10 @@
 		},
 		{
 			"matches": [
-				"https://flm.fpt.edu.vn/gui/Home"
+				"https://flm.fpt.edu.vn/*"
 			],
 			"js": [
-				"./content/flm_setLang.js"
+				"./content/flm_setlang.js"
 			],
 			"world": "MAIN"
 		},
@@ -136,6 +136,10 @@
 				"./content/edunext_redirect.js"
 			],
 			"world": "MAIN"
+		},
+		{
+			"matches": ["https://fu-edunext.fpt.edu.vn/*"],
+			"js": ["/content/edunext_grading.js"]
 		},
 		{
 			"matches": [
