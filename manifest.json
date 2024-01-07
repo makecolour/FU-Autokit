@@ -138,7 +138,7 @@
 			"world": "MAIN"
 		},
 		{
-			"matches": ["https://fu-edunext.fpt.edu.vn/*"],
+			"matches": ["https://fu-edunext.fpt.edu.vn/course/activity/*"],
 			"js": ["/content/edunext_grading.js"]
 		},
 		{
