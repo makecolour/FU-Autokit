@@ -10,7 +10,7 @@
    - Tính GPA [^2]
 2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động dăng nhập
-3. [EduNext](https://fu-edunext.fpt.edu.vn/]
+3. [EduNext](https://fu-edunext.fpt.edu.vn/)
    - Tự động đăng nhập (WIP)
    - Tự động Grade on Groupmates [^3]
 4. [FLM](https://flm.fpt.edu.vn/)
