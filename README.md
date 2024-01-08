@@ -1,6 +1,6 @@
 # FU Autokit
 
-**FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.<br\>
+**FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.\n
 ***Đây là bộ công cụ tổng hợp từ nhiều nguồn***
 
 ## Các chức năng chính:
