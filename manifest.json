@@ -179,16 +179,16 @@
 		},
 		{
 			"js": [
-				"./content/stu-remove-banner.js",
-				"./content/stu-remove-blur.js",
-				"./content/stu-doc-viewer.js"
+				"./content/stu_remove_banner.js",
+				"./content/stu_remove_blur.js",
+				"./content/stu_doc_viewer.js"
 			],
 			"css": [
 				"utils/css/studocu.css"
 			],
 			"matches": [
-				"https://www.studocu.com/*",
-				"https://www.studeersnel.nl/*"
+				"*://www.studocu.com/*",
+				"*://www.studeersnel.nl/*"
 			]
 		},
 		{
