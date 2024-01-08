@@ -3,7 +3,6 @@ const rollNum = document.querySelector('#rollnum');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
-window.camp = 6;
 // const autoLoginCheckbox = document.querySelector('#auto-login');
 
 const btn = document.querySelector('#btn');
@@ -79,5 +78,3 @@ function myFunction() {
 		x.type = "password";
 	}
 };
-
-document.getElementById("bgm").volume = 0.1;

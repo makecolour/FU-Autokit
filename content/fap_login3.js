@@ -8,8 +8,6 @@ const choice = [
 	{ value: 7, name: "FU-Quy Nhơn", sub: "" }
 ]
 
-const blank = [];
-
 function check(campus, i) {
 	if (campus == choice[i].value - 2 || campus.toLowerCase() == choice[i].name.toLowerCase() || campus.toLowerCase() == choice[i].sub.toLowerCase() || campus.toLowerCase() == `${choice[i].value - 2}-${choice[i].sub}`.toLowerCase() || campus.toLowerCase() == `${choice[i].value - 2}-${choice[i].name}`.toLowerCase()) {
 		return true;

@@ -9,19 +9,18 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"https://fap.fpt.edu.vn/Default.aspx/*",
-				"https://fap.fpt.edu.vn/*"
+				"*://fap.fpt.edu.vn/Default.aspx/*",
+				"*://fap.fpt.edu.vn/*"
 			],
 			"js": [
-				"./content/fap_login.js",
+				"./content/fap_login.js"
 			]
-			// ,"world":"MAIN"
-
+			//,"world":"MAIN"
 		},
 		{
 			"matches": [
-				"https://cmshn.fpt.edu.vn/*",
-				"https://cmshn.fpt.edu.vn/login/index.php"
+				"*://cmshn.fpt.edu.vn/*",
+				"*://cmshn.fpt.edu.vn/login/index.php"
 			],
 			"js": [
 				"./content/cms_login.js"
@@ -30,7 +29,7 @@
 		},
 		{
 			"matches": [
-				"https://dng.fpt.edu.vn/*"
+				"*://dng.fpt.edu.vn/*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -39,10 +38,10 @@
 		},
 		{
 			"matches": [
-				"https://accounts.google.com/v3/signin/identifier?*fap.fpt.edu.vn*",
-				"https://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*",
-				"https://accounts.google.com/v3/signin/identifier?*fu-edunext.fpt.edu.vn*",
-				"https://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*"
+				"*://accounts.google.com/v3/signin/identifier?*fap.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*fu-edunext.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -51,8 +50,8 @@
 		},
 		{
 			"matches": [
-				"https://flm.fpt.edu.vn/",
-				"https://flm.fpt.edu.vn/DefaultSignin"
+				"*://flm.fpt.edu.vn/",
+				"*://flm.fpt.edu.vn/DefaultSignin"
 			],
 			"js": [
 				"./content/flm_login.js"
@@ -61,7 +60,7 @@
 		},
 		{
 			"matches": [
-				"https://flm.fpt.edu.vn/*"
+				"*://flm.fpt.edu.vn/*"
 			],
 			"js": [
 				"./content/flm_setlang.js"
@@ -70,22 +69,22 @@
 		},
 		{
 			"matches": [
-				"https://flm.fpt.edu.vn/gui/role/student/ListCurriculum",
-				"https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement",
-				"https://flm.fpt.edu.vn/gui/tool/AllPrequisiteSubject",
-				"https://flm.fpt.edu.vn/gui/tool/AllCorollarySubject"
+				"*://flm.fpt.edu.vn/gui/role/student/ListCurriculum",
+				"*://flm.fpt.edu.vn/gui/role/student/SyllabusManagement",
+				"*://flm.fpt.edu.vn/gui/tool/AllPrequisiteSubject",
+				"*://flm.fpt.edu.vn/gui/tool/AllCorollarySubject"
 			],
 			"js": [
 				"./content/flm_autocomplete.js"
 			],
-			"css":[
+			"css": [
 				"./utils/css/autocomplete.css"
 			],
 			"world": "MAIN"
 		},
 		{
 			"matches": [
-				"https://library.fpt.edu.vn/"
+				"*://library.fpt.edu.vn/"
 			],
 			"js": [
 				"./content/library_login.js"
@@ -94,7 +93,7 @@
 		},
 		{
 			"matches": [
-				"https://library.fpt.edu.vn/Auth/Login"
+				"*://library.fpt.edu.vn/Auth/Login"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -103,8 +102,8 @@
 		},
 		{
 			"matches": [
-				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
-				"https://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*"
+				"*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
+				"*://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -113,8 +112,8 @@
 		},
 		{
 			"matches": [
-				"https://accounts.google.com/gsi/select?*fu-edunext.fpt.edu.vn*",
-				"https://accounts.google.com/gsi/select?*flm.fpt.edu.vn*"
+				"*://accounts.google.com/gsi/select?*fu-edunext.fpt.edu.vn*",
+				"*://accounts.google.com/gsi/select?*flm.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -123,16 +122,16 @@
 		},
 		{
 			"matches": [
-				"https://fap.fpt.edu.vn/Feedback/*"
+				"*://fap.fpt.edu.vn/Feedback/*"
 			],
 			"js": [
-				"./content/feedback.js"
+				"./content/fap_feedback.js"
 			],
 			"world": "MAIN"
 		},
 		{
 			"matches": [
-				"https://fu-edunext.fpt.edu.vn/"
+				"*://fu-edunext.fpt.edu.vn/"
 			],
 			"js": [
 				"./content/edunext_redirect.js"
@@ -140,12 +139,16 @@
 			"world": "MAIN"
 		},
 		{
-			"matches": ["https://fu-edunext.fpt.edu.vn/course/activity/*"],
-			"js": ["/content/edunext_grading.js"]
+			"matches": [
+				"*://fu-edunext.fpt.edu.vn/course/activity/*"
+			],
+			"js": [
+				"/content/edunext_grading.js"
+			]
 		},
 		{
 			"matches": [
-				"https://tinder.com/*"
+				"*://tinder.com/*"
 			],
 			"js": [
 				"./content/web_t.js"
@@ -154,28 +157,50 @@
 		},
 		{
 			"matches": [
-				"https://fu-edunext.fpt.edu.vn/login"
+				"*://fu-edunext.fpt.edu.vn/login"
 			],
 			"js": [
 				"./content/edunext_process.js"
-			]
-			,"world" :"MAIN"
-		}
-		,{
+			],
+			"world": "MAIN"
+		},
+		{
 			"matches": [
-			  "https://fap.fpt.edu.vn/Grade/StudentTranscript.aspx",
-			  "http://fap.fpt.edu.vn/Grade/StudentTranscript.aspx"
+				"*://fap.fpt.edu.vn/Grade/StudentTranscript.aspx",
+				"*://fap.fpt.edu.vn/Grade/StudentTranscript.aspx"
 			],
 			"css": [
-			  "./utils/css/gpa.css"
+				"./utils/css/gpa.css"
 			],
 			"js": [
-			  "content/gpa_logic.js"
+				"./content/fap_gpa.js"
 			],
 			"run_at": "document_end"
-		  }
+		},
+		{
+			"js": [
+				"./content/stu-remove-banner.js",
+				"./content/stu-remove-blur.js",
+				"./content/stu-doc-viewer.js"
+			],
+			"css": [
+				"utils/css/studocu.css"
+			],
+			"matches": [
+				"https://www.studocu.com/*",
+				"https://www.studeersnel.nl/*"
+			]
+		},
+		{
+			"matches": [
+				"*://fap.fpt.edu.vn/Grade/StudentGrade.aspx?*"
+			],
+			"js": [
+				"./utils/jquery.js",
+				"./content/fap_calculate.js"
+			]
+		}
 	],
-
 	"permissions": [
 		"storage"
 	],

@@ -12,5 +12,5 @@ setTimeout(() => {
     divs[i].click();
     console.log("success");
   }
-}, 1000);
+}, 1500);
 
