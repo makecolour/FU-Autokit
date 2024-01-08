@@ -21,7 +21,14 @@
    - Tự động chuyển sang tiếng Việt (WIP)
 5. [Library](https://library.fpt.edu.vn/)
    - Tự động đăng nhập và điền tài khoản - mật khẩu
+6. [DNG](https://dng.fpt.edu.vn/Invoice)
+   - Tự động điền mã số sinh viên
+8. [Studocu](https://www.studocu.com/)
+   - Xóa bỏ paywall
+   - Hỗ trợ download file
+ 
 [^1]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
 [^2]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
 [^3]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
+[^4]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
 
