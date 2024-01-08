@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
 	"name": "FU Autokit",
-	"version": "6.9",
-	"description": "Em yêu 4 bản",
+	"version": "1.0",
+	"description": "Hỡi đồng bào cả nước. Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc.",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
