@@ -10,11 +10,13 @@
 		{
 			"matches": [
 				"https://fap.fpt.edu.vn/Default.aspx/*",
-				"https://fap.fpt.edu.vn/"
+				"https://fap.fpt.edu.vn/*"
 			],
 			"js": [
-				"./content/fap_login.js"
+				"./content/fap_login.js",
 			]
+			// ,"world":"MAIN"
+
 		},
 		{
 			"matches": [
