@@ -3,8 +3,8 @@ console.log(emailEl);
 const main = async () => {
     const email = await getFromStorage('STUDENT_EMAIL', '');
     console.log(email);
-    for(var i = 0; i < emailEl.length; i++) {
-        if(emailEl[i].innerHTML==email.toLowerCase()) {
+    for (var i = 0; i < emailEl.length; i++) {
+        if (emailEl[i].innerHTML == email.toLowerCase()) {
             const child = emailEl[i];
             child.click();
             console.log(child);
@@ -14,7 +14,7 @@ const main = async () => {
             const loginBtn = child.parentElement.parentElement;
             loginBtn.click();
             console.log(loginBtn);
-    }
+        }
     }
 }
 main();

@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			checkbox.checked = true;
 		}
 	}
-
 	if (submitBtn) {
 		submitBtn.click();
 	}

@@ -7,9 +7,11 @@ const main = async () => {
 		// click on email
 		emailEl.click();
 	}
-setTimeout(() => {if (emailEl1) {
-	emailEl1.click();}
-},1000)
-	
+	setTimeout(() => {
+		if (emailEl1) {
+			emailEl1.click();
+		}
+	}, 1000)
+
 }
 main();

@@ -4,6 +4,5 @@ const main = async () => {
     document.querySelector("#identifierId").setAttribute('value', email);
     const nextBtn = document.querySelector(".VfPpkd-Jh9lGc");
     console.log(nextBtn);
-
 }
 main();

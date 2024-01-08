@@ -44,7 +44,7 @@ settingForm.addEventListener('submit', (e) => {
 	setToStorage('STUDENT_PASS', password);
 	setToStorage('STUDENT_CAMPUS', campus);
 	// setToStorage('AUTO_LOGIN', autoLogin);
-	
+
 	alert('Đã lưu');
 
 	// exit
