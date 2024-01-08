@@ -32,5 +32,5 @@
 
 [^1]: Credit goes to [VuHK](https://chromewebstore.google.com/detail/fpt-gpa/pieacoaichghpileamnhephkedchnlba)
 [^2]: Credit goes to [Unknown](https://drive.google.com/file/d/1OdRFtmpg8B2c06XMEpXo4CDmSF07f01V/view?usp=sharing)
-[^3]: Credit goes to [AutoEdunext - Chrome Web store](https://chromewebstore.google.com/detail/auto-edunext/pdpfekfaombegelehblceefphdfacpia?fbclid=IwAR0ByrWCd7IOiTeT5FsueP3m2VhmCFXHjd6D2kVUrfQK-sYZSr7oquOm4lQ)
+[^3]: Credit goes to [AutoEdunext](https://chromewebstore.google.com/detail/auto-edunext/pdpfekfaombegelehblceefphdfacpia?fbclid=IwAR0ByrWCd7IOiTeT5FsueP3m2VhmCFXHjd6D2kVUrfQK-sYZSr7oquOm4lQ)
 [^4]: Credit goes to [isanchop](https://github.com/isanchop/stuhack)
