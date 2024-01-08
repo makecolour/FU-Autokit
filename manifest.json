@@ -197,7 +197,7 @@
 			],
 			"js": [
 				"./utils/jquery.js",
-				"./content/fap_calculate.js"
+				"./content/fap_calculate_fe.js"
 			]
 		}
 	],

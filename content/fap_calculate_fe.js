@@ -1,13 +1,4 @@
 let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade table tbody tr');
-var arr = ['banana', 'monkey banana', 'apple', 'kiwi', 'orange'];
-function checker(value) {
-    for (var i = 0; i < arr.length; i++) {
-        if (value.indexOf(prohibited[i]) > -1) {
-            return false;
-        }
-    }
-    return true;
-}
 
 (function calculateGrade() {
     var tarGet = 5;
@@ -50,6 +41,10 @@ function checker(value) {
     }
     var diemtrungbinh = (tarGet - (total)) / percentFE;
     console.log("-------------");
+    if(diemtrungbinh < 4)
+    {
+        diemtrungbinh = 4;
+    }
     $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
     console.log('% FE: ' + percentFE);
     console.log('Diem pass: ' + diemtrungbinh);
