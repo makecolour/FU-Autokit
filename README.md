@@ -1,9 +1,10 @@
 # FU Autokit
 
-**FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường. 
-***Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID của K19 trở lên***
+**FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.
+***Đây là bộ công cụ tổng hợp từ nhiều nguồn***
 
 ## Các chức năng chính:
+> Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID của K19 trở lên
 1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập
    - Tự động hoàn thành đánh giá giảng viên [^1]
