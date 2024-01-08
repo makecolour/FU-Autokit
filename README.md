@@ -4,18 +4,21 @@
 ***Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID của K19 trở lên***
 
 ##Các chức năng chính:##
-1. FAP[https://fap.fpt.edu.vn/]
+1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập
    - Tự động hoàn thành đánh giá giảng viên [^1]
+[^1]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
    - Tính GPA [^2]
-2. CMS[https://cmshn.fpt.edu.vn/]
+2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động dăng nhập
-3. EduNext[https://fu-edunext.fpt.edu.vn/]
+3. [EduNext](https://fu-edunext.fpt.edu.vn/]
    - Tự động đăng nhập (WIP)
    - Tự động Grade on Groupmates [^3]
-4. FLM[https://flm.fpt.edu.vn/]
+4. [FLM](https://flm.fpt.edu.vn/)
    - Tự động đăng nhập
    - Thêm gợi ý khi nhập mã môn
    - Tự động chuyển sang tiếng Việt (WIP)
-5. Library [https://library.fpt.edu.vn/]
+5. [Library](https://library.fpt.edu.vn/)
    - Tự động đăng nhập và điền tài khoản - mật khẩu
+
+
