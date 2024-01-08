@@ -1,3 +1,3 @@
 # FU Autokit
 
-Tự động hóa việc đăng nhập vào các trang web ĐH FPT, bao gồm FAP, CMS, DNG, FLM, Library, vv
+**FU Autokit** là 1 Extension cho [các trình duyệt nhân Chromium] (https://alternativeto.net/category/browsers/chromium-based/) (Chrome, Edge, Cốc Cốc, Opera, vv)
