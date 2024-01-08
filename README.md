@@ -7,7 +7,6 @@
 1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập
    - Tự động hoàn thành đánh giá giảng viên [^1]
-[^1]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
    - Tính GPA [^2]
 2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động dăng nhập
@@ -20,5 +19,7 @@
    - Tự động chuyển sang tiếng Việt (WIP)
 5. [Library](https://library.fpt.edu.vn/)
    - Tự động đăng nhập và điền tài khoản - mật khẩu
-
+[^1]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
+[^2]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
+[^3]: Credit goes to [JS-Club](https://github.com/fu-js/FPTU-Toolkits)
 
