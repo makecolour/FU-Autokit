@@ -3,7 +3,7 @@
 
 **FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.
 
-#### Đây là bộ công cụ tổng hợp từ nhiều nguồn, Tập hợp bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) tại [Chilling Studio](https://www.facebook.com/search/top/?q=chillin%20studio) 
+#### Đây là bộ công cụ tổng hợp từ nhiều nguồn, Tập hợp bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) tại [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio) 
 
 ## Các chức năng chính:
 > Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID của K19 trở lên
