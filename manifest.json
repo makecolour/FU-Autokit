@@ -14,7 +14,6 @@
 			],
 			"js": [
 				"./content/fap_login.js"
-				//, "./utils/storage.js"
 			]
 			, "world": "MAIN"
 		},

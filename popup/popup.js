@@ -3,6 +3,7 @@ const rollNum = document.querySelector('#rollnum');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
+window.camp = 6;
 // const autoLoginCheckbox = document.querySelector('#auto-login');
 
 const btn = document.querySelector('#btn');
@@ -35,6 +36,7 @@ settingForm.addEventListener('submit', (e) => {
 	const email = e.target.email.value;
 	const password = e.target.password.value;
 	const campus = e.target.campus.value;
+	camp = campus;
 	// const autoLogin = e.target.autoLogin.checked;
 
 	setToStorage('STUDENT_ROLL', roll);
