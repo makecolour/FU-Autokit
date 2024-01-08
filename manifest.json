@@ -15,7 +15,6 @@
 			"js": [
 				"./content/fap_login.js"
 			]
-			, "world": "MAIN"
 		},
 		{
 			"matches": [

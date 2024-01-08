@@ -1,62 +1,66 @@
 const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 const loginBtn = document.querySelector("#ctl00_mainContent_btnLogin");
-const choice = [
-	{ value: 3, name: "FU-Hòa Lạc", sub: "Hola" },
-	{ value: 4, name: "FU-Hồ Chí Minh", sub: "Xavalo" },
-	{ value: 5, name: "FU-Đà Nẵng", sub: "FUDA" },
-	{ value: 6, name: "FU-Cần Thơ", sub: "Hovilo" },
-	{ value: 7, name: "FU-Quy Nhơn", sub: "" }
-]
+const settings = {};
+chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
+    console.log("Campus: " + campus.STUDENT_CAMPUS);
+	Object.assign(settings, campus);
+	FixFAPLoginError_12_22();
+	DoLogin();
+  });
 
-const blank = [];
-
-function check(campus, i) {
-	if (campus == choice[i].value - 2 || campus.toLowerCase() == choice[i].name.toLowerCase() || campus.toLowerCase() == choice[i].sub.toLowerCase() || campus.toLowerCase() == `${choice[i].value - 2}-${choice[i].sub}`.toLowerCase() || campus.toLowerCase() == `${choice[i].value - 2}-${choice[i].name}`.toLowerCase()) {
-		return true;
-	}
+  function CheckLoggedInUser() {
+	const loggedInUserDiv = document.getElementById("ctl00_divUser");
+	if (loggedInUserDiv) return true;
 	return false;
-}
+  }
 
-function find(campus) {
-	for (var i = 0; i < choice.length; i++) {
-		if (check(campus, i)) {
-			localStorage.setItem('STUDENT_CAMPUS', choice[i].value);
-			alert("Đã lưu " + choice[i].name);
-			console.log(campus);
-			return choice[i];
-		}
-		else {
-			continue
-		}
+  function DoLogin() {
+	if(CheckLoggedInUser()==false&&
+	settings.STUDENT_CAMPUS!="")
+	{
+		Login();
 	}
-	return null;
-}
+  }
+  function Login() {
+	const footer = document.getElementById("cssTable");
 
 
-console.log(localStorage.getItem('STUDENT_CAMPUS'));
-if (localStorage.getItem('STUDENT_CAMPUS') == null) {
-	while (true) {
-		var campus = prompt("Nhập cơ sở bạn đang học (1-Hola, 2-Xavalo, 3-FUDA, 4-Hovilo, 5-Quy Nhơn)", "1");
-		campus = find(campus)
-		if (campus == null) {
-			alert("Vui lòng nhập đúng định dạng: \"1\" hoặc \"Hola\" hoặc\"1-Hola\"");
-		}
-		else {
-			break
-		}
+	const campusSelection = document.getElementById(
+	  "ctl00_mainContent_ddlCampus"
+	);
+	if (!campusSelection) return;
+  
+	if (
+	  campusSelection.value === "" ||
+	  campusSelection.value !== settings.STUDENT_CAMPUS
+	) {
+	  campusSelection.value = settings.STUDENT_CAMPUS;
+	  const event = new Event("change");
+	  campusSelection.dispatchEvent(event);
+	} else {
+	  
+	  footer.insertAdjacentHTML(
+		"beforeend",
+		'<h5 id="pointer_button" style="text-align: center; font-weight: bold;" onclick=" \n \
+		const loginButton = document.querySelector(\'#ctl00_mainContent_btnLogin\'); \n \
+		if (loginButton) \n \
+		  loginButton.click(); \n \
+	  "></h5>'
+	  );
+	  const loginButton = document.querySelector("#pointer_button");
+	  if (!loginButton) return;
+	  loginButton.click();
 	}
-}
-else {
-	var campus = localStorage.getItem('STUDENT_CAMPUS');
-}
-console.log(campus);
-if (selectEl.value != campus) {
-	// change value of select to Hola
-	selectEl.value = campus;
-	__doPostBack('ctl00$mainContent$ddlCampus', '');
-} else {
-	// click button
-	loginBtn.click();
-}
-
+  }
+  function FixFAPLoginError_12_22() {
+	const currentUrl = window.location.href;
+	const urlCheckingRegex = new RegExp(/^(.*)(Default\.aspx\?token=)(.*)$/);
+	if (urlCheckingRegex.test(currentUrl)) {
+	  
+	  setTimeout(() => {
+		window.location.assign("https://fap.fpt.edu.vn/Default.aspx");
+	  }, 2000);
+	}
+  }
+  
 
