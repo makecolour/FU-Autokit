@@ -75,7 +75,7 @@ Và còn nhiều tính năng ẩn khác...
 
 ![g2QRmZMVlx](https://github.com/makecolour/FU-Autokit/assets/79389129/53c10158-c3f8-4a38-8d28-6d5a06a5d33b)
 
-**Bước 5**: Mỗi lần mà bạn đăng nhập vào các trang của FPTU, bạn sẽ được tự động đăng nhập. 
+**Bước 5**: Và thế là xong, chúc bạn có thời gian đẹp với FU-Autokit 😎. 
 
 ## Tác giả
 
