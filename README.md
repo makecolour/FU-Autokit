@@ -61,7 +61,7 @@ Và còn nhiều tính năng ẩn khác...
 
 ![chrome_rjzLN3TF6H](https://github.com/makecolour/FU-Autokit/assets/79389129/db43bfdb-c4c3-4b70-951a-1463d7c9de25)
 
-**Bước 2**:  Chọn Gen của bạn (**K18 trở về trước** hay **K19 trở đi**) và nhấn **Xác nhận**.
+**Bước 2**:  Chọn niên khoá của bạn (**K18 trở về trước** hay **K19 trở đi**) và nhấn **Xác nhận**.
 
 ![7ddOhGdgIy](https://github.com/makecolour/FU-Autokit/assets/79389129/1b9eaf16-99bd-49f3-a52b-aa075dc20331)
 
