@@ -22,7 +22,7 @@
 4. [FLM](https://flm.fpt.edu.vn/)
    - Tự động đăng nhập
    - Thêm gợi ý khi nhập mã môn
-   - Tự động chuyển sang tiếng Việt (WIP)
+   - Tự động chuyển sang tiếng Việt 
 5. [Library](https://library.fpt.edu.vn/)
    - Tự động đăng nhập và điền tài khoản - mật khẩu
 6. [DNG](https://dng.fpt.edu.vn/Invoice)
@@ -80,7 +80,7 @@ Và còn nhiều tính năng ẩn khác...
 
 ## Tác giả
 
-[Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) của [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
+[Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
 
 ## Đóng góp
 Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp đến dự án nào đều được trân trọng.
