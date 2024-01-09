@@ -162,7 +162,8 @@
 			"js": [
 				"./content/edunext_process.js"
 			],
-			"world": "MAIN"
+			"world": "MAIN",
+			"run_at": "document_start"
 		},
 		{
 			"matches": [
