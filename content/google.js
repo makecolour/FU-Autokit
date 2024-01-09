@@ -11,6 +11,11 @@ const main = async () => {
 		if (emailEl1) {
 			emailEl1.click();
 		}
+	}, 500)
+	setTimeout(() => {
+		if (emailEl1) {
+			emailEl1.click();
+		}
 	}, 1000)
 
 }

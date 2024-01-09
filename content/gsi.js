@@ -16,6 +16,32 @@ const main = async () => {
             console.log(loginBtn);
         }
     }},500);
+    setTimeout(() =>{for (var i = 0; i < emailEl.length; i++) {
+        if (emailEl[i].innerHTML == email.toLowerCase()) {
+            const child = emailEl[i];
+            child.click();
+            console.log(child);
+            child.parentElement.click();
+            child.parentElement.parentElement.click();
+            child.parentNode.click();
+            const loginBtn = child.parentElement.parentElement;
+            loginBtn.click();
+            console.log(loginBtn);
+        }
+    }},1000);
+    setTimeout(() =>{for (var i = 0; i < emailEl.length; i++) {
+        if (emailEl[i].innerHTML == email.toLowerCase()) {
+            const child = emailEl[i];
+            child.click();
+            console.log(child);
+            child.parentElement.click();
+            child.parentElement.parentElement.click();
+            child.parentNode.click();
+            const loginBtn = child.parentElement.parentElement;
+            loginBtn.click();
+            console.log(loginBtn);
+        }
+    }},1500);
     
 }
 main();

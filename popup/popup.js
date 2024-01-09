@@ -3,30 +3,40 @@ const rollNum = document.querySelector('#rollnum');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
-// const autoLoginCheckbox = document.querySelector('#auto-login');
 
-const btn = document.querySelector('#btn');
-const radioButtons = document.querySelectorAll('input[name="gen"]');
-btn.addEventListener("click", () => {
-	let selected;
-	for (const radioButton of radioButtons) {
-		if (radioButton.checked) {
-			selected = radioButton.value;
-			break;
-		}
-	}
-	// show the output:
-	if (selected == "K19") {
-		document.getElementById("check").style.display = 'none';
-		document.getElementById("k5").style.display = 'block';
-	}
-	else if (selected == "K18") {
-		document.getElementById("check").style.display = 'block';
-		document.getElementById("k5").style.display = 'none';
-	}
-	else {
-		output.innerHTML = `Chưa chọn`;
-	}
+// const btn = document.querySelector('#btn');
+// const radioButtons = document.querySelectorAll('input[name="gen"]');
+// btn.addEventListener("click", () => {
+// 	let selected;
+// 	for (const radioButton of radioButtons) {
+// 		if (radioButton.checked) {
+// 			selected = radioButton.value;
+// 			break;
+// 		}
+// 	}
+// 	// show the output:
+// 	if (selected == "K19") {
+// 		document.getElementById("check").style.display = 'none';
+// 		document.getElementById("k5").style.display = 'block';
+// 	}
+// 	else if (selected == "K18") {
+// 		document.getElementById("check").style.display = 'block';
+// 		document.getElementById("k5").style.display = 'none';
+// 	}
+// 	else {
+// 		output.innerHTML = `Chưa chọn`;
+// 	}
+// });
+
+const k18 = document.getElementById("K18");
+const k19 = document.getElementById("K19");
+k18.addEventListener("click",()=>{
+	document.getElementById("check").style.display = 'block';
+	document.getElementById("k5").style.display = 'none';
+});
+k19.addEventListener("click",()=>{
+	document.getElementById("check").style.display = 'none';
+	document.getElementById("k5").style.display = 'block';
 });
 
 settingForm.addEventListener('submit', (e) => {
@@ -78,3 +88,23 @@ function myFunction() {
 		x.type = "password";
 	}
 };
+
+const fap = document.getElementById("FAP");
+const edn = document.getElementById("EDN");
+const cms = document.getElementById("CMS");
+const flm = document.getElementById("FLM");
+
+fap.addEventListener("click", () => {
+	window.open("https://fap.fpt.edu.vn/","_blank");
+})
+
+edn.addEventListener("click", () => {
+	window.open("https://fu-edunext.fpt.edu.vn/","_blank");
+})
+
+cms.addEventListener("click", () => {
+	window.open("https://cmshn.fpt.edu.vn/","_blank");
+})
+flm.addEventListener("click", () => {
+	window.open("https://flm.fpt.edu.vn/","_blank");
+})

@@ -25,7 +25,7 @@ h1 {
     text-align: center;
 }
 
-.col-xs-6 {
+.col-xs-4 {
     display: flex;
     justify-content: center;
 }
@@ -58,4 +58,21 @@ h1 {
 
 #k5>img {
     width: 200px;
+}
+#gen{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#K18{
+    background-color: rgb(242, 113, 37);
+    font-size: 15px;
+    margin: 0 15px;
+    margin-top: 5px;
+}
+#K19{
+    background-color:  rgb(242, 113, 37);
+    font-size: 15px;
+    margin: 0 15px;
+    margin-top: 5px;
 }
