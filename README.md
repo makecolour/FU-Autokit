@@ -31,7 +31,7 @@
    - Xóa bỏ paywall
    - Hỗ trợ download file
 
-Và còn nhiều tính năng ẩn khác...
+Và còn nhiều tính năng khác...
 
 ## Hướng dẫn Cài đặt
 
