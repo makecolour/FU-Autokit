@@ -3,12 +3,12 @@
 
 # FU Autokit
 
-**FU Autokit** là 1 Extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.
+**FU Autokit** là 1 extension cho các trình duyệt nhân Chromium (Chrome, Edge, Cốc Cốc, Opera, vv), giúp cho cuộc sống sinh viên trường F dễ thở hơn qua việc tiết kiệm thời gian trên hệ thống web nhà trường và 1 số trang web liên quan.
 
-#### Đây là bộ công cụ tổng hợp từ nhiều nguồn, Tập hợp bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) ở [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio) 
+#### Đây là bộ công cụ tổng hợp từ nhiều nguồn
 
 ## Các chức năng chính:
-> Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID của K19 trở lên
+> Tạm thời chưa hỗ trợ đăng nhập bằng FE-ID
 1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập [^1]
    - Tự động hoàn thành đánh giá giảng viên [^2]
@@ -31,6 +31,7 @@
    - Xóa bỏ paywall
    - Hỗ trợ download file
 
+Và còn nhiều tính năng ẩn khác...
 
 ## Hướng dẫn Cài đặt
 **Bước 1**: Nhấn vào phần **Tùy Chỉnh và Kiểm soát của Chrome** , chọn **Tiện ích mở rộng** và chọn **Quản lý các tiện ích**.
@@ -55,7 +56,7 @@
 
 ![chrome_17iL7C1pTj](https://github.com/makecolour/FU-Autokit/assets/79389129/d2fafced-12fe-46ff-820d-db3dec0c6d24)
 
-## Hướng dẫn Sử dụng
+## Hướng dẫn sử dụng
 **Bước 1**:  Nhấn vào icon extension và chọn FU Autokit ở góc trên phải của Chrome.
 
 ![chrome_rjzLN3TF6H](https://github.com/makecolour/FU-Autokit/assets/79389129/db43bfdb-c4c3-4b70-951a-1463d7c9de25)
