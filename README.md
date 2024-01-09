@@ -83,7 +83,7 @@ Và còn nhiều tính năng khác...
 [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
 
 ## Đóng góp
-Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp đến dự án nào đều được trân trọng.
+Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp nào đến dự án nào đều được trân trọng.
 
 ## License
 Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
