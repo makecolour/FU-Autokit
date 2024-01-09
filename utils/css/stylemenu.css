@@ -59,19 +59,22 @@ h1 {
 #k5>img {
     width: 200px;
 }
-#gen{
+
+#gen {
     display: flex;
     justify-content: center;
     text-align: center;
 }
-#K18{
+
+#K18 {
     background-color: rgb(242, 113, 37);
     font-size: 15px;
     margin: 0 15px;
     margin-top: 5px;
 }
-#K19{
-    background-color:  rgb(242, 113, 37);
+
+#K19 {
+    background-color: rgb(242, 113, 37);
     font-size: 15px;
     margin: 0 15px;
     margin-top: 5px;
