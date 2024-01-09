@@ -80,7 +80,7 @@ Và còn nhiều tính năng ẩn khác...
 
 ## Tác giả
 
-[Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) của [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
+[Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
 
 ## Đóng góp
 Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp đến dự án nào đều được trân trọng.
