@@ -34,17 +34,18 @@
 Và còn nhiều tính năng ẩn khác...
 
 ## Hướng dẫn Cài đặt
-**Bước 1**: Nhấn vào phần **Tùy Chỉnh và Kiểm soát của Chrome** , chọn **Tiện ích mở rộng** và chọn **Quản lý các tiện ích**.
+
+**Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.0.0) hoặc clone lại project này.
+
+![firefox_IFGHe0uoFA](https://github.com/makecolour/FU-Autokit/assets/79389129/2089a3ef-7f2e-4dfc-8246-92c3fd8ce3e4)
+
+**Bước 2**: Nhấn vào phần **Tùy Chỉnh và Kiểm soát của Chrome** , chọn **Tiện ích mở rộng** và chọn **Quản lý các tiện ích**.
 
 ![e5TaHcaVDV](https://github.com/makecolour/FU-Autokit/assets/79389129/fd4f68ca-f044-47b1-af32-aa30417d67ce)
 
-**Bước 2**: Bật **chế độ nhà Phát triển**.
+**Bước 3**: Bật **chế độ nhà Phát triển**.
 
 ![chrome_Vf0e44SBBw](https://github.com/makecolour/FU-Autokit/assets/79389129/d5efee2b-9ae8-4a56-8fa6-93f604e3b91f)
-
-**Bước 3**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.0.0) hoặc clone lại project này.
-
-![firefox_IFGHe0uoFA](https://github.com/makecolour/FU-Autokit/assets/79389129/2089a3ef-7f2e-4dfc-8246-92c3fd8ce3e4)
 
 **Bước 4**: Giải nén các tệp sử dụng [Winrar](https://www.win-rar.com/start.html?&L=0) hoặc [7-zip](https://www.7-zip.org/).
 
