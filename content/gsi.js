@@ -3,7 +3,7 @@ console.log(emailEl);
 const main = async () => {
     const email = await getFromStorage('STUDENT_EMAIL', '');
     console.log(email);
-    for (var i = 0; i < emailEl.length; i++) {
+    setTimeout(() =>{for (var i = 0; i < emailEl.length; i++) {
         if (emailEl[i].innerHTML == email.toLowerCase()) {
             const child = emailEl[i];
             child.click();
@@ -15,6 +15,7 @@ const main = async () => {
             loginBtn.click();
             console.log(loginBtn);
         }
-    }
+    }},500);
+    
 }
 main();
