@@ -85,7 +85,7 @@ Và còn nhiều tính năng ẩn khác...
 Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp đến dự án nào đều được trân trọng.
 
 ## License
-Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại file [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
+Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
 
 [^1]: Credit goes to [SonNVQ](https://chromewebstore.google.com/detail/fap-auto-login/hcekfkjfkcfoeohaponopofdhogpecif?hl=vi)
 [^2]: Credit goes to [JSClub](https://github.com/fu-js/FPTU-Toolkits?tab=readme-ov-file#usage)
