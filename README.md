@@ -17,7 +17,7 @@
 2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động đăng nhập
 3. [EduNext](https://fu-edunext.fpt.edu.vn/)
-   - Tự động đăng nhập (WIP)
+   - Tự động đăng nhập
    - Tự động Grade on Groupmates [^5]
 4. [FLM](https://flm.fpt.edu.vn/)
    - Tự động đăng nhập
@@ -42,7 +42,7 @@ Và còn nhiều tính năng ẩn khác...
 
 ![chrome_Vf0e44SBBw](https://github.com/makecolour/FU-Autokit/assets/79389129/d5efee2b-9ae8-4a56-8fa6-93f604e3b91f)
 
-**Bước 3**: Tải [release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v0.9.0-alpha).
+**Bước 3**: Tải [release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.0.0).
 
 ![firefox_IFGHe0uoFA](https://github.com/makecolour/FU-Autokit/assets/79389129/2089a3ef-7f2e-4dfc-8246-92c3fd8ce3e4)
 
