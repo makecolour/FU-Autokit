@@ -22,7 +22,7 @@
 4. [FLM](https://flm.fpt.edu.vn/)
    - Tự động đăng nhập
    - Thêm gợi ý khi nhập mã môn
-   - Tự động chuyển sang tiếng Việt (WIP)
+   - Tự động chuyển sang tiếng Việt 
 5. [Library](https://library.fpt.edu.vn/)
    - Tự động đăng nhập và điền tài khoản - mật khẩu
 6. [DNG](https://dng.fpt.edu.vn/Invoice)
