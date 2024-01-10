@@ -33,15 +33,16 @@
 
 Và còn nhiều tính năng khác...
 
-## Hướng dẫn Cài đặt
+## Hướng dẫn Cài đặt và sử dụng
+### Hướng dẫn Cài đặt
 
 **Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.1.1) hoặc clone lại project này.
 
-![firefox_IFGHe0uoFA](https://github.com/makecolour/FU-Autokit/assets/79389129/2089a3ef-7f2e-4dfc-8246-92c3fd8ce3e4)
+![firefox_WUg43GMQs8](https://github.com/makecolour/FU-Autokit/assets/79389129/9790f7e1-76e7-4fba-8c1e-b41fcdf88782)
 
 **Bước 2**: Nhấn vào phần **Tùy Chỉnh và Kiểm soát của Chrome** , chọn **Tiện ích mở rộng** và chọn **Quản lý các tiện ích**.
 
-![e5TaHcaVDV](https://github.com/makecolour/FU-Autokit/assets/79389129/fd4f68ca-f044-47b1-af32-aa30417d67ce)
+![e5TaHcaVDV](https://github.com/makecolour/FU-Autokit/assets/79389129/65d14e01-d440-4563-92d1-c9e22113e4e6)
 
 **Bước 3**: Bật **chế độ nhà Phát triển**.
 
@@ -57,7 +58,7 @@ Và còn nhiều tính năng khác...
 
 ![chrome_17iL7C1pTj](https://github.com/makecolour/FU-Autokit/assets/79389129/d2fafced-12fe-46ff-820d-db3dec0c6d24)
 
-## Hướng dẫn sử dụng
+### Hướng dẫn sử dụng
 **Bước 1**:  Nhấn vào icon extension và chọn FU Autokit ở góc trên phải của Chrome.
 
 ![chrome_rjzLN3TF6H](https://github.com/makecolour/FU-Autokit/assets/79389129/db43bfdb-c4c3-4b70-951a-1463d7c9de25)
