@@ -65,13 +65,15 @@ Và còn nhiều tính năng khác...
 
 **Bước 2**:  Chọn niên khoá của bạn (**K18 trở về trước** hay **K19 trở đi**) và nhấn **Xác nhận**.
 
-![7ddOhGdgIy](https://github.com/makecolour/FU-Autokit/assets/79389129/1b9eaf16-99bd-49f3-a52b-aa075dc20331)
+![YGwO6qdjoe](https://github.com/makecolour/FU-Autokit/assets/79389129/9b40b4f3-d977-4701-8968-365ed32c00db)
 
 > Note: K19 hiện chưa được hỗ trợ
 
 **Bước 3**: Chọn **Cơ sở học**, nhập **Mã số SV**, **Mail FPT** và **Mật khẩu Library** (*nếu nhớ*).
 
-![LDZF02ehre](https://github.com/makecolour/FU-Autokit/assets/79389129/9ad428ee-9835-4d92-9be6-74220ab73c81)
+![YGwO6qdjoe](https://github.com/makecolour/FU-Autokit/assets/79389129/e4eee924-ae0c-4ff2-a2a6-5b266acf1b72)
+
+> Tip: Bạn cũng có thể chuyển sang các trang của FPTU qua extension này (Các nút như FAP, CMS, vv. phía trên phần chọn niên khóa)
 
 **Bước 4**: Bấm **Save**.
 
