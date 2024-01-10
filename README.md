@@ -31,11 +31,11 @@
    - Xóa bỏ paywall
    - Hỗ trợ download file
 
-Và còn nhiều tính năng ẩn khác...
+Và còn nhiều tính năng khác...
 
 ## Hướng dẫn Cài đặt
 
-**Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.0.0) hoặc clone lại project này.
+**Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v1.1.1) hoặc clone lại project này.
 
 ![firefox_IFGHe0uoFA](https://github.com/makecolour/FU-Autokit/assets/79389129/2089a3ef-7f2e-4dfc-8246-92c3fd8ce3e4)
 
@@ -83,7 +83,7 @@ Và còn nhiều tính năng ẩn khác...
 [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
 
 ## Đóng góp
-Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp đến dự án nào đều được trân trọng.
+Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp nào đến dự án nào đều được trân trọng.
 
 ## License
 Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
