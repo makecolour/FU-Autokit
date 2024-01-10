@@ -41,7 +41,7 @@ Và còn nhiều tính năng khác...
 
 **Bước 2**: Nhấn vào phần **Tùy Chỉnh và Kiểm soát của Chrome** , chọn **Tiện ích mở rộng** và chọn **Quản lý các tiện ích**.
 
-![e5TaHcaVDV](https://github.com/makecolour/FU-Autokit/assets/79389129/fd4f68ca-f044-47b1-af32-aa30417d67ce)
+![e5TaHcaVDV](https://github.com/makecolour/FU-Autokit/assets/79389129/65d14e01-d440-4563-92d1-c9e22113e4e6)
 
 **Bước 3**: Bật **chế độ nhà Phát triển**.
 
