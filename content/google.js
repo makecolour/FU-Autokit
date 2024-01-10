@@ -11,12 +11,12 @@ const main = async () => {
 		if (emailEl1) {
 			emailEl1.click();
 		}
-	}, 500)
+	}, 100)
 	setTimeout(() => {
 		if (emailEl1) {
 			emailEl1.click();
 		}
-	}, 1000)
+	}, 3000)
 
 }
 main();
