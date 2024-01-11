@@ -29,7 +29,7 @@
    - Tự động điền mã số sinh viên
 7. [Coursera](https://www.coursera.org/)
    - Tự động đăng nhập (WIP)
-   - Lấy link chấm điểm
+   - Lấy link chấm điểm (WIP)
 8. [Studocu](https://www.studocu.com/) [^6]
    - Xóa bỏ paywall
    - Hỗ trợ download file
