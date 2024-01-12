@@ -80,6 +80,11 @@ h1 {
     border-color: rgb(242, 113, 37);
 }
 
+.gen:focus{
+    background-color: rgb(242, 113, 37);
+    border-color: white;
+    color: white;
+}
 
 .btn-group{
     margin-left: 10px;
@@ -89,15 +94,10 @@ h1 {
     width: 50px;
     margin-left: 10px;
 }
-.form-check-label{
-    margin-right: 0px;
-    padding-right: 0px;
-}
+
 .dropdown-item-text{
     text-align: center;
 }
 .dropdown-menu {
-    
-    min-width: 200px;
-    max-width: 500px;
+    width: max-content;
 }
