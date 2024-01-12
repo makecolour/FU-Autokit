@@ -122,22 +122,24 @@ var listCurriculumName = ["Chương trình đào tạo cử nhân ngành Ngôn N
 var id = ["txtSubCode", "txtKeyword"];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+
+
 if (checkPg(window.location.href) == 0) {
     const category = document.getElementById("ddlSeachOn");
     const fill = document.getElementById("txtKeyword");
     autocomplete(fill, listCurriculum);
-    console.log(category);
+    //console.log(category);
     category.addEventListener('change', function () {
         fill.setAttribute("autocomplete", "off");
         if (category.value == 'Code') {
-            console.log(listCurriculum);
+            //console.log(listCurriculum);
             autocomplete(fill, listCurriculum);
-            console.log("Code");
+            //console.log("Code");
         }
         else if (category.value == 'Name') {
-            console.log(listCurriculumName);
+            //console.log(listCurriculumName);
             autocomplete(fill, listCurriculumName);
-            console.log("Name");
+            //console.log("Name");
         }
         else {
             console.error("changer");
@@ -148,19 +150,19 @@ else if (checkPg(window.location.href) == 1) {
     const category = document.getElementById("ddlSeachOn");
     const fill = document.getElementById("txtSubCode");
     autocomplete(fill, subjects);
-    console.log(category);
+    //console.log(category);
     category.addEventListener('change', function () {
         fill.setAttribute("autocomplete", "off");
         if (category.value == "Code") {
             autocomplete(fill, subjects);
-            console.log("Code");
+            //console.log("Code");
         }
         else if (category.value == "Name") {
             autocomplete(fill, subjectsName);
-            console.log("Name");
+           // console.log("Name");
         }
         else {
-            console.error("changer");
+            //console.error("changer");
         }
     });
 
@@ -177,11 +179,11 @@ else if (checkPg(window.location.href) == 2) {
         autocomplete(fill, subjects);
     }
     else {
-        console.error("fill");
+        //console.error("fill");
     }
 }
 else {
-    console.error("checcc");
-    console.error(checkPg);
+    //console.error("checcc");
+   // console.error(checkPg);
 }
 

@@ -4,6 +4,7 @@ const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
 
+
 const k18 = document.getElementById("K18");
 const k19 = document.getElementById("K19");
 k18.addEventListener("click", () => {
@@ -43,11 +44,38 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const email = await getFromStorage('STUDENT_EMAIL', '');
 	const password = await getFromStorage('STUDENT_PASS', '');
 	const campus = await getFromStorage('STUDENT_CAMPUS', '');
-	localStorage.setItem('campus', JSON.stringify(campus));
+
+	const fap1_ = await getFromStorage('FAP_1', '');
+	const fap2_ = await getFromStorage('FAP_2', '');
+	const fap3_ = await getFromStorage('FAP_3', '');
+	const fap4_ = await getFromStorage('FAP_4', '');
+	const edn1_ = await getFromStorage('EDN_1', '');
+	const edn2_ = await getFromStorage('EDN_2', '');
+	const cms1_ = await getFromStorage('CMS_1', '');
+	const crs1_ = await getFromStorage('CRS_1', '');
+	const crs2_ = await getFromStorage('CRS_2', '');
+	const flm1_ = await getFromStorage('FLM_1', '');
+	const flm2_ = await getFromStorage('FLM_2', '');
+	const dng1_ = await getFromStorage('DNG_1', '');
+	const lbr1_ = await getFromStorage('LBR_1', '');
+
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;
 	campusInput.value = campus;
+	fap1.checked = fap1_;
+	fap2.checked = fap2_;
+	fap3.checked = fap3_;
+	fap4.checked = fap4_;
+	edn1.checked = edn1_;
+	edn2.checked = edn2_;
+	cms1.checked = cms1_;
+	crs1.checked = crs1_;
+	crs2.checked = crs2_;
+	flm1.checked = flm1_;
+	flm2.checked = flm2_;
+	dng1.checked = dng1_;
+	lbr1.checked = lbr1_;
 	// const autoLogin = await getFromStorage('AUTO_LOGIN', false);
 	// autoLoginCheckbox.checked = autoLogin;
 });

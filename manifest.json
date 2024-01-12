@@ -6,6 +6,9 @@
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
+	"permissions": [
+		"storage"
+	],
 	"content_scripts": [
 		{
 			"matches": [
@@ -23,9 +26,10 @@
 				"*://cmshn.fpt.edu.vn/login/index.php"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/cms_login.js"
-			],
-			"world": "MAIN"
+			]
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [
@@ -55,19 +59,21 @@
 				"*://flm.fpt.edu.vn/DefaultSignin"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/flm_login.js"
-			],
-			"world": "MAIN"
+			]
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [
 				"*://flm.fpt.edu.vn/*"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./utils/jquery.js",
 				"./content/flm_setlang.js"
-			],
-			"world": "MAIN"
+			]
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [
@@ -81,17 +87,18 @@
 			],
 			"css": [
 				"./utils/css/autocomplete.css"
-			],
-			"world": "MAIN"
+			]
+			,"world": "MAIN"
 		},
 		{
 			"matches": [
 				"*://library.fpt.edu.vn/"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/library_login.js"
-			],
-			"world": "MAIN"
+			]
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [
@@ -106,7 +113,7 @@
 			"matches": [
 				"*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*",
-				"*://accounts.google.com/o/oauth2/v2/auth/*www.coursera.org*"
+				"*://accounts.google.com/o/oauth2/v2/auth*www.coursera.org*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -146,6 +153,7 @@
 				"*://fu-edunext.fpt.edu.vn/course/activity/*"
 			],
 			"js": [
+				"./utils/storage.js",
 				"/content/edunext_grading.js"
 			]
 		},
@@ -163,10 +171,11 @@
 				"*://fu-edunext.fpt.edu.vn/login"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/edunext_process.js"
-			],
-			"world": "MAIN",
-			"run_at": "document_start"
+			]//,
+			//"world": "MAIN",
+			//"run_at": "document_start"
 		},
 		{
 			"matches": [
@@ -200,6 +209,7 @@
 				"*://fap.fpt.edu.vn/Grade/StudentGrade.aspx?*"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./utils/jquery.js",
 				"./content/fap_calculate_fe.js"
 			]
@@ -209,14 +219,13 @@
 				"*://www.coursera.org/*"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/coursera_login.js"
-			],
-			"world":"MAIN"
+			]
+			//,"world":"MAIN"
 		}
 	],
-	"permissions": [
-		"storage"
-	],
+	
 	"icons": {
 		"16": "./assets/LogoChill.png",
 		"32": "./assets/LogoChill.png",

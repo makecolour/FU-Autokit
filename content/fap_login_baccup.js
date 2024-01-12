@@ -20,7 +20,7 @@ function find(campus) {
 		if (check(campus, i)) {
 			localStorage.setItem('STUDENT_CAMPUS', choice[i].value);
 			alert("Đã lưu " + choice[i].name);
-			console.log(campus);
+			//console.log(campus);
 			return choice[i];
 		}
 		else {
@@ -31,7 +31,7 @@ function find(campus) {
 }
 
 
-console.log(localStorage.getItem('STUDENT_CAMPUS'));
+//console.log(localStorage.getItem('STUDENT_CAMPUS'));
 if (localStorage.getItem('STUDENT_CAMPUS') == null) {
 	while (true) {
 		var campus = prompt("Nhập cơ sở bạn đang học (1-Hola, 2-Xavalo, 3-FUDA, 4-Hovilo, 5-Quy Nhơn)", "1");
@@ -47,7 +47,7 @@ if (localStorage.getItem('STUDENT_CAMPUS') == null) {
 else {
 	var campus = localStorage.getItem('STUDENT_CAMPUS');
 }
-console.log(campus);
+//console.log(campus);
 if (selectEl.value != campus) {
 	// change value of select to Hola
 	selectEl.value = campus;

@@ -1,6 +1,8 @@
+
+
 let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade table tbody tr');
 
-(function calculateGrade() {
+function calculateGrade() {
     var tarGet = 5;
     let total = 0;
     let allRowFE = allSubjectRows[allSubjectRows.length - 1];
@@ -36,17 +38,28 @@ let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade tabl
         $(weight).css({ "color": "green", "font-weight": "bold" });
 
         var percent = ($(weight).text().split(' ')[0]) / 100;
-        console.log(item.text() + ": " + "WEIGHT: " + $(weight).text() + " (" + percent + ") VALUE: " + $(value).text());
+        //console.log(item.text() + ": " + "WEIGHT: " + $(weight).text() + " (" + percent + ") VALUE: " + $(value).text());
         total += +$(value).text() * percent;
     }
     var diemtrungbinh = (tarGet - (total)) / percentFE;
-    console.log("-------------");
+    //console.log("-------------");
     if(diemtrungbinh < 4)
     {
         diemtrungbinh = 4;
     }
-    $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
-    console.log('% FE: ' + percentFE);
-    console.log('Diem pass: ' + diemtrungbinh);
-})();
+    
+    
+        $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
+        //console.log('% FE: ' + percentFE);
+       // console.log('Diem pass: ' + diemtrungbinh);
+}
+const main = async () => {
+    const enabled4 = await getFromStorage('FAP_4', '');
+    if(enabled4==true)
+    {
+        //console.log(enabled4);
+        calculateGrade();
+    }
+}
+    main();
 

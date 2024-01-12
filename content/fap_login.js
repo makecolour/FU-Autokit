@@ -1,10 +1,17 @@
 const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 const settings = {};
+const enabled = {};
+chrome.storage.sync.get(["FAP_1"]).then((enable)=>{
+	Object.assign(enabled, enable);
+	//console.log(enabled.FAP_1);
+})
 chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
-	console.log("Campus: " + campus.STUDENT_CAMPUS);
+	//console.log("Campus: " + campus.STUDENT_CAMPUS);
 	Object.assign(settings, campus);
-	FixFAPLoginError_12_22();
-	DoLogin();
+	if(enabled.FAP_1==true){
+		FixFAPLoginError_12_22();
+		DoLogin();
+	}
 });
 
 function CheckLoggedInUser() {

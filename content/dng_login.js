@@ -1,7 +1,7 @@
+const fill = document.getElementById("StudentId");
 const main = async () => {
   const rollnum = await getFromStorage('STUDENT_ROLL', '');
-  console.log(rollnum);
-  const fill = document.getElementById("StudentId");
-  fill.value = rollnum;
+  const enabled = await getFromStorage('DNG_1', '');
+  if(enabled) {fill.value = rollnum;}
 }
 main();

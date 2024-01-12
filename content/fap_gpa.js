@@ -1,3 +1,8 @@
+const enabled3 = {};
+chrome.storage.sync.get(["FAP_3"]).then((enable)=>{
+	Object.assign(enabled3, enable);
+})
+
 const SemIndex = {
   Spring: 0,
   Summer: 1,
@@ -234,7 +239,7 @@ const getNonGPAList = () => {
         list = DefaultNonGPA;
         setNonGPAList(list);
       }
-      console.log("GET NON_GPA", list);
+      log("GET NON_GPA", list);
       nonGPAList = list;
       res(nonGPAList);
     });
@@ -243,7 +248,7 @@ const getNonGPAList = () => {
 
 const setNonGPAList = async (list) => {
   await chrome.storage.sync.set({ NonGPAKey: list }, function () {
-    console.log("SET NON_GPA", list);
+    //console.log("SET NON_GPA", list);
     location.reload();
   });
 };
@@ -320,7 +325,7 @@ const renderNonGPAEditor = () => {
   submitBtn.onclick = () => {
     const subject = input.value;
     if (!subject) return;
-    console.log(subject);
+    //log(subject);
     nonGPAList.push(subject);
     renderList();
     input.value = "";
@@ -333,6 +338,7 @@ const renderNonGPAEditor = () => {
 };
 
 const main = async () => {
+
   await getNonGPAList();
   const mainGrade = parseGrade(gradeTablesDOM[0]);
   mainGrade.forEach((subj) => {
@@ -377,13 +383,13 @@ const main = async () => {
       )}">${gpa}</span></h4>`
     )
   );
-
+ if(enabled3.FAP_3 == true) {
   const container = createHTML(`<div id="gpa-panel">`);
   const showBtnDOM = showButtonDOM();
 
-  console.log(container.style.maxHeight);
+  //console.log(container.style.maxHeight);
   showBtnDOM.onclick = () => {
-    console.log(container.style.maxHeight);
+    //console.log(container.style.maxHeight);
     if (container.style.maxHeight != "0px") {
       container.style.maxHeight = "0px";
     } else {
@@ -395,6 +401,7 @@ const main = async () => {
   container.append(renderNonGPAEditor(), table.DOM());
   gridDom.prepend(container);
   container.style.maxHeight = container.scrollHeight + "px";
+}
 };
 
 main();

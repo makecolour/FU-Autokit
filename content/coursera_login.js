@@ -1,10 +1,13 @@
-
     const logLink= document.getElementsByClassName("c-ph-log-in")
     var url = window.location.href;
+    const main = async () => {
+        const enabled = await getFromStorage('CRS_1', '');
+        if(enabled==true)
+        {
     if(logLink){
         if(url.includes("programs/fptu"))
         {
-            console.log("fbt");
+            //console.log("fbt");
         }
         else if(url.includes("?authMode=login"))
         {
@@ -19,7 +22,7 @@
         }
         else
         {
-            console.log(logLink);
+            //console.log(logLink);
             setTimeout(() => {logLink[0].firstChild.click();
 
                 setTimeout(() => {
@@ -31,4 +34,5 @@
             
         }
     }
-
+        }}
+        main();
