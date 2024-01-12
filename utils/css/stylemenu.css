@@ -1,5 +1,5 @@
 body {
-    width: 460px;
+    width: 400px;
 }
 
 h1 {
@@ -79,6 +79,10 @@ h1 {
     margin: 0 15px;
     margin-top: 5px;
 }
+.btn-group{
+    margin-left: 10px;
+    margin-right: 10px
+}
 .form-check{
     width: 50px;
     margin-left: 10px;
@@ -89,4 +93,9 @@ h1 {
 }
 .dropdown-item-text{
     text-align: center;
+}
+.dropdown-menu {
+    
+    min-width: 200px;
+    max-width: 500px;
 }
