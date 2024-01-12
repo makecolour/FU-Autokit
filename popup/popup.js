@@ -32,9 +32,8 @@ settingForm.addEventListener('submit', (e) => {
 	// setToStorage('AUTO_LOGIN', autoLogin);
 
 	alert('Đã lưu');
-
+	document.getElementById("body").setAttribute("data-bs-theme", "dark");
 	// exit
-	setFap(campus);
 	window.close();
 });
 
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const flm2_ = await getFromStorage('FLM_2', '');
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
-
+	
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;
@@ -82,6 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("show").addEventListener("click", myFunction);
+	
 });
 
 function myFunction() {
