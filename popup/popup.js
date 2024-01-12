@@ -95,6 +95,7 @@ const cms = document.getElementById("CMS");
 const flm = document.getElementById("FLM");
 const crs = document.getElementById("CRS");
 const dng = document.getElementById("DNG");
+const lbr = document.getElementById("LBR");
 
 fap.addEventListener("click", () => {
 	window.open("https://fap.fpt.edu.vn/", "_blank");
@@ -114,6 +115,11 @@ flm.addEventListener("click", () => {
 crs.addEventListener("click", () => {
 	window.open("https://www.coursera.org/", "_blank");
 })
+
 dng.addEventListener("click", () => {
 	window.open("https://dng.fpt.edu.vn/Invoice", "_blank");
+})
+
+lbr.addEventListener("click", () => {
+	window.open("https://library.fpt.edu.vn/", "_blank");
 })
