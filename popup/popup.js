@@ -32,7 +32,7 @@ settingForm.addEventListener('submit', (e) => {
 	// setToStorage('AUTO_LOGIN', autoLogin);
 
 	alert('Đã lưu');
-	document.getElementById("body").setAttribute("data-bs-theme", "dark");
+
 	// exit
 	window.close();
 });
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("show").addEventListener("click", myFunction);
-	
+	document.getElementById("body").setAttribute("data-bs-theme", "dark");
 });
 
 function myFunction() {

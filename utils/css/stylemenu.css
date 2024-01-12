@@ -66,19 +66,21 @@ h1 {
     text-align: center;
 }
 
-#K18 {
+.gen {
     background-color: rgb(242, 113, 37);
+    border-color: white;
     font-size: 15px;
     margin: 0 15px;
     margin-top: 5px;
 }
 
-#K19 {
-    background-color: rgb(242, 113, 37);
-    font-size: 15px;
-    margin: 0 15px;
-    margin-top: 5px;
+.gen:hover{
+    background-color: #fff;
+    color: rgb(242, 113, 37);
+    border-color: rgb(242, 113, 37);
 }
+
+
 .btn-group{
     margin-left: 10px;
     margin-right: 10px
