@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-	<title>FPTU Autokit</title>
+	<title>FPTU Autokit - Dev Edition</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap -->
@@ -10,6 +10,7 @@
 	<!-- Embed css link here-->
 	<link rel="stylesheet" href="../utils/css/stylemenu.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../utils/bootstrap.bundle.js"></script>
 </head>
 
 <body>
@@ -17,12 +18,96 @@
 		<h1>FPTU Autokit</h1>
 	</div>
 
-	<p class="container">
-		<button type="button" class="btn btn-default btn-sm col-xs-3" id="FAP">FAP</button>
-		<button type="button" class="btn btn-default btn-sm col-xs-3" id="EDN">Edunext</button>
-		<button type="button" class="btn btn-default btn-sm col-xs-3" id="CMS">CMS</button>
-		<button type="button" class="btn btn-default btn-sm col-xs-3" id="FLM">FLM</button>
-	</p>
+	<div class="nav justify-content-center">
+		<div class="btn-group FAP col-xs-2">
+			<button type="button" class="btn btn-sm" id="FAP">FAP</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+						<label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+					</div>
+				</li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group Edu col-xs-2">
+			<button type="button" class="btn btn-sm" id="EDN">Edunext</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group CMS col-xs-2">
+			<button type="button" class="btn btn-sm" id="CMS">CMS</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group Coursera col-xs-2">
+			<button type="button" class="btn btn-sm" id="CRS">Coursera</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group FLM col-xs-2">
+			<button type="button" class="btn btn-sm" id="FLM">FLM</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group DNG col-xs-2">
+			<button type="button" class="btn btn-sm" id="DNG">DNG</button>
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+				<span class="visually-hidden">Toggle Dropdown</span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+	</div>
 
 	<div class="container" id="gen">
 		<!-- <div class="form-check form-check-inline col-xs-6">

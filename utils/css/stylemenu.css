@@ -1,5 +1,5 @@
 body {
-    width: 400px;
+    width: 500px;
 }
 
 h1 {
@@ -78,4 +78,8 @@ h1 {
     font-size: 15px;
     margin: 0 15px;
     margin-top: 5px;
+}
+
+[class^="col-"]:not(.no-inherit) {
+    background-color:red;
 }
