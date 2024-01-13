@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("show").addEventListener("click", myFunction);
-	document.getElementById("body").setAttribute("data-bs-theme", "dark");
+	//document.getElementById("body").setAttribute("data-bs-theme", "dark");
 });
 
 function myFunction() {
@@ -126,4 +126,18 @@ dng.addEventListener("click", () => {
 
 lbr.addEventListener("click", () => {
 	window.open("https://library.fpt.edu.vn/", "_blank");
+})
+
+const toggle = document.getElementById('toggle');
+
+toggle.addEventListener('click', () => {
+	if (this.src === '/assets/sun.svg') {
+		//color.setAttribute("data-bs-theme", "dark");
+		document.getElementById("body").setAttribute("data-bs-theme", "dark");
+		this.src = '/assets/moon.svg';
+	}else{
+		//color.setAttribute("data-bs-theme", "light");
+		document.getElementById("body").setAttribute("data-bs-theme", "light");
+		this.src = '/assets/sun.svg';
+	}
 })
