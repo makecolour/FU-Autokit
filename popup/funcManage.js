@@ -7,6 +7,7 @@ const edn2 = document.getElementById("ednGrade");
 const cms1 = document.getElementById("cmsLogin");
 const crs1 = document.getElementById("crsLogin");
 const crs2 = document.getElementById("crsGetLink");
+const crs3 = document.getElementById("crsGrade");
 const flm1 = document.getElementById("flmLogin");
 const flm2 = document.getElementById("flmViet");
 const dng1 = document.getElementById("dngFill");
@@ -50,6 +51,10 @@ crs1.addEventListener('change', function () {
 crs2.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('CRS_2', state);
+})
+crs3.addEventListener('change', function () {
+    var state = this.checked;
+    setToStorage('CRS_3', state);
 })
 
 flm1.addEventListener('change', function () {
