@@ -224,7 +224,25 @@
 				"./content/coursera_login.js"
 			]
 			//,"world":"MAIN"
-		}
+		},
+		{
+			"matches": [
+			  "https://www.coursera.org/*submit"
+			],
+			"js": [
+				"./utils/storage.js",
+			  "./content/coursera_getlink.js"
+			]
+		  },
+		  {
+			"matches": [
+			  "https://www.coursera.org/*review*"
+			],
+			"js": [
+				"./utils/storage.js",
+			  "./content/coursera_grade.js"
+			]
+		  }
 	],
 	
 	"icons": {
