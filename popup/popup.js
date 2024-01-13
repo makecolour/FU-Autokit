@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.addEventListener('DOMContentLoaded', function () {
 	document.getElementById("show").addEventListener("click", myFunction);
-	document.getElementById("body").setAttribute("data-bs-theme", "dark");
+	//document.getElementById("body").setAttribute("data-bs-theme", "dark");
 });
 
 function myFunction() {
