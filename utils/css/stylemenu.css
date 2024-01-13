@@ -34,14 +34,15 @@ h1 {
     display: inline-block;
     vertical-align: top;
     margin-right: 3%;
-    margin-left: 2%;
+    margin-left: 1%;
 }
 
-.form-check-input {
+input .form-check-input {
     display: inline-block;
     vertical-align: top;
     margin-left: 100%;
     padding-left: 100%;
+    width: 1%;
 }
 
 .footer {
@@ -91,8 +92,8 @@ h1 {
     margin-right: 10px
 }
 .form-check{
-    width: 50px;
-    margin-left: 10px;
+    width: 100%;
+    margin-left: 5%;
 }
 
 .dropdown-item-text{
