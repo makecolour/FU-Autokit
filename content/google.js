@@ -4,11 +4,13 @@ const main = async () => {
 	const fap1_ = await getFromStorage('FAP_1', '');
 	const cms1_ = await getFromStorage('CMS_1', '');
 	const crs1_ = await getFromStorage('CRS_1', '');
-	console.log(email, fap1_, cms1_,crs1_, url)
+	const gen_ = await getFromStorage('K', '');
+	
 	const checkFap= (url.includes("fap.fpt.edu.vn")&&fap1_==true)
 	const checkCms = (url.includes("cmshn.fpt.edu.vn")&&cms1_==true)
 	const checkCrs = (url.includes("www.coursera.org")&&crs1_==true)
-	if(checkFap||checkCms||checkCrs)
+	const checkK19 = (url.includes("feid.fpt.edu.vn")&&gen_==true)
+	if(checkFap||checkCms||checkCrs||checkK19)
 	{
 		const emailEl = document.querySelector('.wLBAL[data-email="' + email + '"]');
 		const emailEl1 = document.querySelector('.wLBAL[data-email="' + email.toLowerCase() + '"]');

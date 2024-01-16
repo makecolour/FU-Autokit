@@ -4,25 +4,12 @@ const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
 
-
-// const k18 = document.getElementById("K18");
-// const k19 = document.getElementById("K19");
-// k18.addEventListener("click", () => {
-// 	document.getElementById("check").style.display = 'block';
-// 	document.getElementById("k5").style.display = 'none';
-// });
-// k19.addEventListener("click", () => {
-// 	document.getElementById("check").style.display = 'none';
-// 	document.getElementById("k5").style.display = 'block';
-// });
-
 settingForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const roll = e.target.rollnum.value;
 	const email = e.target.email.value;
 	const password = e.target.password.value;
 	const campus = e.target.campus.value;
-	camp = campus;
 	// const autoLogin = e.target.autoLogin.checked;
 
 	setToStorage('STUDENT_ROLL', roll);
@@ -44,6 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const password = await getFromStorage('STUDENT_PASS', '');
 	const campus = await getFromStorage('STUDENT_CAMPUS', '');
 
+	const gen_ = await getFromStorage('K', '');
 	const fap1_ = await getFromStorage('FAP_1', '');
 	const fap2_ = await getFromStorage('FAP_2', '');
 	const fap3_ = await getFromStorage('FAP_3', '');
@@ -58,11 +46,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const flm2_ = await getFromStorage('FLM_2', '');
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
+
 	
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;
 	campusInput.value = campus;
+
+	gen.checked = gen_;
 	fap1.checked = fap1_;
 	fap2.checked = fap2_;
 	fap3.checked = fap3_;
@@ -77,6 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	flm2.checked = flm2_;
 	dng1.checked = dng1_;
 	lbr1.checked = lbr1_;
+	console.log(gen_)
 	// const autoLogin = await getFromStorage('AUTO_LOGIN', false);
 	// autoLoginCheckbox.checked = autoLogin;
 });
@@ -130,20 +122,5 @@ lbr.addEventListener("click", () => {
 	window.open("https://library.fpt.edu.vn/", "_blank");
 })
 
-const toggle = document.getElementById('toggle');
-const body = document.getElementById("body");
 
-toggle.addEventListener('click', () => {
-	if (this.src === '/assets/sun.svg') {
-		//color.setAttribute("data-bs-theme", "dark");
-		body.setAttribute("data-bs-theme", "dark");
-		this.src = "/assets/moon.svg";
-		this.setAttribute("src", "moon.svg");
-	}else{
-		//color.setAttribute("data-bs-theme", "light");
-		body.setAttribute("data-bs-theme", "light");
-		this.src = "/assets/sun.svg";
-		this.setAttribute("src", "sun.svg");
-	}
-})
 

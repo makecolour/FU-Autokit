@@ -51,7 +51,8 @@
 				"*://accounts.google.com/v3/signin/identifier?*cmshn.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*fu-edunext.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*",
-				"*://accounts.google.com/v3/signin/identifier?*www.coursera.org*"
+				"*://accounts.google.com/v3/signin/identifier?*www.coursera.org*",
+				"*://accounts.google.com/v3/signin/identifier?*feid.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -107,6 +108,18 @@
 		},
 		{
 			"matches": [
+				"*://feid.fpt.edu.vn/Account/Login*fu-edunext.fpt.edu.vn*",
+				"*://feid.fpt.edu.vn/Account/Login*flm.fpt.edu.vn*",
+				"*://feid.fpt.edu.vn/Account/Login*fap.fpt.edu.vn*",
+				"*://feid.fpt.edu.vn/Account/Login*cmshn.fpt.edu.vn*"
+			],
+			"js": [
+				"./utils/storage.js",
+				"./content/feid_login.js"
+			]
+		},
+		{
+			"matches": [
 				"*://library.fpt.edu.vn/Auth/Login"
 			],
 			"js": [
@@ -118,7 +131,8 @@
 			"matches": [
 				"*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*",
-				"*://accounts.google.com/o/oauth2/v2/auth*www.coursera.org*"
+				"*://accounts.google.com/o/oauth2/v2/auth*www.coursera.org*",
+				"*://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",

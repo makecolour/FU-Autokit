@@ -12,14 +12,9 @@ h1 {
 .myDiv {
     margin-left: 4%;
     margin-right: 4%;
-    display: none;
+    
 }
 
-#k5 {
-    display: none;
-    text-align: center;
-    font-weight: bold;
-}
 
 #btn {
     text-align: center;

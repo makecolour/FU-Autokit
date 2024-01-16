@@ -1,3 +1,4 @@
+const gen = document.getElementById("KKK");
 const fap1 = document.getElementById("fapLogin");
 const fap2 = document.getElementById("fapFeedback");
 const fap3 = document.getElementById("fapGPA");
@@ -12,6 +13,12 @@ const flm1 = document.getElementById("flmLogin");
 const flm2 = document.getElementById("flmViet");
 const dng1 = document.getElementById("dngFill");
 const lbr1 = document.getElementById("lbrFill");
+
+
+gen.addEventListener('change', function () {
+    var state = this.checked;
+    setToStorage('K', state);
+})
 
 fap1.addEventListener('change', function () {
     var state = this.checked;
@@ -75,5 +82,6 @@ lbr1.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('LBR_1', state);
 })
+
 
 
