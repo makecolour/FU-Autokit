@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const flm2_ = await getFromStorage('FLM_2', '');
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
-
+	const theme = await getFromStorage('THEME', '');
 	
 	emailInput.value = email;
 	rollNum.value = roll;
@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 	flm2.checked = flm2_;
 	dng1.checked = dng1_;
 	lbr1.checked = lbr1_;
-	console.log(gen_)
+	update(theme);
+	//console.log(gen_)
 	// const autoLogin = await getFromStorage('AUTO_LOGIN', false);
 	// autoLoginCheckbox.checked = autoLogin;
 });
@@ -121,6 +122,42 @@ dng.addEventListener("click", () => {
 lbr.addEventListener("click", () => {
 	window.open("https://library.fpt.edu.vn/", "_blank");
 })
+
+const themeBtn = document.getElementsByClassName("bg")
+for(let i = 0; i < themeBtn.length; i++)
+{
+	themeBtn[i].addEventListener("click", ()=>{
+		update(themeBtn[i].value);
+		setToStorage("THEME", themeBtn[i].value);
+	})
+}
+
+const body = document.getElementById("body")
+
+function update(value="light"){
+	switch(value)
+	{
+		case "light":
+			body.setAttribute("data-bs-theme","light");
+			document.getElementById("setting").src = "/assets/gear.svg"
+			break;
+		case "dark":
+			body.setAttribute("data-bs-theme","dark");
+			document.getElementById("setting").src = "/assets/geardark.svg"
+			break;
+		case "sys":
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			{
+				return update("dark")
+			}
+			else{
+				return update("light")
+			}
+			break;
+		default:
+			break;
+	}
+}
 
 
 

@@ -65,30 +65,12 @@ a {
 
 
 
-/*.gen {*/
-/*    background-color: rgb(242, 113, 37);*/
-/*    border-color: rgba(0, 0,0 ,0);*/
-/*    color: white;*/
-/*    font-size: 15px;*/
-/*    margin: 0 15px;*/
-/*}*/
-
-/*.gen:hover{*/
-/*    background-color: #fff;*/
-/*    color: rgb(242, 113, 37);*/
-/*    border-color: rgb(242, 113, 37);*/
-/*}*/
-
-/*.gen:focus{*/
-/*    background-color: rgb(242, 113, 37);*/
-/*    border-color: white;*/
-/*    color: white;*/
-/*}*/
-
 .btn-group{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
+    border-color: rgb(240, 111, 27);
+    border: 2px;
 }
 
 .settingSwitch{
@@ -103,21 +85,6 @@ a {
     width: max-content;
 }
 
-
-/*.travelBtn {*/
-/*    background-color: rgb(242, 112, 27);*/
-/*    color: white;*/
-/*}*/
-
-/*.travelBtn:hover{*/
-/*    background-color: rgb(185, 88, 23);*/
-/*    border-color: rgba(0, 0,0 ,0);*/
-/*}*/
-
-/*.dropdown-toggle {*/
-/*    background-color: rgb(197, 93, 26);*/
-/*    color: white;*/
-/*}*/
 
 .saveBtn{
     background-color: rgb(242, 112, 27);
@@ -134,9 +101,9 @@ a {
     margin: 0 15px;
 }
 
-.bg-body-tertiary {
+/* .bg-body-tertiary {
     background-color: #f4f4f4 !important;
-}
+} */
 
 .gen{
     color: rgb(242, 112, 27);
@@ -193,4 +160,8 @@ a {
 .btn.show {
     background-color: rgba(0,0,0,0);
     border-color: rgba(0, 0,0 ,0);
+}
+
+br{
+    height: 1px;
 }
