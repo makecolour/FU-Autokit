@@ -28,9 +28,9 @@
                 setTimeout(() => {
                     btn2= document.getElementsByClassName("css-gl9hfb")
                     btn2[0].click();
-                },3000)
+                },1500)
 
-            },2000)
+            },1500)
             
         }
     }

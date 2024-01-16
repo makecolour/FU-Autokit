@@ -46,7 +46,7 @@ input .form-check-input {
 }
 
 .row {
-    background-color: rgb(242, 113, 37);
+    background-color: rgb(0, 0, 0);
     --bs-gutter-x: 0;
 }
 
@@ -91,6 +91,10 @@ input .form-check-input {
     border-color: white;
     color: white;
 }
+.gen:active{
+    background-color: lightsalmon;
+    color: ;
+}
 
 .btn-group{
     margin-left: 10px;
@@ -117,4 +121,14 @@ input .form-check-input {
 .col-4 {
     padding: 0;
     transform: translate(-50%, -50%);
+}
+.footer{
+    font-size: larger;
+    row-gap: 0px;
+    line-height: 20px ;
+    font-family: "Inter", sans-serif;
+}
+
+.footer a {
+    color: rgb(242, 113, 37);
 }
