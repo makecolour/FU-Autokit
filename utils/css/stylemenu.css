@@ -2,13 +2,6 @@ body {
     width: 400px;
 }
 
-h1 {
-    text-align: center;
-    font-size: xx-large;
-    font-weight: 800;
-    color: rgb(242, 113, 37);
-}
-
 .myDiv {
     margin-left: 4%;
     margin-right: 4%;
@@ -158,4 +151,46 @@ a {
 #K19{
     text-align: left;
     padding: 0 10px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    color: rgb(242, 113, 37);
+    margin: auto;
+    padding-inline-start: 1em;
+}
+
+.settingBtn img{
+    width: 30px;
+    height: 30px;
+}
+
+.settingBtn{
+    padding-right: 4px;
+}
+
+
+.theme{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0,0 ,0);
+    color: rgb(242,112,27);
+    padding: 4px 4px;
+}
+
+.theme:hover{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0,0 ,0);
+}
+
+.btn.show {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0,0 ,0);
 }
