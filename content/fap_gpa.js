@@ -1,7 +1,4 @@
-const enabled3 = {};
-chrome.storage.sync.get(["FAP_3"]).then((enable)=>{
-	Object.assign(enabled3, enable);
-})
+
 
 const SemIndex = {
   Spring: 0,
@@ -239,7 +236,7 @@ const getNonGPAList = () => {
         list = DefaultNonGPA;
         setNonGPAList(list);
       }
-      log("GET NON_GPA", list);
+      console.log("GET NON_GPA", list);
       nonGPAList = list;
       res(nonGPAList);
     });
@@ -338,7 +335,7 @@ const renderNonGPAEditor = () => {
 };
 
 const main = async () => {
-
+  const fap3_ = await getFromStorage('FAP_3', '');
   await getNonGPAList();
   const mainGrade = parseGrade(gradeTablesDOM[0]);
   mainGrade.forEach((subj) => {
@@ -383,7 +380,7 @@ const main = async () => {
       )}">${gpa}</span></h4>`
     )
   );
- if(enabled3.FAP_3 == true) {
+ if(fap3_ == true) {
   const container = createHTML(`<div id="gpa-panel">`);
   const showBtnDOM = showButtonDOM();
 
