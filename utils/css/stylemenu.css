@@ -46,21 +46,24 @@ input .form-check-input {
 }
 
 .row {
-    background-color: rgb(242, 113, 37);
+    background-color: rgb(17, 17, 17);
     --bs-gutter-x: 0;
 }
 
 .footer {
-    color: var(--bs-body-color);
+    color: rgb(253, 253, 253);
     text-align: center;
-    padding: 10px 0 10px ;
+    padding: 10px 0;
     font-size: 1.4rem;
-    border-left: 3px solid var(--bs-body-color);
 }
 
 .footer>p {
     font-size: smaller;
     margin-bottom: 5px;
+}
+
+a {
+    color: rgb(240, 111, 27);
 }
 
 #k5>img {
@@ -70,36 +73,37 @@ input .form-check-input {
 #gen {
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
-.gen {
-    background-color: rgb(242, 113, 37);
-    border-color: var(--bs-body-color);
-    color: var(--bs-body-color);
-    font-size: 15px;
-    margin: 0 15px;
-}
 
-.gen:hover{
-    background-color: #fff;
-    color: rgb(242, 113, 37);
-    border-color: rgb(242, 113, 37);
-}
 
-.gen:focus{
-    background-color: rgb(242, 113, 37);
-    border-color: white;
-    color: white;
-}
+/*.gen {*/
+/*    background-color: rgb(242, 113, 37);*/
+/*    border-color: rgba(0, 0,0 ,0);*/
+/*    color: white;*/
+/*    font-size: 15px;*/
+/*    margin: 0 15px;*/
+/*}*/
+
+/*.gen:hover{*/
+/*    background-color: #fff;*/
+/*    color: rgb(242, 113, 37);*/
+/*    border-color: rgb(242, 113, 37);*/
+/*}*/
+
+/*.gen:focus{*/
+/*    background-color: rgb(242, 113, 37);*/
+/*    border-color: white;*/
+/*    color: white;*/
+/*}*/
 
 .btn-group{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
-
 }
-.form-check{
+
+.settingSwitch{
     width: 100%;
     margin-left: 5%;
 }
@@ -111,18 +115,52 @@ input .form-check-input {
     width: max-content;
 }
 
-.icond{
-    width: 100%;
-    height: 100%;
-    scale: 50%;
-    color: white;
-}
 
+/*.travelBtn {*/
+/*    background-color: rgb(242, 112, 27);*/
+/*    color: white;*/
+/*}*/
 
-.travelBtn {
+/*.travelBtn:hover{*/
+/*    background-color: rgb(185, 88, 23);*/
+/*    border-color: rgba(0, 0,0 ,0);*/
+/*}*/
+
+/*.dropdown-toggle {*/
+/*    background-color: rgb(197, 93, 26);*/
+/*    color: white;*/
+/*}*/
+
+.saveBtn{
     background-color: rgb(242, 112, 27);
+    border-color: rgba(0, 0,0 ,0);
 }
 
-.dropdown-toggle {
-    background-color: rgb(171, 81, 23);
+.saveBtn:hover{
+    background-color: rgb(211, 101, 27);
+    border-color: rgba(0, 0,0 ,0);
+}
+
+.genSwitch{
+    scale: 200%;
+    margin: 0 15px;
+}
+
+.bg-body-tertiary {
+    background-color: #f4f4f4 !important;
+}
+
+.gen{
+    color: rgb(242, 112, 27);
+    font-weight: bold;
+}
+
+#K18{
+    text-align: right;
+    padding: 0 10px;
+}
+
+#K19{
+    text-align: left;
+    padding: 0 10px;
 }

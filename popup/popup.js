@@ -5,16 +5,16 @@ const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
 
 
-const k18 = document.getElementById("K18");
-const k19 = document.getElementById("K19");
-k18.addEventListener("click", () => {
-	document.getElementById("check").style.display = 'block';
-	document.getElementById("k5").style.display = 'none';
-});
-k19.addEventListener("click", () => {
-	document.getElementById("check").style.display = 'none';
-	document.getElementById("k5").style.display = 'block';
-});
+// const k18 = document.getElementById("K18");
+// const k19 = document.getElementById("K19");
+// k18.addEventListener("click", () => {
+// 	document.getElementById("check").style.display = 'block';
+// 	document.getElementById("k5").style.display = 'none';
+// });
+// k19.addEventListener("click", () => {
+// 	document.getElementById("check").style.display = 'none';
+// 	document.getElementById("k5").style.display = 'block';
+// });
 
 settingForm.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -137,11 +137,13 @@ toggle.addEventListener('click', () => {
 	if (this.src === '/assets/sun.svg') {
 		//color.setAttribute("data-bs-theme", "dark");
 		body.setAttribute("data-bs-theme", "dark");
-		this.src = '/assets/moon.svg';
+		this.src = "/assets/moon.svg";
+		this.setAttribute("src", "moon.svg");
 	}else{
 		//color.setAttribute("data-bs-theme", "light");
 		body.setAttribute("data-bs-theme", "light");
-		this.src = '/assets/sun.svg';
+		this.src = "/assets/sun.svg";
+		this.setAttribute("src", "sun.svg");
 	}
 })
 
