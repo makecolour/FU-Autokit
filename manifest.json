@@ -168,6 +168,7 @@
 			]
 			//,"world": "MAIN"
 		},
+
 		{
 			"matches": [
 				"*://fu-edunext.fpt.edu.vn/course/activity/*"
@@ -176,6 +177,18 @@
 				"./utils/storage.js",
 				"/content/edunext_grading.js"
 			]
+		},
+		{
+			"matches": [
+				"*://cmshn.fpt.edu.vn/mod/quiz/*",
+				"*://cmshn.fpt.edu.vn/course/view.php?*"
+
+			],
+			"js": [
+				"./utils/jquery.js",
+				"./content/cms_tool.js"
+			]
+			,"world": "MAIN"
 		},
 		{
 			"matches": [
