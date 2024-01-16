@@ -191,6 +191,7 @@
 				"./utils/css/gpa.css"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/fap_gpa.js"
 			],
 			"run_at": "document_end"
