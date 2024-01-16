@@ -33,7 +33,7 @@ h1 {
 .form-check-label {
     display: inline-block;
     vertical-align: top;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-left: 1%;
 }
 
@@ -51,15 +51,16 @@ input .form-check-input {
 }
 
 .footer {
-    color: #fff;
+    color: var(--bs-body-color);
     text-align: center;
-    padding: 15px 0 0 ;
+    padding: 10px 0 10px ;
     font-size: 1.4rem;
-    border-left: 3px solid rgba(0, 0, 0, 0.5);
+    border-left: 3px solid var(--bs-body-color);
 }
 
 .footer>p {
     font-size: smaller;
+    margin-bottom: 5px;
 }
 
 #k5>img {
@@ -74,10 +75,10 @@ input .form-check-input {
 
 .gen {
     background-color: rgb(242, 113, 37);
-    border-color: white;
+    border-color: var(--bs-body-color);
+    color: var(--bs-body-color);
     font-size: 15px;
     margin: 0 15px;
-    margin-top: 5px;
 }
 
 .gen:hover{
@@ -94,7 +95,9 @@ input .form-check-input {
 
 .btn-group{
     margin-left: 10px;
-    margin-right: 10px
+    margin-right: 10px;
+    margin-bottom: 5px;
+
 }
 .form-check{
     width: 100%;
@@ -114,7 +117,12 @@ input .form-check-input {
     scale: 50%;
     color: white;
 }
-.col-4 {
-    padding: 0;
-    transform: translate(-50%, -50%);
+
+
+.travelBtn {
+    background-color: rgb(242, 112, 27);
+}
+
+.dropdown-toggle {
+    background-color: rgb(171, 81, 23);
 }

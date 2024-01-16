@@ -131,15 +131,17 @@ lbr.addEventListener("click", () => {
 })
 
 const toggle = document.getElementById('toggle');
+const body = document.getElementById("body");
 
 toggle.addEventListener('click', () => {
 	if (this.src === '/assets/sun.svg') {
 		//color.setAttribute("data-bs-theme", "dark");
-		document.getElementById("body").setAttribute("data-bs-theme", "dark");
+		body.setAttribute("data-bs-theme", "dark");
 		this.src = '/assets/moon.svg';
 	}else{
 		//color.setAttribute("data-bs-theme", "light");
-		document.getElementById("body").setAttribute("data-bs-theme", "light");
+		body.setAttribute("data-bs-theme", "light");
 		this.src = '/assets/sun.svg';
 	}
 })
+
