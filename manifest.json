@@ -163,9 +163,10 @@
 				"*://fu-edunext.fpt.edu.vn/"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/edunext_redirect.js"
-			],
-			"world": "MAIN"
+			]
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [

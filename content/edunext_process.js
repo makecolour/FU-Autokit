@@ -7,7 +7,6 @@ const main = async () => {
     if(k19==false)
     {
       K18()
-    
     }
       //console.log(enabled);
     else{
