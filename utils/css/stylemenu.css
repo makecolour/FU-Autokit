@@ -46,7 +46,7 @@ input .form-check-input {
 }
 
 .footer>p {
-    font-size: smaller;
+    font-size: small;
     margin-bottom: 5px;
 }
 
@@ -68,11 +68,15 @@ a {
 }
 
 .btn-group{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 5px;
-    border-color: rgb(240, 111, 27);
-    border: 2px;
+    margin-top: 5px;
+    border: 1.5px solid rgb(242,112,27);
+}
+
+.btn-group:hover{
+    border: 0px;
 }
 
 .settingSwitch{
@@ -101,7 +105,6 @@ a {
     background-color: rgb(242, 112, 27);
 }
 
-
 .saveBtn{
     margin-top: 5px;
     background-color: rgb(242, 112, 27);
@@ -113,10 +116,6 @@ a {
     scale: 200%;
     margin: 0 15px;
 }
-
-/* .bg-body-tertiary {
-    background-color: #f4f4f4 !important;
-} */
 
 .gen{
     color: rgb(242, 112, 27);
@@ -175,3 +174,15 @@ a {
     border-color: rgba(0, 0,0 ,0);
 }
 
+.dropdown-toggle-split:hover{
+    background-color: rgb(242,112,27);
+    color: white;
+}
+
+.travelBtn{
+    border-right: 1.5px solid rgb(242,112,27);
+}
+.travelBtn:hover{
+    background-color: rgb(242,112,27);
+    color: white;
+}
