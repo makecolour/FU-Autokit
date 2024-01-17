@@ -22,18 +22,24 @@ const main = async () => {
 			emailEl1.click();
 			//console.log('0')
 		}
-		setTimeout(() => {
-			if (emailEl1) {
-				emailEl1.click();
-				//console.log('1000')
-			}
-		}, 2000)
-		setTimeout(() => {
-			if (emailEl1) {
-				emailEl1.click();
-				//console.log('1500')
-			}
-		}, 4000)
+		else{
+			setTimeout(() => {
+				if (emailEl1) {
+					emailEl1.click();
+					//console.log('1000')
+				}
+				else{
+					setTimeout(() => {
+						if (emailEl1) {
+							emailEl1.click();
+							//console.log('1500')
+						}
+					}, 2000)
+				}
+			}, 2000)
+		}
+		
+		
 	}
 	else{
 		console.log('nothing enabled')
