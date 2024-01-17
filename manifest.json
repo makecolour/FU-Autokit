@@ -188,6 +188,7 @@
 
 			],
 			"js": [
+				// "./utils/storage.js",
 				"./utils/jquery.js",
 				"./content/cms_tool.js"
 			]

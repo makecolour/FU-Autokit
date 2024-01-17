@@ -6,6 +6,7 @@ const fap4 = document.getElementById("fapFE");
 const edn1 = document.getElementById("ednLogin");
 const edn2 = document.getElementById("ednGrade");
 const cms1 = document.getElementById("cmsLogin");
+// const cms2 = document.getElementById("cmsTool");
 const crs1 = document.getElementById("crsLogin");
 const crs2 = document.getElementById("crsGetLink");
 const crs3 = document.getElementById("crsGrade");
@@ -50,6 +51,11 @@ cms1.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('CMS_1', state);
 })
+
+// cms2.addEventListener('change', function () {
+//     var state = this.checked;
+//     setToStorage('CMS_2', state);
+// })
 
 crs1.addEventListener('change', function () {
     var state = this.checked;
