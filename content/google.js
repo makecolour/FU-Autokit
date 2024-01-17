@@ -27,13 +27,13 @@ const main = async () => {
 				emailEl1.click();
 				//console.log('1000')
 			}
-		}, 500)
+		}, 2000)
 		setTimeout(() => {
 			if (emailEl1) {
 				emailEl1.click();
 				//console.log('1500')
 			}
-		}, 1500)
+		}, 4000)
 	}
 	else{
 		console.log('nothing enabled')
