@@ -63,7 +63,9 @@ a {
     justify-content: center;
 }
 
-
+.navbar{
+    margin: 15px 0px;
+}
 
 .btn-group{
     margin-left: 10px;
@@ -85,16 +87,27 @@ a {
     width: max-content;
 }
 
-
-.saveBtn{
-    background-color: rgb(242, 112, 27);
-    border-color: rgba(0, 0,0 ,0);
+.saveBtn:focus{
+    background-color: rgb(242, 112, 27)
 }
 
 .saveBtn:hover{
-    background-color: rgb(211, 101, 27);
-    border-color: rgba(0, 0,0 ,0);
+    background-color: white;
+    border-color: rgb(242, 112, 27);
+    color: rgb(242, 112, 27);
 }
+
+.saveBtn:active{
+    background-color: rgb(242, 112, 27);
+}
+
+
+.saveBtn{
+    margin-top: 5px;
+    background-color: rgb(242, 112, 27);
+    border-color: white;
+}
+
 
 .genSwitch{
     scale: 200%;
@@ -162,6 +175,3 @@ a {
     border-color: rgba(0, 0,0 ,0);
 }
 
-br{
-    height: 1px;
-}
