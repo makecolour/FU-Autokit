@@ -1,12 +1,12 @@
-const enabled = {}
-const url = window.location.href;
-chrome.storage.sync.get(["CRS_2"]).then((enable)=>{
-	Object.assign(enabled, enable);
-	//console.log(enabled.FAP_1);
-})
-function get(){
-  removeSync()
-  if(enabled.CRS_2 == true && url.includes("www.coursera.org")&&url.includes("submit")){
+function clear()
+{chrome.storage.sync.remove("finalUrl", function () {
+  console.log("Dữ liệu đã được xóa thành công");
+});}
+const get = async () => {
+  const enabled = await getFromStorage('CRS_2', '');
+  if(enabled==true)
+  {
+    clear();
     const internalId = setInterval(() => {
       try {
         const currentUrl = window.location.href;
@@ -20,10 +20,10 @@ function get(){
     
         if (cutId) {
           finalUrl = finalUrl + "review/" + cutId;
-          navigator.clipboard.writeText(finalUrl);
+    
           // Lưu finalUrl vào clipboard
           setToStorage("finalUrl", finalUrl);
-          alert(finalUrl)
+          navigator.clipboard.writeText(finalUrl);
           console.log("Lấy URL thành công!!" + finalUrl);
           clearInterval(internalId);
         } else {
@@ -33,25 +33,9 @@ function get(){
         console.error("Error during execution:", error);
       }
     }, 1000);
-    
   }
 }
-    chrome.contextMenus.onClicked.addListener(get);
-    chrome.runtime.onInstalled.addListener(function (){
-      chrome.contextMenus.create({
-        title: "Get link Coursera",
-        contexts: "all",
-        id:"getlink"
-      })
-    })
-   
+get();
 
 
-  
-    function removeSync(){
-        chrome.storage.sync.remove("finalUrl", function () {
-        console.log("Dữ liệu đã được xóa thành công");
-      });
-    }
-    
-      
+// Function to copy text to the clipboard
