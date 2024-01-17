@@ -5,7 +5,7 @@
 #### Đây là bộ công cụ tổng hợp từ nhiều nguồn
 
 ## Các chức năng chính:
-### Hỗ trợ cho cả FAP mail (K18 về trước) và FE-ID (K19 trở đi)
+### Hỗ trợ cho cả email FPT Edu (K18 về trước) và FE-ID (K19 trở đi)
 
 1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập [^1]
