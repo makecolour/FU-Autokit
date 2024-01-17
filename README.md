@@ -39,7 +39,7 @@ Và còn nhiều tính năng khác...
 ## Hướng dẫn Cài đặt và Sử dụng
 ### Hướng dẫn Cài đặt
 
-**Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v2.0.0).
+**Bước 1**: Tải xuống [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v2.0.0).
 
 ![msedge_jGKu8NKwLP](https://github.com/makecolour/FU-Autokit/assets/79389129/0e821939-826f-4fca-a7a4-c13dd640852d)
 
@@ -57,7 +57,7 @@ Và còn nhiều tính năng khác...
 
 > Mình đang dùng 7-zip. Giải nén bẳng Winrar vẫn như thế nhé (Unzip / Extract Here)
 
-**Bước 5**:  Nhấn vào **Load Unpacked** (Edge) / **Tải tiện ích đã giải nén** (Chrome) và chọn folder bạn vừa mới giải nén.
+**Bước 5**:  Nhấn vào **Load Unpacked** / **Tải tiện ích đã giải nén** và chọn folder bạn vừa mới giải nén.
 
 ![msedge_ySpflV7rFw](https://github.com/makecolour/FU-Autokit/assets/79389129/3bf2b9e2-ada4-42cb-a76d-3ee19bc52117)
 
@@ -82,7 +82,7 @@ Và còn nhiều tính năng khác...
 
 ![lzNlYNCPXB](https://github.com/makecolour/FU-Autokit/assets/79389129/d28b82ed-c2fe-49cb-ab31-532fa2145bb5)
 
-**Bước 4**: Chọn **Cơ sở học**, nhập **Mã số SV**, **Mail FPT** và **Mật khẩu Library** (*nếu nhớ*).
+**Bước 4**: Chọn **Cơ sở đang theo học**, nhập **Mã số SV**, **Mail FPT** và **Mật khẩu Library** (*nếu nhớ*).
 
 ![KbaMYfIOqY](https://github.com/makecolour/FU-Autokit/assets/79389129/dce58171-2406-4feb-b855-fb764526396e)
 
