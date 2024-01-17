@@ -25,8 +25,9 @@ const get = async () => {
           setToStorage("finalUrl", finalUrl);
           navigator.clipboard.writeText(finalUrl);
           console.log("Lấy URL thành công!!" + finalUrl);
-          alert("Đã sao chép URL vào clipboard!!\n" + finalUrl)
-          window.open("extension://lmelgfgffnjbhnojidbpgdjaiindhppp/windows/index.html", "_blank");
+          // alert("Đã sao chép URL vào clipboard!!\n" + finalUrl)
+          console.log()
+          window.open(chrome.runtime.getURL('./windows/index.html'),"_blank", "width=450,height=175")
           clearInterval(internalId);
         } else {
           console.log("Không tìm thấy textarea hoặc id.");
