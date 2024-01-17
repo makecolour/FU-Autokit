@@ -1,11 +1,11 @@
-const main = async () => {
+const grade = async () => {
     const enabled1 = await getFromStorage('CRS_3', '');
     if(enabled1==true)
     {
         autoOption();
     }}
 
-    main();
+    grade();
 
     function autoOption() {
         setTimeout(function () {
