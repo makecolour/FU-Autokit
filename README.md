@@ -36,7 +36,7 @@
 
 Và còn nhiều tính năng khác...
 
-## Hướng dẫn Cài đặt và sử dụng
+## Hướng dẫn Cài đặt và Sử dụng
 ### Hướng dẫn Cài đặt
 
 **Bước 1**: Tải [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v2.0.0).
