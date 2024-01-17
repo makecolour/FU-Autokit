@@ -13,14 +13,14 @@
 
         <title>Coursera Link</title>
     </head>
-    <body class="main">
+    <body class="main" id = "body">
         <div class="title">Coursera Shareable Link</div>
 
         <div class="input-group mb-3">
             <button class="btn btn-primary copyBtn" type="button" id="button-addon1">
                 <img src="/assets/copied-icon.svg" alt="">
             </button>
-            <input type="text" class="form-control" aria-label="Example text with button addon" aria-describedby="button-addon1" readonly>
+            <input type="text" class="form-control" aria-label="Example text with button addon" aria-describedby="button-addon1" readonly id = "link">
         </div>
 
         <div class="footer">
@@ -28,5 +28,7 @@
                                target="_blank">Chillin Studio</a></p>
             <p>😎 FPTU Autokit - Version <a href="https://github.com/makecolour/FU-Autokit" target="_blank">2.0.0</a> 😎</p>
         </div>
+        <script src="../utils/storage.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
