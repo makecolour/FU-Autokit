@@ -1,0 +1,47 @@
+html {
+    width: 450px;
+}
+
+.main {
+    text-align: center;
+}
+
+.footer {
+    color: rgb(253, 253, 253);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.4rem;
+    background-color: rgb(17, 17, 17);
+    --bs-gutter-x: 0;
+}
+
+.footer>p {
+    font-size: medium;
+    margin-bottom: 5px;
+}
+
+a {
+    color: rgb(240, 111, 27);
+}
+
+.title {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 800;
+    color: rgb(242, 113, 37);
+    margin-bottom: 5px;
+}
+
+.input-group{
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.copyBtn {
+    background-color: rgb(240, 111, 27);
+    border-color: rgb(240, 111, 27);
+}
+
+.copyBtn > img {
+    width: 20px;
+}
