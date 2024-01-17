@@ -25,7 +25,7 @@ const get = async () => {
           setToStorage("finalUrl", finalUrl);
           navigator.clipboard.writeText(finalUrl);
           console.log("Lấy URL thành công!!" + finalUrl);
-          alert("Lấy URL thành công!!\n" + finalUrl)
+          alert("Đã sao chép URL vào clipboard!!\n" + finalUrl)
           clearInterval(internalId);
         } else {
           console.log("Không tìm thấy textarea hoặc id.");
