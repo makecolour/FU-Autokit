@@ -1,12 +1,12 @@
 const enabled = {}
-const url = window.location.href;
+//const url = window.location.href;
 chrome.storage.sync.get(["CRS_2"]).then((enable)=>{
 	Object.assign(enabled, enable);
 	//console.log(enabled.FAP_1);
 })
 function get(){
   removeSync()
-  if(enabled.CRS_2 == true && url.includes("www.coursera.org")&&url.includes("submit")){
+  if(enabled.CRS_2 == true){
     const internalId = setInterval(() => {
       try {
         const currentUrl = window.location.href;
@@ -40,14 +40,11 @@ function get(){
     chrome.runtime.onInstalled.addListener(function (){
       chrome.contextMenus.create({
         title: "Get link Coursera",
-        contexts: "all",
+        contexts: ["all"],
         id:"getlink"
       })
     })
    
-
-
-  
     function removeSync(){
         chrome.storage.sync.remove("finalUrl", function () {
         console.log("Dữ liệu đã được xóa thành công");

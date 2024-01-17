@@ -14,6 +14,9 @@
 		"declarativeContent",
         "activeTab"
 	],
+	"background": {
+		"service_worker": "./service/context_menu.js"
+	  },
 	"content_scripts": [
 		{
 			"matches": [
@@ -260,7 +263,7 @@
 		},
 		{
 			"matches": [
-			  "https://www.coursera.org/*submit"
+			  "*://www.coursera.org/*submit"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -269,7 +272,7 @@
 		  },
 		  {
 			"matches": [
-			  "https://www.coursera.org/*review*"
+			  "*://www.coursera.org/*review*"
 			],
 			"js": [
 				"./utils/storage.js",
