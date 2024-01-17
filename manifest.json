@@ -14,6 +14,18 @@
 		"declarativeContent",
         "activeTab"
 	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"/windows/index.html",
+				"/windows/index.js",
+				"/windows/indexcss.css"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	],
 	"background": {
 		"service_worker": "./service/context_menu.js"
 	  },
