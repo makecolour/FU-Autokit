@@ -47,7 +47,7 @@ Và còn nhiều tính năng khác...
 
 ![hogo9espkb](https://github.com/makecolour/FU-Autokit/assets/79389129/10ba6e2a-72c1-47ea-bb4d-d91408531b2f)
 
-**Bước 3**: Bật **chế độ nhà Phát triển** / **Developer Mode**.
+**Bước 3**: Bật **Chế độ nhà phát triển** / **Developer Mode**.
 
 ![msedge_z7IEZN2sRj](https://github.com/makecolour/FU-Autokit/assets/79389129/093ef386-ff07-4d76-886e-e522564aec1e)
 
