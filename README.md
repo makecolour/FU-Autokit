@@ -82,7 +82,7 @@ Và còn nhiều tính năng khác...
 
 ![lzNlYNCPXB](https://github.com/makecolour/FU-Autokit/assets/79389129/d28b82ed-c2fe-49cb-ab31-532fa2145bb5)
 
-**Bước 4**: Chọn **Cơ sở đang theo học**, nhập **Mã số SV**, **Mail FPT** và **Mật khẩu Library** (*nếu nhớ*).
+**Bước 4**: Chọn **Cơ sở đang theo học**, nhập **Mã số SV**, **Email** (mail FPT Edu hoặc Email cá nhân đã đăng ký với trường) và **Mật khẩu Library** (*nếu nhớ*).
 
 ![KbaMYfIOqY](https://github.com/makecolour/FU-Autokit/assets/79389129/dce58171-2406-4feb-b855-fb764526396e)
 
