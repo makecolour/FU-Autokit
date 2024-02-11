@@ -42,11 +42,11 @@ input .form-check-input {
     color: rgb(253, 253, 253);
     text-align: center;
     padding: 10px 0;
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
 }
 
 .footer>p {
-    font-size: small;
+    /* font-size: smaller; */
     margin-bottom: 5px;
 }
 
@@ -185,4 +185,7 @@ a {
 .travelBtn:hover{
     background-color: rgb(242,112,27);
     color: white;
+}
+.bg-primary{
+    background-color: rgb(242,112,27);
 }

@@ -1,46 +1,38 @@
-const grade = async () => {
-    const enabled1 = await getFromStorage('CRS_3', '');
-    if(enabled1==true)
-    {
-        autoOption();
-    }}
-
-    grade();
-
-    function autoOption() {
-        setTimeout(function () {
-            var checkList = document.querySelectorAll('.rc-OptionsFormPart>div>div:last-child>label'); 
-            checkList.forEach(function (check) {
-                check.click();
-            });
-            setTimeout(autoYesNo, 1000);
-            // Call autoComment() after autoOption() completes
-            setTimeout(autoComment, 1000);
-        }, 3000);
-    }
-    
-    function autoComment() {
-        const divs = document.querySelectorAll("div.rc-MultiLineInputFormPart");
-        if (divs.length === 0) {
-            autoOption();
-            return;
+const logLink= document.getElementsByClassName("c-ph-log-in")
+    var url = window.location.href;
+    const main = async () => {
+        const enabled = await getFromStorage('CRS_1', '');
+        if(enabled==true)
+        {
+    if(logLink){
+        if(url.includes("programs/fptu"))
+        {
+            //console.log("fbt");
         }
-        divs.forEach(div => {
-            const textarea = div.querySelector("textarea");
-            textarea.value = "Ok";
-        });
-    }
-    
-    function autoYesNo(){
-        var checkList2 = document.querySelectorAll('.rc-YesNoFormPart>div>div:first-child>label');
-        if(checkList2.length === 0){
-            autoOption();
-            return;
+        else if(url.includes("?authMode=login"))
+        {
+            btn2= document.getElementsByClassName("css-gl9hfb")
+            setTimeout(() => {
+                btn2[0].click();
+            },1500)
         }
-        checkList2.forEach(function (check) {
-            check.click();
-        });
-    }
-    
+        else if(url.includes("ssoCallback?"))
+        {
+            window.location.replace("https://www.coursera.org/");
+        }
+        else
+        {
+            //console.log(logLink);
+            setTimeout(() => {logLink[0].firstChild.click();
 
-    
+                setTimeout(() => {
+                    btn2= document.getElementsByClassName("css-gl9hfb")
+                    btn2[0].click();
+                },1500)
+
+            },1500)
+            
+        }
+    }
+        }}
+        main();

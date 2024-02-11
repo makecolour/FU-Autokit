@@ -1,0 +1,5 @@
+
+const e = document.currentScript; 
+window.addEventListener = () => { }, navigator.wakeLock = {}; 
+const block = e => { e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation() }; 
+Object.defineProperty(document, "visibilityState", { get: () => "visible" }), document.addEventListener("visibilitychange", (t => "false" !== e.dataset.visibility && block(t)), !0), Object.defineProperty(document, "hidden", { get: () => !1 }), document.addEventListener("hasFocus", (t => "false" !== e.dataset.focus && block(t)), !0), document.__proto__.hasFocus = function () { return !0 }, document.addEventListener("blur", (t => "false" !== e.dataset.blur && block(t)), !0), window.addEventListener("blur", (t => "false" !== e.dataset.blur && block(t)), !0), window.addEventListener("mouseleave", (t => "false" !== e.dataset.mouseleave && block(t)), !0);

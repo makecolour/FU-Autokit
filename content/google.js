@@ -18,10 +18,11 @@ const main = async () => {
 			// click on email
 			emailEl.click();
 		}
-		if (emailEl1) {
+		setTimeout(() => {if (emailEl1) {
 			emailEl1.click();
 			//console.log('0')
 		}
+		
 		else{
 			setTimeout(() => {
 				if (emailEl1) {
@@ -38,6 +39,8 @@ const main = async () => {
 				}
 			}, 2000)
 		}
+		},500
+		)
 		
 		
 	}

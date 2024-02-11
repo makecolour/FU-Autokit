@@ -48,11 +48,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
 	const theme = await getFromStorage('THEME', '');
+
 	
+
+	if (campus!=0&&campus!=3&&campus!=4&&campus!=5&&campus!=6&&campu!=7) {
+		campusInput.value=0;
+	}
+	else{
+		campusInput.value = campus;
+	}
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;
-	campusInput.value = campus;
+	if(emailInput.value=="undefined")
+	{
+		emailInput.value ="";
+	}
+	if(rollNum.value=="undefined")
+	{
+		rollNum.value ="";
+	}
+	if(passwordInput.value=="undefined")
+	{
+		passwordInput.value ="";
+	}
+	
 
 	gen.checked = gen_;
 	fap1.checked = fap1_;

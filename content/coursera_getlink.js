@@ -1,6 +1,6 @@
 function clear()
 {chrome.storage.sync.remove("finalUrl", function () {
-  console.log("Dữ liệu đã được xóa thành công");
+  //console.log("Dữ liệu đã được xóa thành công");
 });}
 const get = async () => {
   const enabled = await getFromStorage('CRS_2', '');
@@ -24,9 +24,8 @@ const get = async () => {
           // Lưu finalUrl vào clipboard
           setToStorage("finalUrl", finalUrl);
           navigator.clipboard.writeText(finalUrl);
-          console.log("Lấy URL thành công!!" + finalUrl);
+          //console.log("Lấy URL thành công!!" + finalUrl);
           // alert("Đã sao chép URL vào clipboard!!\n" + finalUrl)
-          console.log()
           window.open(chrome.runtime.getURL('./windows/index.html'),"_blank", "width=450,height=175")
           clearInterval(internalId);
         } else {

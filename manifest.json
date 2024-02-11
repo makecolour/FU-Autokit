@@ -1,12 +1,13 @@
 {
 	"manifest_version": 3,
-	"name": "FU Autokit - Dev Edition",
-	"version": "2.0",
-	"description": "",
+	"name": "FU Autokit",
+	"author": "Chillin Studio",
+	"version": "2.0.0",
+	"description": "“Hỡi đồng bào cả nước. Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
-	"options_page": "./windows/index.html",
+	"options_page": "./popup/popup.html",
 	"homepage_url": "https://github.com/makecolour/FU-Autokit", 
 	"permissions": [
 		"storage",
@@ -25,12 +26,21 @@
 			"matches": [
 				"<all_urls>"
 			]
+		},
+		{
+			"resources": ["./service/shub_inject_script.js"],
+			"matches": ["*://shub.edu.vn/*"]
 		}
 	],
 	"background": {
-		"service_worker": "./service/context_menu.js"
+		"service_worker": "./service/service-worker.js"
 	  },
 	"content_scripts": [
+		{
+			"matches": ["*://shub.edu.vn/*"],
+			"run_at": "document_start",
+			"js": ["./content/shub_inject.js"]
+		},
 		{
 			"matches": [
 				"*://fap.fpt.edu.vn/Default.aspx/*",
@@ -283,16 +293,16 @@
 				"./utils/storage.js",
 			  "./content/coursera_getlink.js"
 			]
-		  },
-		  {
-			"matches": [
-			  "*://www.coursera.org/*review*"
-			],
-			"js": [
-				"./utils/storage.js",
-			  "./content/coursera_grade.js"
-			]
-		  }
+		},
+		{
+		"matches": [
+			"*://www.coursera.org/*review*"
+		],
+		"js": [
+			"./utils/storage.js",
+			"./content/coursera_grade.js"
+		]
+		}
 	],
 	
 	"icons": {
