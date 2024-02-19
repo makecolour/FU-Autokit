@@ -8,6 +8,9 @@ body {
     
 }
 
+.dropdown-item:active{
+    background-color: rgb(242,112,27);
+}
 
 #btn {
     text-align: center;
