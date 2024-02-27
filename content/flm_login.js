@@ -4,13 +4,15 @@ const main = async () => {
   const k19 = await getFromStorage('K', '');
   if(enabled==true)
   {
-    var options = document.getElementById("drSelectEduLevel").options;
-    for (var i = 0; i < options.length; i++) {
-    if (options[i].value == "fptu") {
-      options[i].selected = true;
-      break;
+    var select = document.getElementById("drSelectEduLevel")
+    var options = select.options;
+    for (var opt, j = 0; opt = options[j]; j++) {
+      if (opt.value == "fptu") {
+        console.log("ok");
+          select.selectedIndex = j;
+          break;
       }
-    }
+  }
     if(k19==false) {
       K18()
     }
