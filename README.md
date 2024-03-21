@@ -94,7 +94,7 @@ Và còn nhiều tính năng khác chờ bạn khám phá...
 
 ## Tác giả
 
-Tổng hợp và phát triển bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) và [NobleMode](https://github.com/NobleMode) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
+Tổng hợp và phát triển bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
 
 ## Đóng góp
 Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp nào đến dự án nào đều được trân trọng.
@@ -108,7 +108,7 @@ Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại 
 [^4]: Credit goes to [Unknown](https://drive.google.com/file/d/1OdRFtmpg8B2c06XMEpXo4CDmSF07f01V/view?usp=sharing)
 [^5]: Credit goes to [nguyenvancaoky](https://github.com/nguyenvancaokyfpt/cms-tool)
 [^6]: Credit goes to [AutoEdunext](https://chromewebstore.google.com/detail/auto-edunext/pdpfekfaombegelehblceefphdfacpia?fbclid=IwAR0ByrWCd7IOiTeT5FsueP3m2VhmCFXHjd6D2kVUrfQK-sYZSr7oquOm4lQ)
-[^7]: Credit goes to [vuducky](https://github.com/vuduchuy1120/cousera-toolkit/tree/main)
+[^7]: Credit goes to [vuduchuy](https://github.com/vuduchuy1120/cousera-toolkit/tree/main)
 [^8]: Credit goes to [isanchop](https://github.com/isanchop/stuhack)
 
 
