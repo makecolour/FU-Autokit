@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"author": "Chillin Studio",
-	"version": "2.0.1",
+	"version": "2.0",
 	"description": "“Hỡi đồng bào cả nước. Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.",
 	"action": {
 		"default_popup": "./popup/popup.html"
@@ -16,6 +16,7 @@
         "activeTab",
 		"tabs"
 	],
+	"update_url": "https://makecolour.github.io/update.xml",
 	"web_accessible_resources": [
 		{
 			"resources": [
@@ -180,9 +181,9 @@
 				"*://fap.fpt.edu.vn/Feedback/*"
 			],
 			"js": [
+				"./utils/storage.js",
 				"./content/fap_feedback.js"
-			],
-			"world": "MAIN"
+			]
 		},
 		{
 			"matches": [

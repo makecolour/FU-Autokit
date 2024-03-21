@@ -1,5 +1,6 @@
 chrome.runtime.onInstalled.addListener(function(details) {
     if (details.reason == "install") {
+        chrome.storage.sync.set({'K19': false})
         chrome.storage.sync.set({'FAP_1': true})
         chrome.storage.sync.set({'FAP_2': true})
         chrome.storage.sync.set({'FAP_3': true})

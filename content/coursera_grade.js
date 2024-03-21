@@ -1,38 +1,61 @@
-const logLink= document.getElementsByClassName("c-ph-log-in")
-    var url = window.location.href;
-    const main = async () => {
-        const enabled = await getFromStorage('CRS_1', '');
-        if(enabled==true)
-        {
-    if(logLink){
-        if(url.includes("programs/fptu"))
-        {
-            //console.log("fbt");
-        }
-        else if(url.includes("?authMode=login"))
-        {
-            btn2= document.getElementsByClassName("css-gl9hfb")
-            setTimeout(() => {
-                btn2[0].click();
-            },1500)
-        }
-        else if(url.includes("ssoCallback?"))
-        {
-            window.location.replace("https://www.coursera.org/");
-        }
-        else
-        {
-            //console.log(logLink);
-            setTimeout(() => {logLink[0].firstChild.click();
 
-                setTimeout(() => {
-                    btn2= document.getElementsByClassName("css-gl9hfb")
-                    btn2[0].click();
-                },1500)
+function autoOption() {
+    var checkList = document.querySelectorAll('.rc-OptionsFormPart>div>div:first-child>label');
+    console.log("autoOption checkList:", checkList);
 
-            },1500)
-            
+    if (checkList.length == 0) {
+        console.log("No elements found for autoOption");
+        return;
+    }
+
+    var optionContent = checkList[0].querySelector('.option-contents>div:first-child>span').innerHTML.trim();
+    console.log("autoOption optionContent:", optionContent);
+
+    if (optionContent.charAt(0) == '0') {
+        checkList = document.querySelectorAll('.rc-OptionsFormPart>div>div:last-child>label');
+        console.log("autoOption updated checkList:", checkList);
+
+        checkList.forEach(function (check) {
+            check.click();
+        });
+    } else {
+        checkList.forEach(function (check) {
+            check.click();
+        });
+    }
+
+}
+
+function autoComment() {
+    const formParts = document.getElementsByClassName("rc-FormPart");
+    for (const form of formParts) {
+        const t = form.getElementsByClassName(
+            "c-peer-review-submit-textarea-field"
+        );
+        for (let l of t) {
+            l.click();
+            l.focus();
+            document.execCommand("insertText", false, "OK");
         }
     }
-        }}
-        main();
+}
+
+function autoYesNo() {
+    var checkList2 = document.querySelectorAll('.rc-YesNoFormPart>div>div:first-child>label');
+    console.log("autoYesNo checkList2:", checkList2);
+
+    checkList2.forEach(function (check) {
+        check.click();
+    });
+}
+
+const grade = async () => {
+    const enabled1 = await getFromStorage('CRS_3', '');
+    if(enabled1==true)
+    {
+        autoOption();
+        autoYesNo();
+        autoComment();
+    }}
+
+    document.addEventListener('DOMContentLoaded', setTimeout(grade(),1000));

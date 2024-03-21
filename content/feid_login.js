@@ -1,5 +1,5 @@
 const url = window.location.href;
-const loginBtn = document.getElementsByClassName("btn-primary");
+const loginBtn = document.getElementsByClassName("btn-outline-primary");
 const main = async () => {
 	const fap1_ = await getFromStorage('FAP_1', '');
 	const cms1_ = await getFromStorage('CMS_1', '');

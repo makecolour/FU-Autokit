@@ -12,8 +12,8 @@ const main = async () => {
 	const checkK19 = (url.includes("feid.fpt.edu.vn")&&gen_==true)
 	if(checkFap||checkCms||checkCrs||checkK19)
 	{
-		const emailEl = document.querySelector('.wLBAL[data-email="' + email + '"]');
-		const emailEl1 = document.querySelector('.wLBAL[data-email="' + email.toLowerCase() + '"]');
+		const emailEl = document.querySelector('.yAlK0b[data-email="' + email + '"]');
+		const emailEl1 = document.querySelector('.yAlK0b[data-email="' + email.toLowerCase() + '"]');
 		if (emailEl) {
 			// click on email
 			emailEl.click();
