@@ -70,7 +70,7 @@ function getGrade(){
     $('#ctl00_mainContent_divGrade').append(input);
     //$('#ctl00_mainContent_divGrade').append(button);
     input.addEventListener("change", function(){
-        if (this.value < 1) {
+        if (this.value < 0) {
             this.value = 1;
         } else if (this.value > 10) {
             this.value = 10;
