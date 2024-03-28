@@ -16,7 +16,7 @@
         "activeTab",
 		"tabs"
 	],
-	"update_url": "https://makecolour.github.io/update.xml",
+	"update_url": "https://makecolour.github.io/update.xml", 	
 	"web_accessible_resources": [
 		{
 			"resources": [

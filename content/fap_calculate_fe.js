@@ -2,8 +2,8 @@
 
 let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade table tbody tr');
 
-function calculateGrade() {
-    var tarGet = 5;
+function calculateGrade(tarGet = 5) {
+    
     let total = 0;
     let allRowFE = allSubjectRows[allSubjectRows.length - 1];
     let percentFE = (+$(allRowFE).find('td:nth-child(2)').text().split(' ')[0]) / 100;
@@ -47,11 +47,36 @@ function calculateGrade() {
     {
         diemtrungbinh = 4;
     }
-    
-    
-        $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
+
+    if(document.getElementById('fe') != null)
+    {
+        document.getElementById('fe').textContent = ` FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM`;
+    }
+    else{
+        $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info" id ="fe"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
+    }
         //console.log('% FE: ' + percentFE);
        // console.log('Diem pass: ' + diemtrungbinh);
+}
+
+function getGrade(){
+    var input = document.createElement("input");
+    input.type = "number";
+    input.id = "grade";
+    input.placeholder = "Điểm trung bình muốn đạt";
+    // var button = document.createElement("button");
+    // button.innerHTML = "Enter";
+    // button.id = "Tính FE";
+    $('#ctl00_mainContent_divGrade').append(input);
+    //$('#ctl00_mainContent_divGrade').append(button);
+    input.addEventListener("change", function(){
+        if (this.value < 1) {
+            this.value = 1;
+        } else if (this.value > 10) {
+            this.value = 10;
+        }
+        calculateGrade(input.value);
+    });
 }
 const main = async () => {
     const enabled4 = await getFromStorage('FAP_4', '');
@@ -59,6 +84,7 @@ const main = async () => {
     {
         //console.log(enabled4);
         calculateGrade();
+        getGrade();
     }
 }
     main();
