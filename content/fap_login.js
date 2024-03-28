@@ -9,7 +9,7 @@ chrome.storage.sync.get(["FAP_1"]).then((enable)=>{
 
 chrome.storage.sync.get(["K"]).then((gen)=>{
 	Object.assign(k, gen);
-	console.log(k.K);
+	//console.log(k);
 })
 chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
 	//console.log("Campus: " + campus.STUDENT_CAMPUS);
@@ -34,8 +34,13 @@ function DoLogin() {
 			console.log(k)
 			Login();
 		}
-		else{
+		else if(k.K==true && settings.STUDENT_CAMPUS != ""){
 			k19Login();
+		}
+		else{
+			console.log(k.K);
+			console.log(settings.STUDENT_CAMPUS);
+		
 		}
 	}
 

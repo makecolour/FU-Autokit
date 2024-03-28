@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const crs3_ = await getFromStorage('CRS_3', '');
 	const flm1_ = await getFromStorage('FLM_1', '');
 	const flm2_ = await getFromStorage('FLM_2', '');
+	const flm3_ = await getFromStorage('FLM_3', '');
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
 	const theme = await getFromStorage('THEME', '');
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	crs3.checked = crs3_;
 	flm1.checked = flm1_;
 	flm2.checked = flm2_;
+	flm3.checked = flm3_;
 	dng1.checked = dng1_;
 	lbr1.checked = lbr1_;
 	update(theme);

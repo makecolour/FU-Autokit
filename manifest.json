@@ -121,7 +121,7 @@
 			"css": [
 				"./utils/css/autocomplete.css"
 			]
-			,"world": "MAIN"
+			//,"world": "MAIN"
 		},
 		{
 			"matches": [

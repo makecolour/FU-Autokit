@@ -1,3 +1,5 @@
+const data = {};
+const enabled = {};
 function checkPg(now) {
     if (now == "https://flm.fpt.edu.vn/gui/role/student/ListCurriculum") {
         return 0;
@@ -110,92 +112,86 @@ function autocomplete(inp, arr) {
     });
 }
 
-    var subjects;
-    var subjectsName;
-    var listCurriculum;
-    var listCurriculumName;
 
-    chrome.storage.sync.get(['subjects'], function(result) {
-        console.log('Value currently is ' + result.subjects);
-      });
-
-    chrome.storage.sync.get("subjectsName", function (obj) {
-        Object.assign(subjectsName, obj.subjectsName);
-    });
-    chrome.storage.sync.get("listCurriculum", function (obj) {
-        Object.assign(listCurriculum, obj.listCurriculum);
-    });
-    chrome.storage.sync.get("listCurriculumName", function (obj) {
-        Object.assign(listCurriculumName, obj.listCurriculumName);
-    });
-
-    console.log(subjects);
-    console.log(subjectsName);
 var id = ["txtSubCode", "txtKeyword"];
+
+async function fetchData() {
+    let enable = await chrome.storage.sync.get(['FLM_3']);
+    Object.assign(enabled, enable);
+    let all = await chrome.storage.local.get(['subjects', 'subjectsName', 'listCurriculum', 'listCurriculumName']);
+    Object.assign(data, all);
+}
+fetchData().then(() => {
+    if(enabled.FLM_3 == true){
+        if (checkPg(window.location.href) == 0) {
+            const category = document.getElementById("ddlSeachOn");
+            const fill = document.getElementById("txtKeyword");
+            autocomplete(fill, data.listCurriculum);
+            //console.log(category);
+            category.addEventListener('change', function () {
+                fill.setAttribute("autocomplete", "off");
+                if (category.value == 'Code') {
+                    //console.log(listCurriculum);
+                    autocomplete(fill, data.listCurriculum);
+                    //console.log("Code");
+                }
+                else if (category.value == 'Name') {
+                    //console.log(listCurriculumName);
+                    autocomplete(fill, data.listCurriculumName);
+                    //console.log("Name");
+                }
+                else {
+                    console.error("changer");
+                }
+            });
+        }
+        else if (checkPg(window.location.href) == 1) {
+            const category = document.getElementById("ddlSeachOn");
+            const fill = document.getElementById("txtSubCode");
+            autocomplete(fill, data.subjects);
+            //console.log(category);
+            category.addEventListener('change', function () {
+                fill.setAttribute("autocomplete", "off");
+                if (category.value == "Code") {
+                    autocomplete(fill, data.subjects);
+                    //console.log("Code");
+                }
+                else if (category.value == "Name") {
+                    autocomplete(fill, data.subjectsName);
+                   // console.log("Name");
+                }
+                else {
+                    //console.error("changer");
+                }
+            });
+        
+        }
+        else if (checkPg(window.location.href) == 2) {
+            if (document.getElementById("txtSubCode")) {
+                const fill = document.getElementById("txtSubCode");
+                fill.setAttribute("autocomplete", "off");
+                autocomplete(fill, data.subjects);
+            }
+            else if (document.getElementById("txtKeyword")) {
+                const fill = document.getElementById("txtKeyword");
+                fill.setAttribute("autocomplete", "off");
+                autocomplete(fill, data.subjects);
+            }
+            else {
+                //console.error("fill");
+            }
+        }
+        else {
+            //console.error("checcc");
+           // console.error(checkPg);
+        }
+    }
+    else{
+        console.error("Disabled");
+    }
+});
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 
 
-if (checkPg(window.location.href) == 0) {
-    const category = document.getElementById("ddlSeachOn");
-    const fill = document.getElementById("txtKeyword");
-    autocomplete(fill, listCurriculum);
-    //console.log(category);
-    category.addEventListener('change', function () {
-        fill.setAttribute("autocomplete", "off");
-        if (category.value == 'Code') {
-            //console.log(listCurriculum);
-            autocomplete(fill, listCurriculum);
-            //console.log("Code");
-        }
-        else if (category.value == 'Name') {
-            //console.log(listCurriculumName);
-            autocomplete(fill, listCurriculumName);
-            //console.log("Name");
-        }
-        else {
-            console.error("changer");
-        }
-    });
-}
-else if (checkPg(window.location.href) == 1) {
-    const category = document.getElementById("ddlSeachOn");
-    const fill = document.getElementById("txtSubCode");
-    autocomplete(fill, subjects);
-    //console.log(category);
-    category.addEventListener('change', function () {
-        fill.setAttribute("autocomplete", "off");
-        if (category.value == "Code") {
-            autocomplete(fill, subjects);
-            //console.log("Code");
-        }
-        else if (category.value == "Name") {
-            autocomplete(fill, subjectsName);
-           // console.log("Name");
-        }
-        else {
-            //console.error("changer");
-        }
-    });
-
-}
-else if (checkPg(window.location.href) == 2) {
-    if (document.getElementById("txtSubCode")) {
-        const fill = document.getElementById("txtSubCode");
-        fill.setAttribute("autocomplete", "off");
-        autocomplete(fill, subjects);
-    }
-    else if (document.getElementById("txtKeyword")) {
-        const fill = document.getElementById("txtKeyword");
-        fill.setAttribute("autocomplete", "off");
-        autocomplete(fill, subjects);
-    }
-    else {
-        //console.error("fill");
-    }
-}
-else {
-    //console.error("checcc");
-   // console.error(checkPg);
-}
 

@@ -12,6 +12,7 @@ const crs2 = document.getElementById("crsGetLink");
 const crs3 = document.getElementById("crsGrade");
 const flm1 = document.getElementById("flmLogin");
 const flm2 = document.getElementById("flmViet");
+const flm3 = document.getElementById("flmFill");
 const dng1 = document.getElementById("dngFill");
 const lbr1 = document.getElementById("lbrFill");
 
@@ -77,6 +78,10 @@ flm1.addEventListener('change', function () {
 flm2.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('FLM_2', state);
+})
+flm3.addEventListener('change', function () {
+    var state = this.checked;
+    setToStorage('FLM_3', state);
 })
 
 dng1.addEventListener('change', function () {
