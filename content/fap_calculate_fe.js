@@ -3,7 +3,6 @@
 let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade table tbody tr');
 
 function calculateGrade(tarGet = 5) {
-    
     let total = 0;
     let allRowFE = allSubjectRows[allSubjectRows.length - 1];
     let percentFE = (+$(allRowFE).find('td:nth-child(2)').text().split(' ')[0]) / 100;
@@ -31,6 +30,7 @@ function calculateGrade(tarGet = 5) {
             +$(value).text() == 0) {
             continue;
         }
+       
         // bôi xanh những giá trị đã get về
         $(item).css({ "color": "green", "font-weight": "bold" });
         $(allRowFE).css({ "color": "green", "font-weight": "bold" });
@@ -78,6 +78,7 @@ function getGrade(){
         calculateGrade(input.value);
     });
 }
+
 const main = async () => {
     const enabled4 = await getFromStorage('FAP_4', '');
     if(enabled4==true)
