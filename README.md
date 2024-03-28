@@ -20,10 +20,10 @@
    - Tự động Grade on Groupmates [^6]
 4. [FLM](https://flm.fpt.edu.vn/)
    - Tự động đăng nhập
-   - Thêm gợi ý khi nhập mã môn
-   - Tự động chuyển sang tiếng Việt 
+   - Tự động chuyển sang tiếng Việt
+   - Thêm gợi ý khi tìm kiếm mã môn/ngành học
 5. [Library](https://library.fpt.edu.vn/)
-   - Tự động đăng nhập và điền tài khoản - mật khẩu
+   - Tự động điền tài khoản - mật khẩu
 6. [DNG](https://dng.fpt.edu.vn/Invoice)
    - Tự động điền mã số sinh viên
 7. [Coursera](https://www.coursera.org/)
@@ -70,7 +70,7 @@ Và còn nhiều tính năng khác chờ bạn khám phá...
 
 ![mNBmp5dWpC](https://github.com/makecolour/FU-Autokit/assets/79389129/b93423de-0c0a-4865-9e91-cbea1c949e21)
 
-> Tip: Bạn cũng có thể chuyển sang các trang của FPTU qua extension này (Các nút như FAP, CMS, vv.)
+> Tip 1: Bạn cũng có thể chuyển sang các trang của FPTU qua extension này (Các nút như FAP, CMS, vv.)
    ![cknIKJvUh3](https://github.com/makecolour/FU-Autokit/assets/79389129/7f45aa65-acf8-4cff-a2e7-e66d9ef3e502)
 
 > Tip 2: Bạn cũng có thể chọn giao diện cho Extension bằng hình bánh răng ở góc và chọn giao diện mong muốn (Sáng / Tối / Hệ thống)
@@ -90,6 +90,11 @@ Và còn nhiều tính năng khác chờ bạn khám phá...
 
 **Bước 6**: Và thế là xong, chúc bạn có thời gian đẹp với FU-Autokit 😎. 
 
+>Tip 3: Bạn hoàn toàn có thể tắt pop-up của Tool CMS bằng cách nhấn phím `V` trên bàn phím ![image](https://github.com/makecolour/FU-Autokit/assets/62919926/0ed1a286-a4bd-4381-b72a-86e029122777)
+
+>Tip 4: Nếu có chức năng không hoạt động, hãy thử reload lại trang
+
+
 ## Tác giả
 
 Tổng hợp và phát triển bởi [Monserrat](mailto:mo.nstrousitification@googlemail.com?subject=FPT%20Autokit) đến từ [Chillin Studio](https://www.facebook.com/PresentedbyChillinStudio)
@@ -98,7 +103,7 @@ Tổng hợp và phát triển bởi [Monserrat](mailto:mo.nstrousitification@go
 Bạn có thể thoải mái đóng góp cho dự án. Bất kể đóng góp nào đến dự án nào đều được trân trọng.
 
 ## License
-Dự án được License với license Apache-2.0 - Xem thêm chi tiết tại [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
+Dự án được bảo vệ bởi license Apache-2.0 - Xem thêm chi tiết tại [LICENSE](https://github.com/makecolour/FU-Autokit/blob/main/LICENSE).
 
 [^1]: Credit goes to [SonNVQ](https://chromewebstore.google.com/detail/fap-auto-login/hcekfkjfkcfoeohaponopofdhogpecif?hl=vi)
 [^2]: Credit goes to [JSClub](https://github.com/fu-js/FPTU-Toolkits?tab=readme-ov-file#usage)
