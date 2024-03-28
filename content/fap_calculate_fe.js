@@ -64,12 +64,13 @@ function getGrade(){
     input.type = "number";
     input.id = "grade";
     input.placeholder = "Điểm trung bình muốn đạt";
-    // var button = document.createElement("button");
-    // button.innerHTML = "Enter";
-    // button.id = "Tính FE";
+    var button = document.createElement("button");
+    button.innerHTML = "Submit";
+    button.id = "Tính FE";
     $('#ctl00_mainContent_divGrade').append(input);
-    //$('#ctl00_mainContent_divGrade').append(button);
-    input.addEventListener("change", function(){
+    $('#ctl00_mainContent_divGrade').append(button);
+    button.addEventListener("click", function(e){
+        e.preventDefault();
         if (this.value < 0) {
             this.value = 1;
         } else if (this.value > 10) {
