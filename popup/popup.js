@@ -74,7 +74,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 		passwordInput.value ="";
 	}
 	
-
+	let version = chrome.runtime.getManifest().version;
+	document.getElementById('version').textContent = version;
+	
 	gen.checked = gen_;
 	fap1.checked = fap1_;
 	fap2.checked = fap2_;

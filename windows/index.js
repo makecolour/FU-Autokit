@@ -11,6 +11,9 @@ copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(linkBtn.value);
 })
 
+let version = chrome.runtime.getManifest().version;
+document.getElementById('ver').textContent = version;
+
 const body = document.getElementById("body")
 
 function update(value="light"){
