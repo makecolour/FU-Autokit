@@ -71,10 +71,10 @@ function getGrade(){
     $('#ctl00_mainContent_divGrade').append(button);
     button.addEventListener("click", function(e){
         e.preventDefault();
-        if (this.value < 0) {
-            this.value = 1;
-        } else if (this.value > 10) {
-            this.value = 10;
+        if (input.value < 1) {
+            input.value = 1;
+        } else if (input.value > 10) {
+            input.value = 10;
         }
         calculateGrade(input.value);
     });
