@@ -15,8 +15,6 @@ if((url.includes("fap.fpt.edu.vn")&&gen_==false&&fap1_==true)||(url.includes("cm
     //     const nextBtn = document.querySelector(".VfPpkd-Jh9lGc");
     //     nextBtn.click();
     // },2000)
-    
 }
-
 }
 main();

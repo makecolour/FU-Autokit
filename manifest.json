@@ -303,6 +303,15 @@
 			"./utils/storage.js",
 			"./content/coursera_grade.js"
 		]
+		},
+		{
+			"matches": [
+				"*://fap.fpt.edu.vn/FrontOffice/SubjectFees.aspx"
+			],
+			"js": [
+				"./utils/storage.js",
+				"./content/fap_getcourses.js"
+			]
 		}
 	],
 	
