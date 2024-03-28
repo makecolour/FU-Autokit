@@ -30,7 +30,7 @@ function appendMenu(){
     var divBlock = `<div style="z-index: 99999;position: fixed;right: 8px;bottom: 8px;width: 230px;height: 35px;background-color: #d9dde8;border-radius: 6px;" id="menu"><p style=" font-size: 13px; color: #000000; padding: 8px 10px; text-align: center; " id="log"><a href="#" style="text-decoration: none" id ="key">Click here</a> to get key</p></div>`;
     if(got=="true")
     {
-       
+        
     }
     else{
         $("body").append(divBlock);
