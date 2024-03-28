@@ -141,7 +141,7 @@ fetchData().then(() => {
                     //console.log("Name");
                 }
                 else {
-                    console.error("changer");
+                    //console.error("changer");
                 }
             });
         }
