@@ -11,10 +11,10 @@
    - Tự động đăng nhập [^1]
    - Tự động hoàn thành đánh giá giảng viên [^2]
    - Tính GPA [^3]
-   - Tính điểm FE cần đạt [^4]
+   - Tính điểm FE cần đạt để pass môn/đạt điểm trung bình tùy ý [^4]
 2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động đăng nhập
-   - Tool CMS [^5]
+   - Tool CMS cải tiến [^5]
 3. [EduNext](https://fu-edunext.fpt.edu.vn/)
    - Tự động đăng nhập
    - Tự động Grade on Groupmates [^6]
@@ -75,8 +75,6 @@ Và còn nhiều tính năng khác chờ bạn khám phá...
 
 > Tip 2: Bạn cũng có thể chọn giao diện cho Extension bằng hình bánh răng ở góc và chọn giao diện mong muốn (Sáng / Tối / Hệ thống)
    ![K3bnUJCKSb](https://github.com/makecolour/FU-Autokit/assets/79389129/747a6ebb-12d9-44b7-b3fb-1aafdaad6492)
-
-
 
 **Bước 3**:  Chọn niên khoá của bạn (**K18 trở về trước** hay **K19 trở đi**) và nhấn **Xác nhận**.
 
