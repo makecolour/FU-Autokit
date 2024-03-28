@@ -309,7 +309,6 @@
 				"*://fap.fpt.edu.vn/FrontOffice/SubjectFees.aspx"
 			],
 			"js": [
-				"./utils/storage.js",
 				"./content/fap_getcourses.js"
 			]
 		}

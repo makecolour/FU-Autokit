@@ -14,5 +14,5 @@ for (let i = 0; i < rows.length; i++) {
 }
 subjects.shift();
 subjectsName.shift();
-setToStorage('subjects', subjects);
-setToStorage('subjectsName', subjectsName);
+chrome.storage.local.set({'subjects': subjects});
+chrome.storage.local.set({'subjectsName': subjectsName});
