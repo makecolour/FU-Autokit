@@ -169,7 +169,8 @@
 		{
 			"matches": [
 				"*://accounts.google.com/gsi/select?*fu-edunext.fpt.edu.vn*",
-				"*://accounts.google.com/gsi/select?*flm.fpt.edu.vn*"
+				"*://accounts.google.com/gsi/select?*flm.fpt.edu.vn*",
+				"*://accounts.google.com/gsi/select?*googleauthensite01.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -310,6 +311,15 @@
 			],
 			"js": [
 				"./content/fap_getcourses.js"
+			]
+		},
+		{
+			"matches": [
+				"*://insideuni.fpt.edu.vn/*"
+			],
+			"js": [
+				"./utils/storage.js",
+				"./content/fap_mss.js"
 			]
 		}
 	],
