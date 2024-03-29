@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const lbr1_ = await getFromStorage('LBR_1', '');
 	const theme = await getFromStorage('THEME', '');
 
-	if (campus!=0&&campus!=3&&campus!=4&&campus!=5&&campus!=6&&campu!=7) {
+	if (campus!=0&&campus!=3&&campus!=4&&campus!=5&&campus!=6&&campus!=7) {
 		campusInput.value=0;
 	}
 	else{
