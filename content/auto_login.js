@@ -8,7 +8,7 @@ const main = async () => {
     const flm1_ = await getFromStorage('FLM_1', '');
     const gen_ = await getFromStorage('K', '');
 
-if((url.includes("fap.fpt.edu.vn")&&gen_==false&&fap1_==true)||(url.includes("cmshn.fpt.edu.vn")&&gen_==false&&cms1_==true)||(url.includes("www.coursera.org")&&gen_==false&&crs1_==true)||(url.includes("flm.fpt.edu.vn")&&flm1_==true)||(url.includes("fu-edunext.fpt.edu.vn")&&edn1_==true)||(url.includes("feid.fpt.edu.vn")&&gen_==true))
+if((url.includes("fap.fpt.edu.vn")&&gen_==false&&fap1_==true)||(url.includes("cmshn.fpt.edu.vn")&&gen_==false&&cms1_==true)||(url.includes("www.coursera.org")&&gen_==false&&crs1_==true)||(url.includes("flm.fpt.edu.vn")&&flm1_==true)||(url.includes("fu-edunext.fpt.edu.vn")&&edn1_==true)||(url.includes("feid.fpt.edu.vn")&&gen_==true)||(url.includes("googleauthensite01.fpt.edu.vn")&&fap1_==true))
 {
     document.querySelector("#identifierId").setAttribute('value', email);
     // setTimeout(() => {

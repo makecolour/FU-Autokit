@@ -76,7 +76,8 @@
 				"*://accounts.google.com/v3/signin/identifier?*fu-edunext.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*www.coursera.org*",
-				"*://accounts.google.com/v3/signin/identifier?*feid.fpt.edu.vn*"
+				"*://accounts.google.com/v3/signin/identifier?*feid.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*googleauthensite01.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
