@@ -24,9 +24,7 @@
 				"/windows/index.js",
 				"/windows/indexcss.css"
 			],
-			"matches": [
-				"<all_urls>"
-			]
+			"matches": ["*://www.coursera.org/*"]
 		},
 		{
 			"resources": ["./service/shub_inject_script.js"],
