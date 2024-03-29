@@ -50,7 +50,6 @@
 			"js": [
 				"./content/fap_login.js"
 			]
-			//,"world":"MAIN"
 		},
 		{
 			"matches": [
@@ -61,7 +60,7 @@
 				"./utils/storage.js",
 				"./content/cms_login.js"
 			]
-			//,"world": "MAIN"
+			
 		},
 		{
 			"matches": [
@@ -95,7 +94,7 @@
 				"./utils/storage.js",
 				"./content/flm_login.js"
 			]
-			//,"world": "MAIN"
+			
 		},
 		{
 			"matches": [
@@ -106,7 +105,7 @@
 				"./utils/jquery.js",
 				"./content/flm_setlang.js"
 			]
-			//,"world": "MAIN"
+			
 		},
 		{
 			"matches": [
@@ -121,7 +120,7 @@
 			"css": [
 				"./utils/css/autocomplete.css"
 			]
-			//,"world": "MAIN"
+			
 		},
 		{
 			"matches": [
@@ -131,7 +130,6 @@
 				"./utils/storage.js",
 				"./content/library_login.js"
 			]
-			//,"world": "MAIN"
 		},
 		{
 			"matches": [
@@ -194,7 +192,6 @@
 				"./utils/storage.js",
 				"./content/edunext_redirect.js"
 			]
-			//,"world": "MAIN"
 		},
 
 		{
@@ -213,7 +210,6 @@
 
 			],
 			"js": [
-				// "./utils/storage.js",
 				"./utils/jquery.js",
 				"./content/cms_tool.js"
 			]
@@ -235,9 +231,7 @@
 			"js": [
 				"./utils/storage.js",
 				"./content/edunext_process.js"
-			]//,
-			//"world": "MAIN",
-			//"run_at": "document_start"
+			]
 		},
 		{
 			"matches": [
@@ -285,7 +279,6 @@
 				"./utils/storage.js",
 				"./content/coursera_login.js"
 			]
-			//,"world":"MAIN"
 		},
 		{
 			"matches": [

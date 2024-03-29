@@ -24,9 +24,9 @@ function calculateGrade(tarGet = 5) {
             weight = $(element).find('td:nth-child(2)');
         }
         //gặp những cái phần tử như này thì không get điểm
-        if ($(item).text().includes("FE") ||
-            $(item).text().includes("Final") ||
-            $(item).text().includes("Total") ||
+        if ($(item).text().toLowerCase().includes("fe") ||
+            $(item).text().toLowerCase().includes("final") ||
+            $(item).text().toLowerCase().includes("total") ||
             +$(value).text() == 0) {
             continue;
         }
