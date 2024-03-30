@@ -234,7 +234,6 @@
 		},
 		{
 			"matches": [
-				"*://fap.fpt.edu.vn/Grade/StudentTranscript.aspx",
 				"*://fap.fpt.edu.vn/Grade/StudentTranscript.aspx"
 			],
 			"css": [
@@ -303,6 +302,14 @@
 			],
 			"js": [
 				"./content/fap_getcourses.js"
+			]
+		},
+		{
+			"matches": [
+				"*://fap.fpt.edu.vn/FrontOffice/StudentCurriculum.aspx"
+			],
+			"js": [
+				"./content/fap_getbit.js"
 			]
 		},
 		{

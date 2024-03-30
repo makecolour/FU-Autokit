@@ -340,9 +340,9 @@ function searchStringInArray (str, strArray) {
   }
   return -1;
 }
-
+const bit = document.querySelector("#ctl00_mainContent_lblRollNumber > span.label.label-info").innerHTML;
 const main = async () => {
-  const bit = document.querySelector("#ctl00_mainContent_lblRollNumber > span.label.label-info").innerHTML;
+  
   const list = await chrome.storage.local.get('listCurriculum');
   console.log(list);
   if(searchStringInArray(bit, list.listCurriculum)==-1)
