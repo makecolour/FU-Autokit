@@ -236,7 +236,7 @@ const getNonGPAList = () => {
         list = DefaultNonGPA;
         setNonGPAList(list);
       }
-      console.log("GET NON_GPA", list);
+      //console.log("GET NON_GPA", list);
       nonGPAList = list;
       res(nonGPAList);
     });
@@ -334,7 +334,23 @@ const renderNonGPAEditor = () => {
   return root;
 };
 
+function searchStringInArray (str, strArray) {
+  for (var j=0; j<strArray.length; j++) {
+      if (strArray[j].match(str)) return j;
+  }
+  return -1;
+}
+
 const main = async () => {
+  const bit = document.querySelector("#ctl00_mainContent_lblRollNumber > span.label.label-info").innerHTML;
+  const list = await chrome.storage.local.get('listCurriculum');
+  console.log(list);
+  if(searchStringInArray(bit, list.listCurriculum)==-1)
+  {
+    list.listCurriculum.push(bit);
+    chrome.storage.local.set({'listCurriculum': list.listCurriculum});
+    console.log("Updated");
+  }
   const fap3_ = await getFromStorage('FAP_3', '');
   await getNonGPAList();
   const mainGrade = parseGrade(gradeTablesDOM[0]);

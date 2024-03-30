@@ -3,7 +3,7 @@
 	"name": "FU Autokit",
 	"author": "Chillin Studio",
 	"version": "2.2",
-	"description": "“Hỡi đồng bào cả nước. Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.",
+	"description": "FU Autokit is a Chrome extension that help FPT University students by automating various user’s interactions.",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
@@ -16,7 +16,7 @@
         "activeTab",
 		"tabs"
 	],
-	"update_url": "https://makecolour.github.io/update.xml", 	
+
 	"web_accessible_resources": [
 		{
 			"resources": [
