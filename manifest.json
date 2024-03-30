@@ -7,6 +7,7 @@
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
+	"default_locale": "vi",
 	"options_page": "./popup/popup.html",
 	"homepage_url": "https://github.com/makecolour/FU-Autokit", 
 	"permissions": [
@@ -16,7 +17,6 @@
         "activeTab",
 		"tabs"
 	],
-
 	"web_accessible_resources": [
 		{
 			"resources": [
