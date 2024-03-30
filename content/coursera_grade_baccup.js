@@ -1,48 +1,47 @@
 const grade = async () => {
     const enabled1 = await getFromStorage('CRS_3', '');
-    if(enabled1==true)
-    {
+    if (enabled1 == true) {
         autoOption();
         autoYesNo();
         autoComment();
-    }}
+    }
+}
 
-setTimeout(grade(),3000);
+setTimeout(grade(), 3000);
 
 function autoOption() {
 
     setTimeout(function () {
-            var checkList = document.querySelectorAll('.rc-OptionsFormPart>div:last-child'); 
-            
-            // if (checkList.length === 0) {
-            //     console.log("No elements found for autoOption");
-            //     return;
-            // }
-            
-            checkList.forEach(function (choice) {
-                var maxPts=0;
-                choice.childNodes.forEach(function (check){
-                    const label = check.childNodes[0].childNodes[1].childNodes[0].childNodes[0].innerHTML.charAt(0);
-                    const input = check.childNodes[0].childNodes[0];
-                    if(label>maxPts)
-                    {
-                        maxPts=label;
-                        input.click();
-                    }
-                    // console.log(check.childNodes[0].childNodes[1].childNodes[0].childNodes[0])
-                    // console.log(label)
-                })
+        var checkList = document.querySelectorAll('.rc-OptionsFormPart>div:last-child');
 
-                //console.log(checkList)
-                
-                //check.click();
-            });
-            
+        // if (checkList.length === 0) {
+        //     console.log("No elements found for autoOption");
+        //     return;
+        // }
 
-        }, 3000);
-            
-    }
-    
+        checkList.forEach(function (choice) {
+            var maxPts = 0;
+            choice.childNodes.forEach(function (check) {
+                const label = check.childNodes[0].childNodes[1].childNodes[0].childNodes[0].innerHTML.charAt(0);
+                const input = check.childNodes[0].childNodes[0];
+                if (label > maxPts) {
+                    maxPts = label;
+                    input.click();
+                }
+                // console.log(check.childNodes[0].childNodes[1].childNodes[0].childNodes[0])
+                // console.log(label)
+            })
+
+            //console.log(checkList)
+
+            //check.click();
+        });
+
+
+    }, 3000);
+
+}
+
 
 function autoComment() {
     const formParts = document.getElementsByClassName("rc-FormPart");

@@ -2,20 +2,20 @@ const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 const settings = {};
 const enabled = {};
 const k = {};
-chrome.storage.sync.get(["FAP_1"]).then((enable)=>{
+chrome.storage.sync.get(["FAP_1"]).then((enable) => {
 	Object.assign(enabled, enable);
 	//console.log(enabled.FAP_1);
 })
 
-chrome.storage.sync.get(["K"]).then((gen)=>{
+chrome.storage.sync.get(["K"]).then((gen) => {
 	Object.assign(k, gen);
 	//console.log(k);
 })
 chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
 	//console.log("Campus: " + campus.STUDENT_CAMPUS);
 	Object.assign(settings, campus);
-	if(enabled.FAP_1==true){
-		
+	if (enabled.FAP_1 == true) {
+
 		FixFAPLoginError_12_22();
 		DoLogin();
 	}
@@ -28,19 +28,18 @@ function CheckLoggedInUser() {
 }
 
 function DoLogin() {
-	if(CheckLoggedInUser()==false)
-	{
-		if(k.K==false && settings.STUDENT_CAMPUS != ""){
+	if (CheckLoggedInUser() == false) {
+		if (k.K == false && settings.STUDENT_CAMPUS != "") {
 			console.log(k)
 			Login();
 		}
-		else if(k.K==true && settings.STUDENT_CAMPUS != ""){
+		else if (k.K == true && settings.STUDENT_CAMPUS != "") {
 			k19Login();
 		}
-		else{
+		else {
 			console.log(k.K);
 			console.log(settings.STUDENT_CAMPUS);
-		
+
 		}
 	}
 
@@ -76,7 +75,7 @@ function Login() {
 	}
 }
 
-function k19Login(){
+function k19Login() {
 	const footer = document.getElementById("cssTable");
 	footer.insertAdjacentHTML(
 		"beforeend",

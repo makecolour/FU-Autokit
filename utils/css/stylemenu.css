@@ -2,14 +2,22 @@ body {
     width: 400px;
 }
 
+label {
+    margin-bottom: 2px;
+}
+
+div {
+    margin-bottom: 5px;
+}
+
 .myDiv {
     margin-left: 4%;
     margin-right: 4%;
-    
+
 }
 
-.dropdown-item:active{
-    background-color: rgb(242,112,27);
+.dropdown-item:active {
+    background-color: rgb(242, 112, 27);
 }
 
 #btn {
@@ -66,76 +74,77 @@ a {
     justify-content: center;
 }
 
-.navbar{
-    margin: 15px 0px;
+.navbar {
+    margin: 8px 0px;
 }
 
-.btn-group{
+.btn-group {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    border: 1.5px solid rgb(242,112,27);
+    border: 1.5px solid rgb(242, 112, 27);
 }
 
-.btn-group:hover{
+.btn-group:hover {
     border: 0px;
 }
 
-.settingSwitch{
+.settingSwitch {
     width: 100%;
     margin-left: 5%;
 }
 
-.dropdown-item-text{
+.dropdown-item-text {
     text-align: center;
 }
+
 .dropdown-menu {
     width: max-content;
 }
 
-.saveBtn:focus{
+.saveBtn:focus {
     background-color: rgb(242, 112, 27)
 }
 
-.saveBtn:hover{
+.saveBtn:hover {
     background-color: white;
     border-color: rgb(242, 112, 27);
     color: rgb(242, 112, 27);
 }
 
-.saveBtn:active{
+.saveBtn:active {
     background-color: rgb(242, 112, 27);
 }
 
-.saveBtn{
+.saveBtn {
     margin-top: 5px;
     background-color: rgb(242, 112, 27);
     border-color: white;
 }
 
 
-.genSwitch{
+.genSwitch {
     scale: 200%;
     margin: 0 15px;
 }
 
-.gen{
+.gen {
     color: rgb(242, 112, 27);
     font-weight: bold;
 }
 
-#K18{
+#K18 {
     text-align: right;
     padding: 0 10px;
 }
 
-#K19{
+#K19 {
     text-align: left;
     padding: 0 10px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,45 +159,47 @@ a {
     padding-inline-start: 1em;
 }
 
-.settingBtn img{
+.settingBtn img {
     width: 30px;
     height: 30px;
 }
 
-.settingBtn{
+.settingBtn {
     padding-right: 4px;
 }
 
 
-.theme{
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0, 0,0 ,0);
-    color: rgb(242,112,27);
+.theme {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgb(242, 112, 27);
     padding: 4px 4px;
 }
 
-.theme:hover{
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0, 0,0 ,0);
+.theme:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
 }
 
 .btn.show {
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0, 0,0 ,0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
 }
 
-.dropdown-toggle-split:hover{
-    background-color: rgb(242,112,27);
+.dropdown-toggle-split:hover {
+    background-color: rgb(242, 112, 27);
     color: white;
 }
 
-.travelBtn{
-    border-right: 1.5px solid rgb(242,112,27);
+.travelBtn {
+    border-right: 1.5px solid rgb(242, 112, 27);
 }
-.travelBtn:hover{
-    background-color: rgb(242,112,27);
+
+.travelBtn:hover {
+    background-color: rgb(242, 112, 27);
     color: white;
 }
-.bg-primary{
-    background-color: rgb(242,112,27);
+
+.bg-primary {
+    background-color: rgb(242, 112, 27);
 }

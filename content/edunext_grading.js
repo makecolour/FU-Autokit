@@ -1,7 +1,6 @@
 const main = async () => {
     const enabled1 = await getFromStorage('EDN_2', '');
-    if(enabled1==true)
-    {
+    if (enabled1 == true) {
 
         setInterval(function () {
             for (let i = 1; i <= 100; i++) {

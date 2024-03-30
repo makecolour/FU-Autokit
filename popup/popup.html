@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-	<title>FPTU Autokit - Dev Edition</title>
+	<title>FPTU Autokit</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap -->
@@ -13,18 +13,26 @@
 	<script src="../utils/bootstrap.bundle.min.js"></script>
 </head>
 
-<body id = "body">
+<body id="body">
 	<div class="title">
 		<div class="name">FPTU Autokit</div>
 		<div class="settingBtn">
-			<button class="btn btn-secondary btn-sm theme" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-				<img src="/assets/gear.svg" alt="setting" id = "setting">
+			<button class="btn btn-secondary btn-sm theme" type="button" id="dropdownMenuButton"
+				data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<img src="/assets/gear.svg" alt="setting" id="setting">
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<li><h6 class="dropdown-item-text">Giao diện</h6></li>
-				<option class="dropdown-item bg" value="light">Sáng</option>
-				<option class="dropdown-item bg" value="dark">Tối</option>
-				<option class="dropdown-item bg" value="sys">Hệ thống</option>
+				<li>
+					<h6 class="dropdown-item-text" id="theme"></h6>
+				</li>
+				<option class="dropdown-item bg" id="light" value="light"></option>
+				<option class="dropdown-item bg" id="dark" value="dark"></option>
+				<option class="dropdown-item bg" id="sys" value="sys"></option>
+				<li>
+					<h6 class="dropdown-item-text" id="language"></h6>
+				</li>
+				<option class="dropdown-item lang" value="vi" id="vi"></option>
+				<option class="dropdown-item lang" value="en" id="en"></option>
 			</div>
 		</div>
 	</div>
@@ -32,33 +40,36 @@
 	<div class="nav justify-content-center">
 		<div class="btn-group FAP col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="FAP">FAP</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split d-inline-block" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split d-inline-block"
+				data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu w-200">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="fapLogin" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động đăng nhập</label>
+						<label class="form-check-label autologin" for="flexSwitchCheckChecked"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="fapFeedback" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động hoàn thành đánh giá giảng viên</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="feedback"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="fapGPA" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tính GPA</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="GPA"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="fapFE" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tính điểm FE cần đạt</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="FE"></label>
 					</div>
 				</li>
 			</ul>
@@ -66,21 +77,24 @@
 
 		<div class="btn-group Edu col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="EDN">Edunext</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="ednLogin" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động đăng nhập</label>
+						<label class="form-check-label autologin" for="flexSwitchCheckChecked"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="ednGrade" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động Grade on Groupmates</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="gradeongroupmates"></label>
 					</div>
 				</li>
 			</ul>
@@ -88,15 +102,18 @@
 
 		<div class="btn-group CMS col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="CMS">CMS</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="cmsLogin" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động đăng nhập</label>
+						<label class="form-check-label autologin" for="flexSwitchCheckChecked"></label>
 					</div>
 				</li>
 				<!-- <li>
@@ -110,27 +127,30 @@
 
 		<div class="btn-group Coursera col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="CRS">Coursera</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="crsLogin" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động đăng nhập</label>
+						<label class="form-check-label autologin" for="flexSwitchCheckChecked"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="crsGetLink" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Lấy link chấm điểm</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="getshareablelink"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="crsGrade" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động chấm điểm</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="autoreview"></label>
 					</div>
 				</li>
 			</ul>
@@ -138,28 +158,31 @@
 
 		<div class="btn-group FLM col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="FLM">FLM</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="flmLogin" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động đăng nhập</label>
+						<label class="form-check-label autologin" for="flexSwitchCheckChecked"></label>
 					</div>
 				</li>
-				
+
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="flmViet" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động chuyển sang tiếng Việt</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="autochangelang"></label>
 					</div>
 				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="flmFill" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Thêm gợi ý điền tên môn/ngành học</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="suggestion"></label>
 					</div>
 				</li>
 			</ul>
@@ -167,30 +190,36 @@
 
 		<div class="btn-group DNG col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="DNG">DNG</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="dngFill" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động điền mã sinh viên</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="autofillroll"></label>
 					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="btn-group LBR col-xs-2">
 			<button type="button" class="btn btn-sm travelBtn" id="LBR">Library</button>
-			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+			<button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+				aria-expanded="false" data-bs-auto-close="outside">
 				<span class="visually-hidden">Toggle Dropdown</span>
 			</button>
 			<ul class="dropdown-menu">
-				<li><h6 class="dropdown-item-text">Bật/tắt tính năng</h6></li>
+				<li>
+					<h6 class="dropdown-item-text onoff"></h6>
+				</li>
 				<li>
 					<div class="form-check form-switch settingSwitch">
 						<input class="form-check-input" type="checkbox" role="switch" id="lbrFill" checked>
-						<label class="form-check-label" for="flexSwitchCheckChecked">Tự động điền tài khoản-mật khẩu</label>
+						<label class="form-check-label" for="flexSwitchCheckChecked" id="autofillall"></label>
 					</div>
 				</li>
 			</ul>
@@ -199,51 +228,51 @@
 
 	<div class="navbar navbar-expand-lg bg-body-tertiary container" id="gen">
 
-		<div class="col-md-4 gen" id="K18">K18 trở xuống</div>
+		<div class="col-md-4 gen" id="K18"></div>
 		<div class="form-check form-switch col-xs-4 genSwitch">
-			<input class="form-check-input" type="checkbox" role="switch" id = "KKK">
+			<input class="form-check-input" type="checkbox" role="switch" id="KKK">
 		</div>
-		<div  class="col-md-4 gen" id="K19">K19 trở lên</div>
+		<div class="col-md-4 gen" id="K19"></div>
 	</div>
 
 	<form class="myDiv" id="check">
 
 		<div class="form-group">
-			<label for="Campus">Chọn cơ sở</label>
+			<label for="Campus" id="select"></label>
 			<select name="campus" id="campus" class="form-control form-control-sm">
-				<option value="0" selected="selected">Select Campus</option>
-				<option value="3">FU-Hòa Lạc</option>
-				<option value="4">FU-Hồ Chí Minh</option>
-				<option value="5">FU-Đà Nẵng</option>
-				<option value="6">FU-Cần Thơ</option>
-				<option value="7">FU-Quy Nhơn</option>
+				<option value="0" selected="selected"></option>
+				<option value="3"></option>
+				<option value="4"></option>
+				<option value="5"></option>
+				<option value="6"></option>
+				<option value="7"></option>
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="rollnum">Mã số sinh viên</label>
-			<input type="text" name="rollnum" class="form-control" id="rollnum" placeholder="Rollnumber">
+			<label for="rollnum"></label>
+			<input type="text" name="rollnum" class="form-control" id="rollnum">
 		</div>
 		<div class="form-group">
-			<label for="email">Địa chỉ mail</label>
-			<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+			<label for="email"></label>
+			<input type="email" class="form-control" name="email" id="email">
 		</div>
 		<div class="form-group">
-			<label for="password">Mật khẩu <a href="https://library.fpt.edu.vn/" target="_blank">Library</a></label>
-			<input type="password" class="form-control" name="password" id="password" placeholder="Password">
-			<input type="checkbox" id="show"> Hiện mật khẩu
+			<label for="password"></label>
+			<input type="password" class="form-control" name="password" id="password">
+			<input type="checkbox" id="show">
+			<label for="show"></label>
 		</div>
-		<button type="submit" class="btn btn-primary saveBtn">Lưu</button>
+		<button type="submit" class="btn btn-primary saveBtn"></button>
 	</form>
 
 	<br />
 
-	<div class="row"> <!--content footer-->
+	<div class="row">
+		<!--content footer-->
 		<div class="footer">
-			<p>A project by <a href="https://www.facebook.com/PresentedbyChillinStudio"
-					target="_blank">Chillin Studio</a></p>
-			<p>😎 Version <a href="https://github.com/makecolour/FU-Autokit" target="_blank" id="version"></a> 😎</p>
+			<p id="madeby"></p>
+			<p id="version"></p>
 		</div>
-
 	</div>
 
 	<script src="../utils/storage.js"></script>

@@ -1,3 +1,230 @@
 {
-    
+    "doFeedBack": {
+        "message": "The lecturer is proactive in teaching and guiding students",
+        "description": "FAP feedback"
+    },
+    "nonGPA": {
+        "message": "Subjects not included in GPA: ",
+        "description": "FAP GPA"
+    },
+    "addNonGPA": {
+        "message": "Add subject to the list:",
+        "description": "FAP GPA"
+    },
+    "addToList": {
+        "message": "Add to list:",
+        "description": "FAP GPA"
+    },
+    "inputCode": {
+        "message": "Enter subject code (no number needed)",
+        "description": "FAP GPA"
+    },
+    "default": {
+        "message": "Default",
+        "description": "FAP GPA"
+    },
+    "save": {
+        "message": "Save",
+        "description": "FAP GPA, Popup"
+    },
+    "year": {
+        "message": "Academic year",
+        "description": "FAP GPA"
+    },
+    "semester": {
+        "message": "Semester",
+        "description": "FAP GPA"
+    },
+    "subjects": {
+        "message": "Subjects",
+        "description": "FAP GPA"
+    },
+    "gpa": {
+        "message": "Grade point average",
+        "description": "FAP GPA"
+    },
+    "totalAvg": {
+        "message": "Total average score",
+        "description": "FAP GPA"
+    },
+    "feToPass": {
+        "message": "FE required to pass",
+        "description": "FAP FE"
+    },
+    "mark": {
+        "message": "Score",
+        "description": "FAP FE"
+    },
+    "avg": {
+        "message": "Desired average score",
+        "description": "FAP FE"
+    },
+    "calculate": {
+        "message": "Calculate",
+        "description": "FAP FE"
+    },
+    "review": {
+        "message": "Good",
+        "description": "CRS Grade"
+    },
+    "clickHere": {
+        "message": "Click here",
+        "description": "CMS Tool"
+    },
+    "toGetKey": {
+        "message": "to get key",
+        "description": "CMS Tool"
+    },
+    "copied": {
+        "message": "Copied",
+        "description": "Key copied successfully, press X to enter key and see the answer. Press V to close the answer popup. Press B if you want to retrieve the key again."
+    },
+    "theme": {
+        "message": "Theme",
+        "description": "Popup"
+    },
+    "light": {
+        "message": "Light",
+        "description": "Popup"
+    },
+    "dark": {
+        "message": "Dark",
+        "description": "Popup"
+    },
+    "system": {
+        "message": "System",
+        "description": "Popup"
+    },
+    "language": {
+        "message": "Language",
+        "description": "Popup"
+    },
+    "vi": {
+        "message": "Vietnamese",
+        "description": "Popup"
+    },
+    "en": {
+        "message": "English",
+        "description": "Popup"
+    },
+    "onoff": {
+        "message": "Turn on/off feature",
+        "description": "Popup"
+    },
+    "autoLogin": {
+        "message": "Automatic login",
+        "description": "Popup"
+    },
+    "feedback": {
+        "message": "Automatically complete lecturer evaluation",
+        "description": "Popup"
+    },
+    "gpa_1": {
+        "message": "Calculate grade point average",
+        "description": "Popup"
+    },
+    "fe": {
+        "message": "Calculate FE required to pass",
+        "description": "Popup"
+    },
+    "gradeongroupmates": {
+        "message": "Automatically Grade on Groupmates",
+        "description": "Popup"
+    },
+    "getshareablelink": {
+        "message": "Get grading link",
+        "description": "Popup"
+    },
+    "autoreview": {
+        "message": "Automatically grade",
+        "description": "Popup"
+    },
+    "autochangelang": {
+        "message": "Automatically change language",
+        "description": "Popup"
+    },
+    "suggestion": {
+        "message": "Add suggestion to fill in subject/major",
+        "description": "Popup"
+    },
+    "autofillroll": {
+        "message": "Automatically fill in student code",
+        "description": "Popup"
+    },
+    "autofillall": {
+        "message": "Automatically fill in account-password",
+        "description": "Popup"
+    },
+    "k18": {
+        "message": "K18 and below",
+        "description": "Popup"
+    },
+    "k19": {
+        "message": "K19 and above",
+        "description": "Popup"
+    },
+    "select": {
+        "message": "Select campus",
+        "description": "Popup"
+    },
+    "campus0": {
+        "message": "Select Campus",
+        "description": "Popup"
+    },
+    "campus3": {
+        "message": "FPTU Hanoi",
+        "description": "Popup"
+    },
+    "campus4": {
+        "message": "FPTU HCMC",
+        "description": "Popup"
+    },
+    "campus5": {
+        "message": "FPTU Danang",
+        "description": "Popup"
+    },
+    "campus6": {
+        "message": "FPTU Can Tho",
+        "description": "Popup"
+    },
+    "campus7": {
+        "message": "FPTU Quy Nhon",
+        "description": "Popup"
+    },
+    "rollnum": {
+        "message": "Rollnumber",
+        "description": "Popup"
+    },
+    "email": {
+        "message": "Email address",
+        "description": "Popup"
+    },
+    "password": {
+        "message": "<a href=\"https://library.fpt.edu.vn/\" target=\"_blank\">Library</a> password",
+        "description": "Popup"
+    },
+    "show": {
+        "message": "Show password",
+        "description": "Popup"
+    },
+    "roll_placeholder": {
+        "message": "Rollnumber",
+        "description": "Popup"
+    },
+    "email_placeholder": {
+        "message": "Email",
+        "description": "Popup"
+    },
+    "password_placeholder": {
+        "message": "Password",
+        "description": "Popup"
+    },
+    "madeby": {
+        "message": "A project by <a href=\"https://www.facebook.com/PresentedbyChillinStudio\" target=\"_blank\">Chillin Studio</a>",
+        "description": "Popup, Getlink"
+    },
+    "version": {
+        "message": "😎 Version <a href=\"https://github.com/makecolour/FU-Autokit\" target=\"_blank\">{{version}}</a> 😎",
+        "description": "Popup, Getlink"
+    }
 }

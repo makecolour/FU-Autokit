@@ -1,4 +1,4 @@
-
+const label = {};
 
 let allSubjectRows = document.querySelectorAll('#ctl00_mainContent_divGrade table tbody tr');
 
@@ -30,7 +30,7 @@ function calculateGrade(tarGet = 5) {
             +$(value).text() == 0) {
             continue;
         }
-       
+
         // bôi xanh những giá trị đã get về
         $(item).css({ "color": "green", "font-weight": "bold" });
         $(allRowFE).css({ "color": "green", "font-weight": "bold" });
@@ -43,33 +43,29 @@ function calculateGrade(tarGet = 5) {
     }
     var diemtrungbinh = (tarGet - (total)) / percentFE;
     //console.log("-------------");
-    if(diemtrungbinh < 4)
-    {
+    if (diemtrungbinh < 4) {
         diemtrungbinh = 4;
     }
 
-    if(document.getElementById('fe') != null)
-    {
-        document.getElementById('fe').textContent = ` FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM`;
+    if (document.getElementById('fe') != null) {
+        document.getElementById('fe').textContent = ` ${label.feToPass.message.toUpperCase()}: ${diemtrungbinh.toFixed(2)} ${label.mark.message.toUpperCase()}`;
     }
-    else{
-        $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info" id ="fe"> FE CẦN ĐẠT: ${diemtrungbinh.toFixed(2)} ĐIỂM</span>`);
+    else {
+        $('#ctl00_mainContent_divGrade table caption').append(` - <span class="label label-info" id ="fe"> ${label.feToPass.message.toUpperCase()}: ${diemtrungbinh.toFixed(2)} ${label.mark.message.toUpperCase()}`);
     }
-        //console.log('% FE: ' + percentFE);
-       // console.log('Diem pass: ' + diemtrungbinh);
+    //console.log('% FE: ' + percentFE);
+    // console.log('Diem pass: ' + diemtrungbinh);
 }
 
-function getGrade(){
+function getGrade() {
     var input = document.createElement("input");
     input.type = "number";
-    input.id = "grade";
-    input.placeholder = "Điểm trung bình muốn đạt";
+    input.placeholder = label.avg.message;
     var button = document.createElement("button");
-    button.innerHTML = "Submit";
-    button.id = "Tính FE";
+    button.innerHTML = label.calculate.message;
     $('#ctl00_mainContent_divGrade').append(input);
     $('#ctl00_mainContent_divGrade').append(button);
-    button.addEventListener("click", function(e){
+    button.addEventListener("click", function (e) {
         e.preventDefault();
         if (input.value < 1) {
             input.value = 1;
@@ -82,12 +78,15 @@ function getGrade(){
 
 const main = async () => {
     const enabled4 = await getFromStorage('FAP_4', '');
-    if(enabled4==true)
-    {
+    const lang = await getFromStorage('LANG', '');
+    if (enabled4 == true) {
+        fetch(chrome.runtime.getURL(lang)).then(response => response.json()).then(messages => {
+            Object.assign(label, messages);
+            calculateGrade();
+            getGrade();
+        });
         //console.log(enabled4);
-        calculateGrade();
-        getGrade();
     }
 }
-    main();
+main();
 

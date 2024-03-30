@@ -122,7 +122,7 @@ async function fetchData() {
     Object.assign(data, all);
 }
 fetchData().then(() => {
-    if(enabled.FLM_3 == true){
+    if (enabled.FLM_3 == true) {
         if (checkPg(window.location.href) == 0) {
             const category = document.getElementById("ddlSeachOn");
             const fill = document.getElementById("txtKeyword");
@@ -158,13 +158,13 @@ fetchData().then(() => {
                 }
                 else if (category.value == "Name") {
                     autocomplete(fill, data.subjectsName);
-                   // console.log("Name");
+                    // console.log("Name");
                 }
                 else {
                     //console.error("changer");
                 }
             });
-        
+
         }
         else if (checkPg(window.location.href) == 2) {
             if (document.getElementById("txtSubCode")) {
@@ -183,10 +183,10 @@ fetchData().then(() => {
         }
         else {
             //console.error("checcc");
-           // console.error(checkPg);
+            // console.error(checkPg);
         }
     }
-    else{
+    else {
         console.error("Disabled");
     }
 });

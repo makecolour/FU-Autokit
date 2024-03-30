@@ -1,50 +1,40 @@
-        appendMenu(); 
-        appendFunc();
+appendMenu();
+appendFunc();
 document.addEventListener("keypress", function onPress(e) {
-    if(e.key == "v")
-    {
+    if (e.key == "v") {
         const ans = document.getElementsByClassName("outcome")
-        if(ans.length > 0)
-        {
-            for(let i = 0; i < ans.length; i++)
-            {
+        if (ans.length > 0) {
+            for (let i = 0; i < ans.length; i++) {
                 ans[i].remove();
             }
         }
     }
-} );
-
-document.addEventListener("keypress", function onPress(e) {
-    if(e.key == "b")
-    {
-        localStorage.setItem("got","false");
-        if(!document.getElementById('log'))
-        {
+    else if (e.key == "b") {
+        localStorage.setItem("got", "false");
+        if (!document.getElementById('log')) {
             appendMenu();
         }
     }
-} );
+});
 
-function appendMenu(){
+function appendMenu() {
     var got = localStorage.getItem("got");
     var divBlock = `<div style="z-index: 99999;position: fixed;right: 8px;bottom: 8px;width: 230px;height: 35px;background-color: #d9dde8;border-radius: 6px;" id="menu"><p style=" font-size: 13px; color: #000000; padding: 8px 10px; text-align: center; " id="log"><a href="#" style="text-decoration: none" id ="key">Click here</a> to get key</p></div>`;
-    if(got=="true")
-    {
-        
+    if (got == "true") {
+
     }
-    else{
+    else {
         $("body").append(divBlock);
         key();
     }
 }
 
-function key(){
-    document.getElementById("key").addEventListener("click", function(){
+function key() {
+    document.getElementById("key").addEventListener("click", function () {
         navigator.clipboard.writeText("ef92e5d882e936c828c81eb75047cd77")
         alert("Sao chép key thành công, ấn X để xem đáp án");
-        localStorage.setItem("got","true");
-        if(document.getElementById("menu"))
-        {
+        localStorage.setItem("got", "true");
+        if (document.getElementById("menu")) {
             document.getElementById("menu").remove();
         }
     })

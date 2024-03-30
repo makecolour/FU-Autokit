@@ -35,7 +35,7 @@ function autoComment() {
         for (let l of t) {
             l.click();
             l.focus();
-            document.execCommand("insertText", false, "OK");
+            document.execCommand("insertText", false, label.review.message);
         }
     }
 }
@@ -51,11 +51,16 @@ function autoYesNo() {
 
 const grade = async () => {
     const enabled1 = await getFromStorage('CRS_3', '');
-    if(enabled1==true)
-    {
-        autoOption();
-        autoYesNo();
-        autoComment();
-    }}
+    const lang = await getFromStorage('LANG', '');
+    if (enabled1 == true) {
+        fetch(chrome.runtime.getURL(lang)).then(response => response.json()).then(messages => {
+            Object.assign(label, messages);
+            autoOption();
+            autoYesNo();
+            autoComment();
+        });
 
-    document.addEventListener('DOMContentLoaded', setTimeout(grade(),1000));
+    }
+}
+
+document.addEventListener('DOMContentLoaded', setTimeout(grade(), 1000));

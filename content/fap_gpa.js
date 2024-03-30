@@ -1,12 +1,11 @@
-
-
+const label = {};
 const SemIndex = {
   Spring: 0,
   Summer: 1,
   Fall: 2,
 };
 
-const DefaultNonGPA = ["OJS", "VOV", "GDQP", "LAB", "ENT", "SSS", "ĐNH", "TMI"];
+var DefaultNonGPA //= ["OJS", "VOV", "GDQP", "LAB", "ENT", "SSS", "ĐNH", "TMI"];
 
 class Subject {
   semester;
@@ -283,7 +282,7 @@ const renderNonGPAEditor = () => {
   const submitCell = createHTML(`<th rowspan="2" class="w-25"//>`);
 
   const defaultBtn = createHTML(
-    `<span class="btn btn-warning w-100">Mặc định</span>`
+    `<span class="btn btn-warning w-100">${label.default.message}</span>`
   );
   defaultBtn.onclick = () => {
     nonGPAList = DefaultNonGPA;
@@ -291,7 +290,7 @@ const renderNonGPAEditor = () => {
     renderList();
   };
 
-  const saveBtn = createHTML(`<span class="btn btn-primary w-100">Lưu</span>`);
+  const saveBtn = createHTML(`<span class="btn btn-primary w-100">${label.save.message}</span>`);
   saveBtn.onclick = () => {
     setNonGPAList(nonGPAList);
   };
@@ -303,21 +302,21 @@ const renderNonGPAEditor = () => {
   );
 
   listSubjRow.append(
-    createHTML('<th class="w-25"><b>Các môn không tính vào GPA: </b></th>'),
+    createHTML(`<th class="w-25"><b>${label.nonGPA.message}</b></th>`),
     listSubjCell,
     submitCell
   );
   // Input new subject
   const addSubjRow = thead.insertRow();
 
-  addSubjRow.insertCell().outerHTML = "<th>Thêm môn vào danh sách:</th>";
+  addSubjRow.insertCell().outerHTML = `<th>${label.addNonGPA.message}</th>`;
 
   const addSubjCell = createHTML(`<div class="input-group"></div>`);
   const input = createHTML(
-    `<input class="form-control" placeholder="Nhập mã môn ( không cần số )"/>`
+    `<input class="form-control" placeholder="${label.inputCode.message}"/>`
   );
   const submitBtn = createHTML(
-    `<div class="input-group-btn"><span class="btn btn-success">Thêm vào danh sách</span></div>`
+    `<div class="input-group-btn"><span class="btn btn-success">${label.addToList.message}</span></div>`
   );
   submitBtn.onclick = () => {
     const subject = input.value;
@@ -334,24 +333,26 @@ const renderNonGPAEditor = () => {
   return root;
 };
 
-function searchStringInArray (str, strArray) {
-  for (var j=0; j<strArray.length; j++) {
-      if (strArray[j].match(str)) return j;
+function searchStringInArray(str, strArray) {
+  for (var j = 0; j < strArray.length; j++) {
+    if (strArray[j].match(str)) return j;
   }
   return -1;
 }
 const bit = document.querySelector("#ctl00_mainContent_lblRollNumber > span.label.label-info").innerHTML;
+
 const main = async () => {
-  
   const list = await chrome.storage.local.get('listCurriculum');
-  console.log(list);
-  if(searchStringInArray(bit, list.listCurriculum)==-1)
-  {
+  if (searchStringInArray(bit, list.listCurriculum) == -1) {
     list.listCurriculum.push(bit);
-    chrome.storage.local.set({'listCurriculum': list.listCurriculum});
+    chrome.storage.local.set({ 'listCurriculum': list.listCurriculum });
     console.log("Updated");
   }
+  const lang = await getFromStorage('LANG', '');
+  DefaultNonGPA = await getFromStorage('DefaultNonGPA', '');
+
   const fap3_ = await getFromStorage('FAP_3', '');
+
   await getNonGPAList();
   const mainGrade = parseGrade(gradeTablesDOM[0]);
   mainGrade.forEach((subj) => {
@@ -366,55 +367,63 @@ const main = async () => {
     return SemIndex[a.semester] - SemIndex[b.semester];
   });
 
-  const table = new GPATable();
-  table.addHeader("YEAR", "SEMESTER", "SUBJECTS", "GPA");
-  report.forEach((sem) => {
-    table.addRow(sem.Year, sem.Semester, sem.Subjects, sem.Gpa);
-  });
-  let gpa = mainGrade.reduce(
-    (avg, sub) => {
-      if (sub.includeInGPA() && sub.status == "Passed")
-        return {
-          sum: avg.sum + sub.grade * sub.credit,
-          total: avg.total + sub.credit,
+
+  if (fap3_ == true) {
+    fetch(chrome.runtime.getURL(lang))
+      .then(response => response.json())
+      .then(messages => {
+        Object.assign(label, messages);
+        const table = new GPATable();
+        table.addHeader(label.year.message, label.semester.message, label.subjects.message, label.gpa.message);
+        report.forEach((sem) => {
+          table.addRow(sem.Year, sem.Semester, sem.Subjects, sem.Gpa);
+        });
+        let gpa = mainGrade.reduce(
+          (avg, sub) => {
+            if (sub.includeInGPA() && sub.status == "Passed")
+              return {
+                sum: avg.sum + sub.grade * sub.credit,
+                total: avg.total + sub.credit,
+              };
+            return avg;
+          },
+          {
+            sum: 0,
+            total: 0,
+          }
+        );
+        gpa = gpa.sum / gpa.total;
+
+        table.addRow(
+          "",
+          "",
+          createHTML(`<h4><b>${label.totalAvg.message}</b></h4>`),
+          createHTML(
+            `<h4 style="text-align:start"><span class="label ${rankLabel(
+              gpa
+            )}">${gpa}</span></h4>`
+          )
+        );
+        const container = createHTML(`<div id="gpa-panel">`);
+        const showBtnDOM = showButtonDOM();
+
+        //console.log(container.style.maxHeight);
+        showBtnDOM.onclick = () => {
+          //console.log(container.style.maxHeight);
+          if (container.style.maxHeight != "0px") {
+            container.style.maxHeight = "0px";
+          } else {
+            container.style.maxHeight = container.scrollHeight + "px";
+          }
         };
-      return avg;
-    },
-    {
-      sum: 0,
-      total: 0,
-    }
-  );
-  gpa = gpa.sum / gpa.total;
-  table.addRow(
-    "",
-    "",
-    createHTML("<h4><b>Total avg</b></h4>"),
-    createHTML(
-      `<h4 style="text-align:start"><span class="label ${rankLabel(
-        gpa
-      )}">${gpa}</span></h4>`
-    )
-  );
- if(fap3_ == true) {
-  const container = createHTML(`<div id="gpa-panel">`);
-  const showBtnDOM = showButtonDOM();
 
-  //console.log(container.style.maxHeight);
-  showBtnDOM.onclick = () => {
-    //console.log(container.style.maxHeight);
-    if (container.style.maxHeight != "0px") {
-      container.style.maxHeight = "0px";
-    } else {
-      container.style.maxHeight = container.scrollHeight + "px";
-    }
-  };
+        headerDOM.append(" - ", showBtnDOM);
+        container.append(renderNonGPAEditor(), table.DOM());
+        gridDom.prepend(container);
+        container.style.maxHeight = container.scrollHeight + "px";
+      });
 
-  headerDOM.append(" - ", showBtnDOM);
-  container.append(renderNonGPAEditor(), table.DOM());
-  gridDom.prepend(container);
-  container.style.maxHeight = container.scrollHeight + "px";
-}
+  }
 };
 
 main();

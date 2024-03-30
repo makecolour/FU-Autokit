@@ -8,11 +8,11 @@ for (let i = 0; i < rows.length; i++) {
     if (firstCell) {
         subjects.push(firstCell.textContent);
     }
-    if(secondCell){
+    if (secondCell) {
         subjectsName.push(secondCell.textContent);
     }
 }
 subjects.shift();
 subjectsName.shift();
-chrome.storage.local.set({'subjects': subjects});
-chrome.storage.local.set({'subjectsName': subjectsName});
+chrome.storage.local.set({ 'subjects': subjects });
+chrome.storage.local.set({ 'subjectsName': subjectsName });

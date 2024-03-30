@@ -2,19 +2,19 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"author": "Chillin Studio",
-	"version": "2.2",
+	"version": "3.0",
 	"description": "FU Autokit is a Chrome extension that help FPT University students by automating various user’s interactions.",
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
 	"default_locale": "vi",
 	"options_page": "./popup/popup.html",
-	"homepage_url": "https://github.com/makecolour/FU-Autokit", 
+	"homepage_url": "https://github.com/makecolour/FU-Autokit",
 	"permissions": [
 		"storage",
 		"contextMenus",
 		"declarativeContent",
-        "activeTab",
+		"activeTab",
 		"tabs"
 	],
 	"web_accessible_resources": [
@@ -24,21 +24,40 @@
 				"/windows/index.js",
 				"/windows/indexcss.css"
 			],
-			"matches": ["*://www.coursera.org/*"]
+			"matches": [
+				"*://www.coursera.org/*"
+			]
 		},
 		{
-			"resources": ["./service/shub_inject_script.js"],
-			"matches": ["*://shub.edu.vn/*"]
+			"resources": [
+				"/_locales/vi/messages.json",
+				"/_locales/en/messages.json"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		},
+		{
+			"resources": [
+				"./service/shub_inject_script.js"
+			],
+			"matches": [
+				"*://shub.edu.vn/*"
+			]
 		}
 	],
 	"background": {
 		"service_worker": "./service/service-worker.js"
-	  },
+	},
 	"content_scripts": [
 		{
-			"matches": ["*://shub.edu.vn/*"],
+			"matches": [
+				"*://shub.edu.vn/*"
+			],
 			"run_at": "document_start",
-			"js": ["./content/shub_inject.js"]
+			"js": [
+				"./content/shub_inject.js"
+			]
 		},
 		{
 			"matches": [
@@ -58,7 +77,6 @@
 				"./utils/storage.js",
 				"./content/cms_login.js"
 			]
-			
 		},
 		{
 			"matches": [
@@ -93,7 +111,6 @@
 				"./utils/storage.js",
 				"./content/flm_login.js"
 			]
-			
 		},
 		{
 			"matches": [
@@ -104,7 +121,6 @@
 				"./utils/jquery.js",
 				"./content/flm_setlang.js"
 			]
-			
 		},
 		{
 			"matches": [
@@ -119,7 +135,6 @@
 			"css": [
 				"./utils/css/autocomplete.css"
 			]
-			
 		},
 		{
 			"matches": [
@@ -192,7 +207,6 @@
 				"./content/edunext_redirect.js"
 			]
 		},
-
 		{
 			"matches": [
 				"*://fu-edunext.fpt.edu.vn/course/activity/*"
@@ -206,13 +220,12 @@
 			"matches": [
 				"*://cmshn.fpt.edu.vn/mod/quiz/*",
 				"*://cmshn.fpt.edu.vn/course/view.php?*"
-
 			],
 			"js": [
 				"./utils/jquery.js",
 				"./content/cms_tool.js"
-			]
-			,"world": "MAIN"
+			],
+			"world": "MAIN"
 		},
 		{
 			"matches": [
@@ -280,21 +293,21 @@
 		},
 		{
 			"matches": [
-			  "*://www.coursera.org/*submit"
+				"*://www.coursera.org/*submit"
 			],
 			"js": [
 				"./utils/storage.js",
-			  "./content/coursera_getlink.js"
+				"./content/coursera_getlink.js"
 			]
 		},
 		{
-		"matches": [
-			"*://www.coursera.org/*review*"
-		],
-		"js": [
-			"./utils/storage.js",
-			"./content/coursera_grade.js"
-		]
+			"matches": [
+				"*://www.coursera.org/*review*"
+			],
+			"js": [
+				"./utils/storage.js",
+				"./content/coursera_grade.js"
+			]
 		},
 		{
 			"matches": [
@@ -319,10 +332,10 @@
 			"js": [
 				"./utils/storage.js",
 				"./content/fap_mss.js"
-			]
+			],
+			"run_at": "document_end"
 		}
 	],
-	
 	"icons": {
 		"16": "./assets/LogoChill.png",
 		"32": "./assets/LogoChill.png",

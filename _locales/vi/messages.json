@@ -1,3 +1,230 @@
 {
-    
+    "doFeedBack": {
+        "message": "Giảng viên tích cực trong việc giảng dạy và hướng dẫn sinh viên",
+        "description": "FAP feedback"
+    },
+    "nonGPA": {
+        "message": "Các môn không tính vào GPA: ",
+        "description": "FAP GPA"
+    },
+    "addNonGPA": {
+        "message": "Thêm môn vào danh sách:",
+        "description": "FAP GPA"
+    },
+    "addToList": {
+        "message": "Thêm vào danh sách:",
+        "description": "FAP GPA"
+    },
+    "inputCode": {
+        "message": "Nhập mã môn (không cần số)",
+        "description": "FAP GPA"
+    },
+    "default": {
+        "message": "Mặc định",
+        "description": "FAP GPA"
+    },
+    "save": {
+        "message": "Lưu",
+        "description": "FAP GPA, Popup"
+    },
+    "year": {
+        "message": "Năm học",
+        "description": "FAP GPA"
+    },
+    "semester": {
+        "message": "Học kỳ",
+        "description": "FAP GPA"
+    },
+    "subjects": {
+        "message": "Môn học",
+        "description": "FAP GPA"
+    },
+    "gpa": {
+        "message": "Điểm trung bình",
+        "description": "FAP GPA"
+    },
+    "totalAvg": {
+        "message": "Điểm trung bình tổng",
+        "description": "FAP GPA"
+    },
+    "feToPass": {
+        "message": "FE cần đạt",
+        "description": "FAP FE"
+    },
+    "mark": {
+        "message": "Điểm",
+        "description": "FAP FE"
+    },
+    "avg": {
+        "message": "Điểm trung bình muốn đạt",
+        "description": "FAP FE"
+    },
+    "calculate": {
+        "message": "Tính",
+        "description": "FAP FE"
+    },
+    "review": {
+        "message": "Tốt",
+        "description": "CRS Grade"
+    },
+    "clickHere": {
+        "message": "Nhấn vào đây",
+        "description": "CMS Tool"
+    },
+    "toGetKey": {
+        "message": "để lấy key",
+        "description": "CMS Tool"
+    },
+    "copied": {
+        "message": "Sao chép key thành công, ấn X để nhập key và xem đáp án. Nhấn V để tắt popup đáp án. Nhấn B nếu muốn lấy lại key.",
+        "description": "CMS Tool"
+    },
+    "theme": {
+        "message": "Giao diện",
+        "description": "Popup"
+    },
+    "light": {
+        "message": "Sáng",
+        "description": "Popup"
+    },
+    "dark": {
+        "message": "Tối",
+        "description": "Popup"
+    },
+    "system": {
+        "message": "Hệ thống",
+        "description": "Popup"
+    },
+    "language": {
+        "message": "Ngôn ngữ",
+        "description": "Popup"
+    },
+    "vi": {
+        "message": "Tiếng Việt",
+        "description": "Popup"
+    },
+    "en": {
+        "message": "Tiếng Anh",
+        "description": "Popup"
+    },
+    "onoff": {
+        "message": "Bật/Tắt tính năng",
+        "description": "Popup"
+    },
+    "autoLogin": {
+        "message": "Tự động đăng nhập",
+        "description": "Popup"
+    },
+    "feedback": {
+        "message": "Tự động hoàn thành đánh giá giảng viên",
+        "description": "Popup"
+    },
+    "gpa_1": {
+        "message": "Tính điểm trung bình",
+        "description": "Popup"
+    },
+    "fe": {
+        "message": "Tính điểm FE cần đạt",
+        "description": "Popup"
+    },
+    "gradeongroupmates": {
+        "message": "Tự động Grade on Groupmates",
+        "description": "Popup"
+    },
+    "getshareablelink": {
+        "message": "Lấy link chấm điểm",
+        "description": "Popup"
+    },
+    "autoreview": {
+        "message": "Tự động chấm điểm",
+        "description": "Popup"
+    },
+    "autochangelang": {
+        "message": "Tự động chuyển ngôn ngữ",
+        "description": "Popup"
+    },
+    "suggestion": {
+        "message": "Thêm gợi ý điền tên môn/ngành học",
+        "description": "Popup"
+    },
+    "autofillroll": {
+        "message": "Tự động điền mã sinh viên",
+        "description": "Popup"
+    },
+    "autofillall": {
+        "message": "Tự động điền tài khoản-mật khẩu",
+        "description": "Popup"
+    },
+    "k18": {
+        "message": "K18 trở xuống",
+        "description": "Popup"
+    },
+    "k19": {
+        "message": "K19 trở lên",
+        "description": "Popup"
+    },
+    "select": {
+        "message": "Chọn cơ sở",
+        "description": "Popup"
+    },
+    "campus0": {
+        "message": "Select Campus",
+        "description": "Popup"
+    },
+    "campus3": {
+        "message": "FU-Hòa Lạc",
+        "description": "Popup"
+    },
+    "campus4": {
+        "message": "FU-Hồ Chí Minh",
+        "description": "Popup"
+    },
+    "campus5": {
+        "message": "FU-Đà Nẵng",
+        "description": "Popup"
+    },
+    "campus6": {
+        "message": "FU-Cần Thơ",
+        "description": "Popup"
+    },
+    "campus7": {
+        "message": "FU-Quy Nhơn",
+        "description": "Popup"
+    },
+    "rollnum": {
+        "message": "Mã số sinh viên",
+        "description": "Popup"
+    },
+    "email": {
+        "message": "Địa chỉ mail",
+        "description": "Popup"
+    },
+    "password": {
+        "message": "Mật khẩu <a href=\"https://library.fpt.edu.vn/\" target=\"_blank\">Library</a>",
+        "description": "Popup"
+    },
+    "show": {
+        "message": "Hiện mật khẩu",
+        "description": "Popup"
+    },
+    "roll_placeholder": {
+        "message": "Rollnumber",
+        "description": "Popup"
+    },
+    "email_placeholder": {
+        "message": "Email",
+        "description": "Popup"
+    },
+    "password_placeholder": {
+        "message": "Password",
+        "description": "Popup"
+    },
+    "madeby": {
+        "message": "🧟 Phát triển bởi zombie của <a href=\"https://www.facebook.com/PresentedbyChillinStudio\" target=\"_blank\">Chillin Studio</a> 🧟",
+        "description": "Popup, Getlink"
+    },
+    "version": {
+        "message": "😎 Phiên bản <a href=\"https://github.com/makecolour/FU-Autokit\" target=\"_blank\">{{version}}</a> 😎",
+        "description": "Popup, Getlink"
+    }
 }

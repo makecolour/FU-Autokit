@@ -1,22 +1,24 @@
 const lang = document.getElementById("language");
 const main = async () => {
     const enabled = await getFromStorage('FLM_2', '');
-    if(enabled==true)
-    {
-
-if (lang.value!='vi')
-{
-    changeLang();
+    const language = await getFromStorage('LANG', '');
+    if (enabled == true) {
+        if (language.includes('vi') && lang.value != 'vi') {
+            changeLang("vi");
+        }
+        else if (language.includes('en') && lang.value != 'en') {
+            changeLang("en");
+        }
+    }
 }
-    }}
-    main();
+main();
 
-function changeLang(){
+function changeLang(label = "vi") {
     $.ajax({
         url: '/Language', // comma here instead of semicolon  
-        data: { language: 'vi' },
+        data: { language: label },
         success: function () {
-                window.location.reload();
+            window.location.reload();
         }
     });
 }

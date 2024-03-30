@@ -3,6 +3,8 @@ const rollNum = document.querySelector('#rollnum');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const campusInput = document.querySelector('#campus');
+const show = document.getElementById("show");
+//const version = document.getElementById("version");
 
 settingForm.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -49,32 +51,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
 	const theme = await getFromStorage('THEME', '');
-
-	if (campus!=0&&campus!=3&&campus!=4&&campus!=5&&campus!=6&&campus!=7) {
-		campusInput.value=0;
+	const lang = await getFromStorage('LANG', '');
+	if (campus != 0 && campus != 3 && campus != 4 && campus != 5 && campus != 6 && campus != 7) {
+		campusInput.value = 0;
 	}
-	else{
+	else {
 		campusInput.value = campus;
 	}
 	emailInput.value = email;
 	rollNum.value = roll;
 	passwordInput.value = password;
-	if(emailInput.value=="undefined")
-	{
-		emailInput.value ="";
+	if (emailInput.value == "undefined") {
+		emailInput.value = "";
 	}
-	if(rollNum.value=="undefined")
-	{
-		rollNum.value ="";
+	if (rollNum.value == "undefined") {
+		rollNum.value = "";
 	}
-	if(passwordInput.value=="undefined")
-	{
-		passwordInput.value ="";
+	if (passwordInput.value == "undefined") {
+		passwordInput.value = "";
 	}
-	
-	let version = chrome.runtime.getManifest().version;
-	document.getElementById('version').textContent = version;
-	
+
 	gen.checked = gen_;
 	fap1.checked = fap1_;
 	fap2.checked = fap2_;
@@ -93,24 +89,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 	dng1.checked = dng1_;
 	lbr1.checked = lbr1_;
 	update(theme);
+	if (lang.includes("vi")) {
+		updateLang("vi");
+	}
+	else {
+		updateLang("en");
+	}
+	//version.textContent = chrome.runtime.getManifest().version;
 	//console.log(gen_)
 	// const autoLogin = await getFromStorage('AUTO_LOGIN', false);
 	// autoLoginCheckbox.checked = autoLogin;
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById("show").addEventListener("click", myFunction);
-	//document.getElementById("body").setAttribute("data-bs-theme", "dark");
-});
-
-function myFunction() {
-	var x = document.getElementById("password");
-	if (x.type === "password") {
-		x.type = "text";
+show.addEventListener("change", () => {
+	if (show.checked) {
+		passwordInput.type = 'text';
 	} else {
-		x.type = "password";
+		passwordInput.type = 'password';
 	}
-};
+});
+//document.getElementById("body").setAttribute("data-bs-theme", "dark");
+
 
 const fap = document.getElementById("FAP");
 const edn = document.getElementById("EDN");
@@ -148,33 +147,55 @@ lbr.addEventListener("click", () => {
 })
 
 const themeBtn = document.getElementsByClassName("bg")
-for(let i = 0; i < themeBtn.length; i++)
-{
-	themeBtn[i].addEventListener("click", ()=>{
+for (let i = 0; i < themeBtn.length; i++) {
+	themeBtn[i].addEventListener("click", () => {
 		update(themeBtn[i].value);
 		setToStorage("THEME", themeBtn[i].value);
 	})
 }
+const langBtn = document.getElementsByClassName("lang")
+
+for (let i = 0; i < langBtn.length; i++) {
+	langBtn[i].addEventListener("click", () => {
+		updateLang(langBtn[i].value);
+	})
+}
+
+async function updateLang(lang = "vi") {
+	switch (lang) {
+		case "vi":
+			setToStorage("LANG", '/_locales/vi/messages.json');
+			fetch(chrome.runtime.getURL('/_locales/vi/messages.json')).then(response => response.json()).then(messages => {
+				changeLanguage(messages);
+			});
+			break;
+		case "en":
+			setToStorage("LANG", '/_locales/en/messages.json');
+			fetch(chrome.runtime.getURL('/_locales/en/messages.json')).then(response => response.json()).then(messages => {
+				changeLanguage(messages);
+			});
+			break;
+		default:
+			break;
+	}
+}
 
 const body = document.getElementById("body")
-
-function update(value="light"){
-	switch(value)
-	{
+function update(value = "light") {
+	switch (value) {
 		case "light":
-			body.setAttribute("data-bs-theme","light");
+			body.setAttribute("data-bs-theme", "light");
 			document.getElementById("setting").src = "/assets/gear.svg"
 			break;
 		case "dark":
-			body.setAttribute("data-bs-theme","dark");
+			body.setAttribute("data-bs-theme", "dark");
 			document.getElementById("setting").src = "/assets/geardark.svg"
 			break;
 		case "sys":
-			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-			{
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				return update("dark")
 			}
-			else{
+			else {
 				return update("light")
 			}
 			break;
@@ -183,5 +204,75 @@ function update(value="light"){
 	}
 }
 
+function changeLanguage(label) {
+	document.getElementById("theme").textContent = label.theme.message;
+	document.getElementById("light").textContent = label.light.message;
+	document.getElementById("dark").textContent = label.dark.message;
+	document.getElementById("sys").textContent = label.system.message;
+	document.getElementById("language").textContent = label.language.message;
+	document.getElementById("vi").textContent = label.vi.message;
+	document.getElementById("en").textContent = label.en.message;
 
+	const onoff = document.getElementsByClassName("onoff");
+	for (let i = 0; i < onoff.length; i++) {
+		onoff[i].textContent = label.onoff.message;
+	}
 
+	const autologin = document.getElementsByClassName("autologin");
+	for (let i = 0; i < autologin.length; i++) {
+		autologin[i].textContent = label.autoLogin.message;
+	}
+
+	document.getElementById("feedback").textContent = label.feedback.message;
+	document.getElementById("GPA").textContent = label.gpa_1.message;
+	document.getElementById("FE").textContent = label.fe.message;
+
+	document.getElementById("gradeongroupmates").textContent = label.gradeongroupmates.message;
+
+	document.getElementById("getshareablelink").textContent = label.getshareablelink.message;
+	document.getElementById("autoreview").textContent = label.autoreview.message;
+
+	document.getElementById("autochangelang").textContent = label.autochangelang.message;
+	document.getElementById("suggestion").textContent = label.suggestion.message;
+
+	document.getElementById("autofillroll").textContent = label.autofillroll.message;
+
+	document.getElementById("autofillall").textContent = label.autofillall.message;
+
+	document.getElementById("K18").textContent = label.k18.message;
+	document.getElementById("K19").textContent = label.k19.message;
+
+	document.getElementById("select").textContent = label.select.message;
+	const campuses = document.getElementById("campus");
+	for (let i = 0; i < campuses.options.length; i++) {
+		campuses.options[i].textContent = label["campus" + campuses.options[i].value].message;
+	}
+
+	let formElement = document.getElementById('check');
+	let labels = formElement.querySelectorAll('label');
+	for (let i = 0; i < labels.length; i++) {
+		const fill = labels[i].getAttribute('for');
+		switch (fill) {
+			case "rollnum":
+				labels[i].textContent = label.rollnum.message;
+				break;
+			case "email":
+				labels[i].textContent = label.email.message;
+				break;
+			case "password":
+				labels[i].innerHTML = label.password.message;
+				break;
+			default:
+				break
+		}
+	}
+	rollNum.placeholder = label.roll_placeholder.message;
+	emailInput.placeholder = label.email_placeholder.message;
+	passwordInput.placeholder = label.password_placeholder.message;
+
+	document.querySelector('label[for="show"]').innerText = label.show.message;
+	document.querySelector("#check > button").innerText = label.save.message;
+
+	document.getElementById("madeby").innerHTML = label.madeby.message;
+	document.getElementById("version").innerHTML = label.version.message.replace("{{version}}", chrome.runtime.getManifest().version);
+}
