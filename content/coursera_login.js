@@ -32,4 +32,8 @@ const main = async () => {
         }
     }
 }
-main();
+
+window.addEventListener('load', function() {
+    setTimeout(()=>{main();}, 500);
+});
+

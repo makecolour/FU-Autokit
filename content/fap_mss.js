@@ -9,6 +9,17 @@ fetchData().then(() => {
   }
 });
 
+window.addEventListener('load', function() {
+  setTimeout(()=>{var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
+  console.log(divs);
+  for (i = 0; i < divs.length; ++i) {
+    divs[i].click();
+    
+    //console.log("success");
+  };}, 0);
+});
+
+
 function K18() {
   var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
   console.log(divs);
@@ -16,6 +27,7 @@ function K18() {
     divs[i].click();
     //console.log("success");
   }
+
   setTimeout(() => {
     var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
     console.log(divs);

@@ -9,7 +9,7 @@ const main = async () => {
     if ((url.includes("flm.fpt.edu.vn") && flm1_ == true) || (url.includes("fu-edunext.fpt.edu.vn") && edn1_ == true) || (url.includes("googleauthensite01.fpt.edu.vn") && fap1_ == true)) {
         setTimeout(() => {
             for (var i = 0; i < emailEl.length; i++) {
-                if (emailEl[i].innerHTML == email.toLowerCase()) {
+                if (emailEl[i].innerHTML.toLowerCase() == email.toLowerCase()) {
                     const child = emailEl[i];
                     child.click();
                     //console.log(child);
@@ -24,7 +24,7 @@ const main = async () => {
         }, 500);
         setTimeout(() => {
             for (var i = 0; i < emailEl.length; i++) {
-                if (emailEl[i].innerHTML == email.toLowerCase()) {
+                if (emailEl[i].innerHTML.toLowerCase() == email.toLowerCase()) {
                     const child = emailEl[i];
                     child.click();
                     //console.log(child);
@@ -39,7 +39,7 @@ const main = async () => {
         }, 1000);
         setTimeout(() => {
             for (var i = 0; i < emailEl.length; i++) {
-                if (emailEl[i].innerHTML == email.toLowerCase()) {
+                if (emailEl[i].innerHTML.toLowerCase() == email.toLowerCase()) {
                     const child = emailEl[i];
                     child.click();
                     //console.log(child);

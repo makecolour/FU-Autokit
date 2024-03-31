@@ -5,4 +5,7 @@ const main = async () => {
         document.getElementsByTagName('button')[0].click();
     }
 }
-main();
+window.addEventListener('load', function() {
+    setTimeout(()=>{main();}, 0);
+  });
+  

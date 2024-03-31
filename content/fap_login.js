@@ -15,7 +15,6 @@ chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
 	//console.log("Campus: " + campus.STUDENT_CAMPUS);
 	Object.assign(settings, campus);
 	if (enabled.FAP_1 == true) {
-
 		FixFAPLoginError_12_22();
 		DoLogin();
 	}

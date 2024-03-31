@@ -20,7 +20,10 @@ const main = async () => {
     }
   }
 }
-main();
+window.addEventListener('load', function() {
+  setTimeout(()=>{main();}, 0);
+});
+
 
 function K18() {
   var divs = document.querySelectorAll('.nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb');
@@ -29,7 +32,7 @@ function K18() {
       divs[i].click();
       //console.log("success");
     }
-  }, 1500);
+  }, 500);
 }
 
 function K19() {

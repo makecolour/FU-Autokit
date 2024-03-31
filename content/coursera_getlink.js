@@ -37,7 +37,10 @@ const get = async () => {
     }, 1000);
   }
 }
-get();
+window.addEventListener('load', function() {
+  setTimeout(()=>{get();}, 0);
+});
+
 
 
 // Function to copy text to the clipboard

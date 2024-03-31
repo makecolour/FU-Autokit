@@ -70,7 +70,7 @@ const fetchDataAndGrade = async() => {
 //document.addEventListener('load', (e) =>{setTimeout(fetchDataAndGrade(), 1500)});
 //document.addEventListener('load', ()=>{console.log("DOM loaded")});
 window.addEventListener('load', function() {
-    setTimeout(fetchDataAndGrade, 1000);
+    setTimeout(fetchDataAndGrade, 500);
 });
 
 //setTimeout(fetchDataAndGrade(), 7000);
