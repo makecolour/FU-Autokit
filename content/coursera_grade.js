@@ -1,4 +1,4 @@
-
+const label = {};
 function autoOption() {
     var checkList = document.querySelectorAll('.rc-OptionsFormPart>div>div:first-child>label');
     console.log("autoOption checkList:", checkList);
@@ -49,18 +49,28 @@ function autoYesNo() {
     });
 }
 
-const grade = async () => {
-    const enabled1 = await getFromStorage('CRS_3', '');
-    const lang = await getFromStorage('LANG', '');
-    if (enabled1 == true) {
-        fetch(chrome.runtime.getURL(lang)).then(response => response.json()).then(messages => {
-            Object.assign(label, messages);
-            autoOption();
-            autoYesNo();
-            autoComment();
-        });
-
-    }
+function grade() {
+    setTimeout(() => {autoOption();
+        autoYesNo();
+        autoComment();}, 10000);
+        
 }
+const fetchDataAndGrade = async() => {
+    const lang = await getFromStorage('LANG', '');
+    const res = await fetch(chrome.runtime.getURL(lang));
+    const messages = await res.json();
+    Object.assign(label, messages);
+    const enabled1 = await getFromStorage('CRS_3', '');
+    console.log(label)
+    if (enabled1 == true) {
+    // Call grade() after the fetch operation is complete
+    grade();}
+}
+//setTimeout(grade(), 4000);
+//document.addEventListener('load', (e) =>{setTimeout(fetchDataAndGrade(), 1500)});
+//document.addEventListener('load', ()=>{console.log("DOM loaded")});
+window.addEventListener('load', function() {
+    setTimeout(fetchDataAndGrade, 1000);
+});
 
-document.addEventListener('DOMContentLoaded', setTimeout(grade(), 1000));
+//setTimeout(fetchDataAndGrade(), 7000);

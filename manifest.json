@@ -286,6 +286,10 @@
 			"matches": [
 				"*://www.coursera.org/*"
 			],
+			"exclude_matches": [
+				"*://www.coursera.org/*submit",
+				"*://www.coursera.org/*review*"
+			],
 			"js": [
 				"./utils/storage.js",
 				"./content/coursera_login.js"
@@ -308,6 +312,7 @@
 				"./utils/storage.js",
 				"./content/coursera_grade.js"
 			]
+			, "run_at":"document_end"
 		},
 		{
 			"matches": [
