@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "FU Autokit",
 	"author": "Chillin Studio",
-	"version": "3.0",
+	"version": "3.1",
 	"description": "FU Autokit is a Chrome extension that help FPT University students by automating various user’s interactions.",
 	"action": {
 		"default_popup": "./popup/popup.html"
