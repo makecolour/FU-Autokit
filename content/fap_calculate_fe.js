@@ -63,9 +63,10 @@ function getGrade() {
     input.placeholder = label.avg.message;
     var button = document.createElement("button");
     button.innerHTML = label.calculate.message;
-    $('#ctl00_mainContent_divGrade').append(input);
-    $('#ctl00_mainContent_divGrade').append(button);
-    button.addEventListener("click", function (e) {
+    if($('#ctl00_mainContent_divGrade table tbody tr')){
+        $('#ctl00_mainContent_divGrade').append(input);
+        $('#ctl00_mainContent_divGrade').append(button);
+        button.addEventListener("click", function (e) {
         e.preventDefault();
         if (input.value < 1) {
             input.value = 1;
@@ -74,6 +75,7 @@ function getGrade() {
         }
         calculateGrade(input.value);
     });
+    }
 }
 
 const main = async () => {
