@@ -13,7 +13,7 @@ const main = async () => {
 	if (checkFap || checkCms || checkCrs || checkK19) {
 		const emailEl = document.querySelector('.yAlK0b[data-email="' + email + '"]');
 		const emailEl1 = document.querySelector('.yAlK0b[data-email="' + email.toLowerCase() + '"]');
-		
+
 		if (emailEl) {
 			// click on email
 			emailEl.click();
@@ -50,4 +50,7 @@ const main = async () => {
 	}
 
 }
-main();
+window.addEventListener('load', function() {
+  setTimeout(()=>{main();}, 0);
+});
+
