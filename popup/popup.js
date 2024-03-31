@@ -205,6 +205,32 @@ function update(value = "light") {
 }
 
 function changeLanguage(label) {
+	document.getElementById("FAP").textContent = label.FAP.message;
+	document.getElementById("FAP").title = label.FAP.message;
+
+	document.getElementById("EDN").textContent = label.EDN.message;
+	document.getElementById("EDN").title = label.EDN.message;
+
+	document.getElementById("CMS").textContent = label.CMS.message;
+	document.getElementById("CMS").title = label.CMS.message;
+
+	document.getElementById("FLM").textContent = label.FLM.message;
+	document.getElementById("FLM").title = label.FLM.message;
+
+	document.getElementById("CRS").textContent = label.CRS.message;
+	document.getElementById("CRS").title = label.CRS.message;
+
+	document.getElementById("DNG").textContent = label.DNG.message;
+	document.getElementById("DNG").title = label.DNG.message;
+
+	document.getElementById("LBR").textContent = label.LBR.message;
+	document.getElementById("LBR").title = label.LBR.message;
+
+	const toggle = document.getElementsByClassName("dropdown-toggle");
+	for(let i = 0; i < toggle.length; i++){
+		toggle[i].title = label.more.message;
+	}
+
 	document.getElementById("theme").textContent = label.theme.message;
 	document.getElementById("light").textContent = label.light.message;
 	document.getElementById("dark").textContent = label.dark.message;
@@ -240,6 +266,7 @@ function changeLanguage(label) {
 	document.getElementById("autofillall").textContent = label.autofillall.message;
 
 	document.getElementById("K18").textContent = label.k18.message;
+	document.getElementById("KKK").title = label.gen.message;
 	document.getElementById("K19").textContent = label.k19.message;
 
 	document.getElementById("select").textContent = label.select.message;
@@ -266,9 +293,13 @@ function changeLanguage(label) {
 				break
 		}
 	}
+	campusInput.title = label.select.message
 	rollNum.placeholder = label.roll_placeholder.message;
+	rollNum.title = label.roll_placeholder.message;
 	emailInput.placeholder = label.email_placeholder.message;
+	emailInput.title = label.email_placeholder.message;
 	passwordInput.placeholder = label.password_placeholder.message;
+	passwordInput.title = label.password_placeholder.message;
 
 	document.querySelector('label[for="show"]').innerText = label.show.message;
 	document.querySelector("#check > button").innerText = label.save.message;

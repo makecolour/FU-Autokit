@@ -226,5 +226,41 @@
     "version": {
         "message": "😎 Version <a href=\"https://github.com/makecolour/FU-Autokit\" target=\"_blank\">{{version}}</a> 😎",
         "description": "Popup, Getlink"
+    },
+    "FAP": {
+        "message": "FAP",
+        "description": "Popup"
+    },
+    "EDN": {
+        "message": "EduNext",
+        "description": "Popup"
+    },
+    "CMS": {
+        "message": "CMS",
+        "description": "Popup"
+    },
+    "CRS": {
+        "message": "Coursera",
+        "description": "Popup"
+    },
+    "FLM": {
+        "message": "FLM",
+        "description": "Popup"
+    },
+    "DNG": {
+        "message": "DNG",
+        "description": "Popup"
+    },
+    "LBR": {
+        "message": "Library",
+        "description": "Popup"
+    },
+    "gen": {
+        "message": "Chọn niên khóa",
+        "description": "Popup"
+    },
+    "more": {
+        "message": "More",
+        "description": "Popup"
     }
 }

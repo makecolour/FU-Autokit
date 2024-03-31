@@ -111,6 +111,10 @@
         "message": "Bật/Tắt tính năng",
         "description": "Popup"
     },
+    "FAP": {
+        "message": "FAP",
+        "description": "Popup"
+    },
     "autoLogin": {
         "message": "Tự động đăng nhập",
         "description": "Popup"
@@ -127,8 +131,20 @@
         "message": "Tính điểm FE cần đạt",
         "description": "Popup"
     },
+    "EDN": {
+        "message": "EduNext",
+        "description": "Popup"
+    },
     "gradeongroupmates": {
         "message": "Tự động Grade on Groupmates",
+        "description": "Popup"
+    },
+    "CMS": {
+        "message": "CMS",
+        "description": "Popup"
+    },
+    "CRS": {
+        "message": "Coursera",
         "description": "Popup"
     },
     "getshareablelink": {
@@ -139,6 +155,10 @@
         "message": "Tự động chấm điểm",
         "description": "Popup"
     },
+    "FLM": {
+        "message": "FLM",
+        "description": "Popup"
+    },
     "autochangelang": {
         "message": "Tự động chuyển ngôn ngữ",
         "description": "Popup"
@@ -147,16 +167,32 @@
         "message": "Thêm gợi ý điền tên môn/ngành học",
         "description": "Popup"
     },
+    "DNG": {
+        "message": "DNG",
+        "description": "Popup"
+    },
     "autofillroll": {
         "message": "Tự động điền mã sinh viên",
+        "description": "Popup"
+    },
+    "LBR": {
+        "message": "Thư viện",
         "description": "Popup"
     },
     "autofillall": {
         "message": "Tự động điền tài khoản-mật khẩu",
         "description": "Popup"
     },
+    "more": {
+        "message": "Thêm",
+        "description": "Popup"
+    },
     "k18": {
         "message": "K18 trở xuống",
+        "description": "Popup"
+    },
+    "gen": {
+        "message": "Chọn niên khóa",
         "description": "Popup"
     },
     "k19": {
@@ -200,7 +236,7 @@
         "description": "Popup"
     },
     "password": {
-        "message": "Mật khẩu <a href=\"https://library.fpt.edu.vn/\" target=\"_blank\">Library</a>",
+        "message": "Mật khẩu <a href=\"https://library.fpt.edu.vn/\" target=\"_blank\" title=\"Thư viện\">Library</a>",
         "description": "Popup"
     },
     "show": {
