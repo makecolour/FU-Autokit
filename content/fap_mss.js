@@ -14,24 +14,24 @@ window.addEventListener('load', function() {
 
 
 function K18() {
-  var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
+  var divs = document.querySelectorAll('.nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb');
   console.log(divs);
-  for (i = 0; i < divs.length; ++i) {
-    divs[i].click();
-    //console.log("success");
-  }
-  
   setTimeout(() => {
-    var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
-    console.log(divs);
+    for (i = 0; i < divs.length; ++i) {
+      divs[i].click();
+      //console.log("success");
+    }
+  }, 50);
+  
+  var divs = document.querySelectorAll('.nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb');
+  setTimeout(() => {
     for (i = 0; i < divs.length; ++i) {
       divs[i].click();
       //console.log("success");
     }
   }, 500);
+  var divs = document.querySelectorAll('.nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb');
   setTimeout(() => {
-    var divs = document.getElementsByClassName("nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb");
-    console.log(divs);
     for (i = 0; i < divs.length; ++i) {
       divs[i].click();
       //console.log("success");

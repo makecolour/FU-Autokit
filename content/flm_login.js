@@ -7,8 +7,9 @@ const main = async () => {
     var options = select.options;
     for (var opt, j = 0; opt = options[j]; j++) {
       if (opt.value == "fptu") {
-        console.log("ok");
+        //console.log("ok");
         select.selectedIndex = j;
+        localStorage.setItem("SelectedEduLevel", opt.value);
         break;
       }
     }
