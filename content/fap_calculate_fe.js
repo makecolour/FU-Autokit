@@ -90,5 +90,5 @@ const main = async () => {
         //console.log(enabled4);
     }
 }
-main();
+window.onload = main();
 

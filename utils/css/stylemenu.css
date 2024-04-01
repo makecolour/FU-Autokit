@@ -203,3 +203,6 @@ a {
 .bg-primary {
     background-color: rgb(242, 112, 27);
 }
+.dropdown-item{
+    cursor: pointer;
+}
