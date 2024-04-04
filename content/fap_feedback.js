@@ -21,14 +21,13 @@ function feedback(NUM_FIELDS) {
         const checkbox = document.querySelector(`#ctl00_mainContent_reload_ctl0${i}_chkList_0`);
         if (checkbox) {
             checkbox.checked = true;
-            console.log("ok");
         }
     }
     const textArea = document.querySelector('#ctl00_mainContent_txtComment');
     if (textArea) {
-        textArea.value = label.doFeedback.message;
+        textArea.value = label.doFeedBack.message;
     }
 
 }
 
-main(); 
+windopw.onload = main();
