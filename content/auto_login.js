@@ -16,4 +16,4 @@ const main = async () => {
         // },2000)
     }
 }
-main();
+window.onload = main();

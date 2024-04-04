@@ -7,4 +7,4 @@ const main = async () => {
         document.getElementById("Password").setAttribute("value", pass);
     }
 }
-main();
+window.onload = main();

@@ -426,4 +426,4 @@ const main = async () => {
   }
 };
 
-main();
+window.onload = main();

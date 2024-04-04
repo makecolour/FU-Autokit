@@ -1,5 +1,6 @@
-appendMenu();
-appendFunc();
+window.onload = function () {appendMenu();
+    appendFunc();};
+
 document.addEventListener("keypress", function onPress(e) {
     if (e.key == "v") {
         const ans = document.getElementsByClassName("outcome")

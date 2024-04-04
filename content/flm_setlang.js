@@ -11,7 +11,7 @@ const main = async () => {
         }
     }
 }
-main();
+window.onload = main();
 
 function changeLang(label = "vi") {
     $.ajax({

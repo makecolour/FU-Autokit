@@ -1113,4 +1113,4 @@ async function main() {
 	pageCheckCallback();
 }
 
-main().catch(console.error);
+window.onload = main().catch(console.error);

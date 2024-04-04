@@ -30,4 +30,4 @@ function feedback(NUM_FIELDS) {
 
 }
 
-windopw.onload = main();
+window.onload = main();

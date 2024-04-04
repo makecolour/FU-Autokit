@@ -4,4 +4,4 @@ const main = async () => {
   const enabled = await getFromStorage('DNG_1', '');
   if (enabled) { fill.value = rollnum; }
 }
-main();
+window.onload = main();

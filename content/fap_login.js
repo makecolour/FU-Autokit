@@ -2,23 +2,26 @@ const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 const settings = {};
 const enabled = {};
 const k = {};
-chrome.storage.sync.get(["FAP_1"]).then((enable) => {
-	Object.assign(enabled, enable);
-	//console.log(enabled.FAP_1);
-})
+window.onload = () => {
+	chrome.storage.sync.get(["FAP_1"]).then((enable) => {
+		Object.assign(enabled, enable);
+		//console.log(enabled.FAP_1);
+	})
+	
+	chrome.storage.sync.get(["K"]).then((gen) => {
+		Object.assign(k, gen);
+		//console.log(k);
+	})
+	chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
+		//console.log("Campus: " + campus.STUDENT_CAMPUS);
+		Object.assign(settings, campus);
+		if (enabled.FAP_1 == true) {
+			FixFAPLoginError_12_22();
+			DoLogin();
+		}
+	});
+}
 
-chrome.storage.sync.get(["K"]).then((gen) => {
-	Object.assign(k, gen);
-	//console.log(k);
-})
-chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
-	//console.log("Campus: " + campus.STUDENT_CAMPUS);
-	Object.assign(settings, campus);
-	if (enabled.FAP_1 == true) {
-		FixFAPLoginError_12_22();
-		DoLogin();
-	}
-});
 
 function CheckLoggedInUser() {
 	const loggedInUserDiv = document.getElementById("ctl00_divUser");

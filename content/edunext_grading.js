@@ -29,4 +29,4 @@ const main = async () => {
         }, 500);
     }
 }
-main();
+window.onload = main();
