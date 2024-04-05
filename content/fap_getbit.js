@@ -8,7 +8,7 @@ function searchStringInArray(str, strArray) {
 function getBit() {
   const bit = document.querySelector("#ctl00_mainContent_lblCurriculum").innerHTML;
   const bitArr = bit.split("_");
-  if(bitArr.includes("TRS")||bitArr.includes("LUK"))
+  if(bit.toUpperCase().includes("TRS")||bit.toUpperCase().includes("LUK"))
   {
     return -1;
   }
