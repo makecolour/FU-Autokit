@@ -1,6 +1,6 @@
 function searchStringInArray(str, strArray) {
   for (var j = 0; j < strArray.length; j++) {
-    if (strArray[j].match(str)) return j;
+    if (strArray[j].toUpperCase().match(str.toUpperCase())) return j;
   }
   return -1;
 }
