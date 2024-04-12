@@ -1,8 +1,6 @@
-const synced = {};
+
 chrome.runtime.onInstalled.addListener(function (details) {
   if (details.reason == "install") {
-    fetchData().then(() => {
-      if (synced.K == "undefined" || synced.K == null || synced.K == "") {
         chrome.storage.sync.set({ 'K': false })
         chrome.storage.sync.set({ 'STUDENT_CAMPUS': 0 })
         chrome.storage.sync.set({ 'FAP_1': true })
@@ -21,8 +19,6 @@ chrome.runtime.onInstalled.addListener(function (details) {
         chrome.storage.sync.set({ 'DNG_1': true })
         chrome.storage.sync.set({ 'LBR_1': true })
         chrome.storage.sync.set({ 'CMS_TOOL': 'ef92e5d882e936c828c81eb75047cd77' })
-      }
-    });
     if (chrome.i18n.getUILanguage() == "vi") {
       chrome.storage.sync.set({ 'LANG': "/_locales/vi/messages.json'" })
     }
@@ -46,7 +42,3 @@ chrome.runtime.onInstalled.addListener(function (details) {
   /*An array containing all the subjects of FU:*/
 
 });
-async function fetchData() {
-  let enable = await chrome.storage.sync.get(['K']);
-  Object.assign(synced, enable);
-}
