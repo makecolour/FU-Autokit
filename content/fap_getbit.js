@@ -20,8 +20,6 @@ function getBit() {
   }
 }
 
-
-
 const main = async () => {
   const list = await chrome.storage.local.get('listCurriculum');
   const bit = getBit();
