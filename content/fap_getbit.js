@@ -27,6 +27,7 @@ const main = async () => {
   const bit = getBit();
   if(bit==-1)
   {
+    console.log("TRSer/LUKer");
     return
   }
   else if (searchStringInArray(bit, list.listCurriculum) == -1) {
