@@ -401,7 +401,7 @@ const main = async () => {
           createHTML(
             `<h4 style="text-align:start"><span class="label ${rankLabel(
               gpa
-            )}">${gpa}</span></h4>`
+            )}">${roundToTwo(gpa)}/10 = ${roundToTwo(gpa/2.5)}/4</span></h4>`
           )
         );
         const container = createHTML(`<div id="gpa-panel">`);
@@ -425,5 +425,7 @@ const main = async () => {
 
   }
 };
-
+function roundToTwo(num) {
+  return +(Math.round(num + "e+2")  + "e-2");
+}
 window.onload = main();
