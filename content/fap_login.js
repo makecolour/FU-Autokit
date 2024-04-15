@@ -15,7 +15,7 @@ window.onload = () => {
 	chrome.storage.sync.get(["STUDENT_CAMPUS"]).then((campus) => {
 		//console.log("Campus: " + campus.STUDENT_CAMPUS);
 		Object.assign(settings, campus);
-		if (enabled.FAP_1 == true) {
+		if (enabled.FAP_1 == true && campus.STUDENT_CAMPUS != "") {
 			FixFAPLoginError_12_22();
 			DoLogin();
 		}
@@ -31,11 +31,11 @@ function CheckLoggedInUser() {
 
 function DoLogin() {
 	if (CheckLoggedInUser() == false) {
-		if (k.K == false && settings.STUDENT_CAMPUS != "") {
+		if (k.K == false) {
 			console.log(k)
 			Login();
 		}
-		else if (k.K == true && settings.STUDENT_CAMPUS != "") {
+		else if (k.K == true) {
 			k19Login();
 		}
 		else {
