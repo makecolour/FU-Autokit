@@ -340,6 +340,14 @@
 				"./content/fap_mss.js"
 			],
 			"run_at": "document_end"
+		},
+		{
+			"matches":[
+				"*://fap.fpt.edu.vn/Thongbao.aspx"
+			],
+			"js":[
+				"./content/fap_redirect.js"
+			]
 		}
 	],
 	"icons": {

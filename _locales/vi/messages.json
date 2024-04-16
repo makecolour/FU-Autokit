@@ -131,6 +131,10 @@
         "message": "Tính điểm FE cần đạt",
         "description": "Popup"
     },
+    "noti": {
+        "message": "Tắt trang thông báo",
+        "description": "Popup"
+    },
     "EDN": {
         "message": "EduNext",
         "description": "Popup"

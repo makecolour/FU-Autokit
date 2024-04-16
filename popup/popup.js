@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const fap2_ = await getFromStorage('FAP_2', '');
 	const fap3_ = await getFromStorage('FAP_3', '');
 	const fap4_ = await getFromStorage('FAP_4', '');
+	const fap5_ = await getFromStorage('FAP_5', '');
 	const edn1_ = await getFromStorage('EDN_1', '');
 	const edn2_ = await getFromStorage('EDN_2', '');
 	const cms1_ = await getFromStorage('CMS_1', '');
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	fap2.checked = fap2_;
 	fap3.checked = fap3_;
 	fap4.checked = fap4_;
+	fap5.checked = fap5_;
 	edn1.checked = edn1_;
 	edn2.checked = edn2_;
 	cms1.checked = cms1_;
@@ -252,6 +254,7 @@ function changeLanguage(label) {
 	document.getElementById("feedback").textContent = label.feedback.message;
 	document.getElementById("GPA").textContent = label.gpa_1.message;
 	document.getElementById("FE").textContent = label.fe.message;
+	document.getElementById("NOTI").textContent = label.noti.message;
 
 	document.getElementById("gradeongroupmates").textContent = label.gradeongroupmates.message;
 

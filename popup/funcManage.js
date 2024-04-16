@@ -3,6 +3,7 @@ const fap1 = document.getElementById("fapLogin");
 const fap2 = document.getElementById("fapFeedback");
 const fap3 = document.getElementById("fapGPA");
 const fap4 = document.getElementById("fapFE");
+const fap5 = document.getElementById("fapNoti");
 const edn1 = document.getElementById("ednLogin");
 const edn2 = document.getElementById("ednGrade");
 const cms1 = document.getElementById("cmsLogin");
@@ -37,6 +38,10 @@ fap3.addEventListener('change', function () {
 fap4.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('FAP_4', state);
+})
+fap5.addEventListener('change', function () {
+    var state = this.checked;
+    setToStorage('FAP_5', state);
 })
 
 edn1.addEventListener('change', function () {

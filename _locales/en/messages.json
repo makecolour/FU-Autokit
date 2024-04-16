@@ -127,6 +127,10 @@
         "message": "Calculate FE required to pass",
         "description": "Popup"
     },
+    "noti": {
+        "message": "Automatically redirect out of notification page",
+        "description": "Popup"
+    },
     "gradeongroupmates": {
         "message": "Automatically Grade on Groupmates",
         "description": "Popup"

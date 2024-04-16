@@ -6,6 +6,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
         chrome.storage.sync.set({ 'FAP_2': true })
         chrome.storage.sync.set({ 'FAP_3': true })
         chrome.storage.sync.set({ 'FAP_4': true })
+        chrome.storage.sync.set({ 'FAP_5': true })
         chrome.storage.sync.set({ 'EDN_1': true })
         chrome.storage.sync.set({ 'EDN_2': true })
         chrome.storage.sync.set({ 'CMS_1': true })
