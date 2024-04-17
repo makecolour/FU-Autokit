@@ -101,6 +101,7 @@ a {
 
 .dropdown-menu {
     width: max-content;
+    max-width: 300px;
 }
 
 .saveBtn:focus {
