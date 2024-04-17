@@ -348,6 +348,7 @@
 			"js":[
 				"./content/fap_redirect.js"
 			]
+			, "run_at": "document_start"
 		}
 	],
 	"icons": {

@@ -128,7 +128,7 @@
         "description": "Popup"
     },
     "noti": {
-        "message": "Automatically redirect out of notification page",
+        "message": "Automatically redirect out of notification page (not recommended)",
         "description": "Popup"
     },
     "gradeongroupmates": {

@@ -30,4 +30,4 @@ function feedback(NUM_FIELDS) {
 
 }
 
-window.onload = main();
+window.onload = main().then(() => {submitBtn.click()});
