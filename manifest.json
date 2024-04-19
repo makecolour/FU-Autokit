@@ -349,6 +349,15 @@
 				"./content/fap_redirect.js"
 			]
 			, "run_at": "document_start"
+		},
+		{
+			"matches": [
+				"*://soundcloud.com/*"
+			],
+			"css":[
+				"./utils/css/soundcloud-theme.css"
+			],
+			"run_at": "document_end"
 		}
 	],
 	"icons": {
