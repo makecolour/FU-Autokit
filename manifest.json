@@ -95,6 +95,7 @@
 				"*://accounts.google.com/v3/signin/identifier?*flm.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*www.coursera.org*",
 				"*://accounts.google.com/v3/signin/identifier?*feid.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*ocd.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*googleauthensite01.fpt.edu.vn*"
 				
 			],
@@ -151,6 +152,7 @@
 				"*://feid.fpt.edu.vn/Account/Login*fu-edunext.fpt.edu.vn*",
 				"*://feid.fpt.edu.vn/Account/Login*flm.fpt.edu.vn*",
 				"*://feid.fpt.edu.vn/Account/Login*fap.fpt.edu.vn*",
+				"*://feid.fpt.edu.vn/Account/Login*ocd.fpt.edu.vn*",
 				"*://feid.fpt.edu.vn/Account/Login*cmshn.fpt.edu.vn*"
 			],
 			"js": [
@@ -172,6 +174,7 @@
 				"*://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth*www.coursera.org*",
+				"*://accounts.google.com/o/oauth2/v2/auth*ocd.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*"
 			],
 			"js": [
@@ -358,6 +361,14 @@
 				"./utils/css/soundcloud-theme.css"
 			],
 			"run_at": "document_end"
+		},
+		{
+			"matches":["*://ocd.fpt.edu.vn/*"],
+			"js":[
+				"./utils/storage.js",
+				"./content/ocd_login.js"
+			],
+			"run_at":"document_end"
 		}
 	],
 	"icons": {

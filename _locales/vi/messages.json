@@ -179,6 +179,10 @@
         "message": "Tự động điền mã sinh viên",
         "description": "Popup"
     },
+    "OCD": {
+        "message": "OCD",
+        "description": "Popup"
+    },
     "LBR": {
         "message": "Thư viện",
         "description": "Popup"

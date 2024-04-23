@@ -15,6 +15,7 @@ const flm1 = document.getElementById("flmLogin");
 const flm2 = document.getElementById("flmViet");
 const flm3 = document.getElementById("flmFill");
 const dng1 = document.getElementById("dngFill");
+const ocd1 = document.getElementById("ocdLogin");
 const lbr1 = document.getElementById("lbrFill");
 
 
@@ -94,8 +95,20 @@ dng1.addEventListener('change', function () {
     setToStorage('DNG_1', state);
 })
 
-lbr1.addEventListener('change', function () {
+ocd1.addEventListener('change', function () {
     var state = this.checked;
+    setToStorage('OCD_1', state);
+})
+
+lbr1.addEventListener('change', function (e) {
+    var state = this.checked;
+    if(state == true)
+    {
+        document.getElementById("lbr").style.display = "block";
+    }
+    else{
+        document.getElementById("lbr").style.display = "none";
+    }
     setToStorage('LBR_1', state);
 })
 

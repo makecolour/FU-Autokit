@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const flm2_ = await getFromStorage('FLM_2', '');
 	const flm3_ = await getFromStorage('FLM_3', '');
 	const dng1_ = await getFromStorage('DNG_1', '');
+	const ocd1_ = await getFromStorage('OCD_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
 	const theme = await getFromStorage('THEME', '');
 	const lang = await getFromStorage('LANG', '');
@@ -71,7 +72,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 	if (passwordInput.value == "undefined") {
 		passwordInput.value = "";
 	}
-
+	if(lbr1_==false)
+	{
+		document.getElementById("lbr").style.display = "none";
+	}
 	gen.checked = gen_;
 	fap1.checked = fap1_;
 	fap2.checked = fap2_;
@@ -89,6 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	flm2.checked = flm2_;
 	flm3.checked = flm3_;
 	dng1.checked = dng1_;
+	ocd1.checked = ocd1_;
 	lbr1.checked = lbr1_;
 	update(theme);
 	if (lang.includes("vi")) {
@@ -119,6 +124,7 @@ const cms = document.getElementById("CMS");
 const flm = document.getElementById("FLM");
 const crs = document.getElementById("CRS");
 const dng = document.getElementById("DNG");
+const ocd = document.getElementById("OCD");
 const lbr = document.getElementById("LBR");
 
 fap.addEventListener("click", () => {
@@ -142,6 +148,10 @@ crs.addEventListener("click", () => {
 
 dng.addEventListener("click", () => {
 	window.open("https://dng.fpt.edu.vn/Invoice", "_blank");
+})
+
+ocd.addEventListener("click", () => {
+	window.open("https://ocd.fpt.edu.vn/", "_blank");
 })
 
 lbr.addEventListener("click", () => {
@@ -224,6 +234,9 @@ function changeLanguage(label) {
 
 	document.getElementById("DNG").textContent = label.DNG.message;
 	document.getElementById("DNG").title = label.DNG.message;
+
+	document.getElementById("OCD").textContent = label.OCD.message;
+	document.getElementById("OCD").title = label.OCD.message;
 
 	document.getElementById("LBR").textContent = label.LBR.message;
 	document.getElementById("LBR").title = label.LBR.message;

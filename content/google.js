@@ -4,16 +4,18 @@ const main = async () => {
 	const fap1_ = await getFromStorage('FAP_1', '');
 	const cms1_ = await getFromStorage('CMS_1', '');
 	const crs1_ = await getFromStorage('CRS_1', '');
+	const ocd1_ = await getFromStorage('OCD_1', '');
 	const gen_ = await getFromStorage('K', '');
 
 	const checkFap = (url.includes("fap.fpt.edu.vn") && fap1_ == true)
 	const checkCms = (url.includes("cmshn.fpt.edu.vn") && cms1_ == true)
 	const checkCrs = (url.includes("www.coursera.org") && crs1_ == true)
-	const checkK19 = (url.includes("feid.fpt.edu.vn") && gen_ == true)
-	if (checkFap || checkCms || checkCrs || checkK19) {
+	const checkFEID = (url.includes("feid.fpt.edu.vn") && gen_ == true)
+	const checkOcd = (url.includes("ocd.fpt.edu.vn") && ocd1_ == true)
+
+	if (checkFap || checkCms || checkCrs || checkFEID || checkOcd) {
 		const emailEl = document.querySelector('.yAlK0b[data-email="' + email + '"]');
 		const emailEl1 = document.querySelector('.yAlK0b[data-email="' + email.toLowerCase() + '"]');
-
 		if (emailEl) {
 			// click on email
 			emailEl.click();
