@@ -33,6 +33,8 @@
 8. [Studocu](https://www.studocu.com/) [^8]
    - Xóa bỏ paywall
    - Hỗ trợ download file
+9. [On Campus Dormitory](https://ocd.fpt.edu.vn/) 
+   - Tự động đăng nhập
 
 Và còn nhiều tính năng khác chờ bạn khám phá...
 
