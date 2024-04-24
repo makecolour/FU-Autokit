@@ -270,5 +270,17 @@
     "more": {
         "message": "More",
         "description": "Popup"
+    },
+    "coursera_link": {
+        "message": "Coursera Link",
+        "description": "Getlink"
+    },
+    "get_coursera_link": {
+        "message": "Coursera Shareable Link",
+        "description": "Getlink"
+    },
+    "copy": {
+        "message": "Copy",
+        "description": "Getlink"
     }
 }

@@ -7,9 +7,8 @@ const main = async () => {
     k = await getFromStorage('K','')
     const campusVal = await getFromStorage('STUDENT_CAMPUS','');
     switch (campusVal){
-        case 0:
+        case '0':
             campus = null;
-            console.log(campusVal);
             break;
         case '3':
             campus = 'APHL';
@@ -28,7 +27,6 @@ const main = async () => {
             break;
         default:
             campus = null;
-            console.log(campusVal);
             break;
     }
 }

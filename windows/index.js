@@ -32,6 +32,9 @@ async function updateLang(lang = "vi") {
 	}
 }
 function changeLanguage(label) {
+	document.title = label.coursera_link.message;
+	document.getElementsByClassName("title")[0].innerHTML = label.get_coursera_link.message;
+	document.getElementById("button-addon1").title = label.copy.message;
 	document.getElementById("madeby").innerHTML = label.madeby.message;
 	document.getElementById("version").innerHTML = label.version.message.replace("{{version}}", chrome.runtime.getManifest().version);
 

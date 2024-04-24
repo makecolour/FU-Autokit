@@ -270,5 +270,17 @@
     "version": {
         "message": "😎 Phiên bản <a href=\"https://github.com/makecolour/FU-Autokit\" target=\"_blank\">{{version}}</a> 😎",
         "description": "Popup, Getlink"
+    },
+    "coursera_link": {
+        "message": "Link Coursera",
+        "description": "Getlink"
+    },
+    "get_coursera_link": {
+        "message": "Link chấm điểm Coursera",
+        "description": "Getlink"
+    },
+    "copy": {
+        "message": "Sao chép",
+        "description": "Getlink"
     }
 }

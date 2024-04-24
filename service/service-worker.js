@@ -18,7 +18,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
         chrome.storage.sync.set({ 'FLM_3': true })
         chrome.storage.sync.set({ 'DNG_1': true })
         chrome.storage.sync.set({ 'OCD_1': true })
-        chrome.storage.sync.set({ 'LBR_1': true })
+        chrome.storage.sync.set({ 'LBR_1': false })
         chrome.storage.sync.set({ 'CMS_TOOL': 'ef92e5d882e936c828c81eb75047cd77' })
     if (chrome.i18n.getUILanguage() == "vi") {
       chrome.storage.sync.set({ 'LANG': "/_locales/vi/messages.json'" })
