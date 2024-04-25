@@ -15,7 +15,7 @@
 
 <body id="body">
 	<div class="title">
-		<div class="name">FPTU Autokit</div>
+		<div class="name prevent-select">FPTU Autokit</div>
 		<div class="settingBtn">
 			<button class="btn btn-secondary btn-sm theme" type="button" id="dropdownMenuButton"
 				data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -23,16 +23,16 @@
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 				<li>
-					<h6 class="dropdown-item-text" id="theme"></h6>
+					<h6 class="dropdown-item-text prevent-select" id="theme"></h6>
 				</li>
-				<option class="dropdown-item bg" id="light" value="light"></option>
-				<option class="dropdown-item bg" id="dark" value="dark"></option>
-				<option class="dropdown-item bg" id="sys" value="sys"></option>
+				<option class="dropdown-item bg prevent-select" id="light" value="light"></option>
+				<option class="dropdown-item bg prevent-select" id="dark" value="dark"></option>
+				<option class="dropdown-item bg prevent-select" id="sys" value="sys"></option>
 				<li>
-					<h6 class="dropdown-item-text" id="language"></h6>
+					<h6 class="dropdown-item-text prevent-select" id="language"></h6>
 				</li>
-				<option class="dropdown-item lang" value="vi" id="vi"></option>
-				<option class="dropdown-item lang" value="en" id="en"></option>
+				<option class="dropdown-item lang prevent-select" value="vi" id="vi"></option>
+				<option class="dropdown-item lang prevent-select" value="en" id="en"></option>
 			</div>
 		</div>
 	</div>
@@ -285,7 +285,7 @@
 			<label for="password"></label>
 			<input type="password" class="form-control" name="password" id="password">
 			<input type="checkbox" id="show">
-			<label for="show"></label>
+			<label class="prevent-select" for="show"></label>
 		</div>
 		<button type="submit" class="btn btn-primary saveBtn"></button>
 	</form>
