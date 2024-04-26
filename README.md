@@ -7,7 +7,7 @@
 ## Các chức năng chính:
 ### Hỗ trợ cho cả email FPT Edu (K18 về trước) và FE-ID (K19 trở đi)
 
-1. [FAP](https://fap.fpt.edu.vn/){:target="_blank"}
+1. [FAP](https://fap.fpt.edu.vn/)
    - Tự động đăng nhập [^1]
    - Tự động hoàn thành đánh giá giảng viên [^2]
    - Tính GPA [^3]
