@@ -369,6 +369,12 @@
 				"./content/ocd_login.js"
 			],
 			"run_at":"document_end"
+		},
+		{
+			"matches":["*://www.google.com/*"],
+			"js":[
+				"./content/google_translate.js"
+			]
 		}
 	],
 	"icons": {
