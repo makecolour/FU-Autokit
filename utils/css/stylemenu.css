@@ -16,7 +16,10 @@ div {
 
 }
 .travelBtn{
-    font-size: 0.7em;
+    font-size: 0.85em;
+}
+.dropdown-toggle-split{
+    font-size: 0.82em;
 }
 .dropdown-item:active {
     background-color: rgb(242, 112, 27);
