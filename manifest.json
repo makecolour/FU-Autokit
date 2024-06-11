@@ -175,7 +175,8 @@
 				"*://accounts.google.com/o/oauth2/v2/auth*cmshn.fpt.edu.vn*",
 				"*://accounts.google.com/o/oauth2/v2/auth*www.coursera.org*",
 				"*://accounts.google.com/o/oauth2/v2/auth*ocd.fpt.edu.vn*",
-				"*://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*"
+				"*://accounts.google.com/o/oauth2/v2/auth/*feid.fpt.edu.vn*",
+				"*://accounts.google.com/o/oauth2/v2/auth*ojt.fpt.edu.vn*"
 			],
 			"js": [
 				"./utils/storage.js",
@@ -375,6 +376,22 @@
 			"js":[
 				"./content/google_translate.js"
 			]
+		},
+		{
+			"matches":["*://ojt.fpt.edu.vn/Guest/CampusSelect"],
+			"js":[
+				"./utils/storage.js",
+				"./content/ojt_autocampus.js"
+			],
+			"run_at":"document_end"
+		},
+		{
+			"matches":["*://ojt.fpt.edu.vn/*"],
+			"js":[
+				"./utils/storage.js",
+				"./content/ojt_login.js"
+			],
+			"run_at":"document_end"
 		}
 	],
 	"icons": {

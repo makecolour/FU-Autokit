@@ -124,6 +124,7 @@ const cms = document.getElementById("CMS");
 const flm = document.getElementById("FLM");
 const crs = document.getElementById("CRS");
 const dng = document.getElementById("DNG");
+const ojt = document.getElementById("OJT");
 const ocd = document.getElementById("OCD");
 const lbr = document.getElementById("LBR");
 
@@ -148,6 +149,10 @@ crs.addEventListener("click", () => {
 
 dng.addEventListener("click", () => {
 	window.open("https://dng.fpt.edu.vn/Invoice", "_blank");
+})
+
+ojt.addEventListener("click", () => {
+	window.open("https://ojt.fpt.edu.vn/", "_blank");
 })
 
 ocd.addEventListener("click", () => {
@@ -237,6 +242,9 @@ function changeLanguage(label) {
 
 	document.getElementById("OCD").textContent = label.OCD.message;
 	document.getElementById("OCD").title = label.OCD.message;
+
+	document.getElementById("OJT").textContent = label.OJT.message;
+	document.getElementById("OJT").title = label.OJT.message;
 
 	document.getElementById("LBR").textContent = label.LBR.message;
 	document.getElementById("LBR").title = label.LBR.message;

@@ -16,8 +16,8 @@ const flm2 = document.getElementById("flmViet");
 const flm3 = document.getElementById("flmFill");
 const dng1 = document.getElementById("dngFill");
 const ocd1 = document.getElementById("ocdLogin");
+const ojt1 = document.getElementById("ojtLogin");
 const lbr1 = document.getElementById("lbrFill");
-
 
 gen.addEventListener('change', function () {
     var state = this.checked;
@@ -98,6 +98,11 @@ dng1.addEventListener('change', function () {
 ocd1.addEventListener('change', function () {
     var state = this.checked;
     setToStorage('OCD_1', state);
+})
+
+ojt1.addEventListener('change', function () {
+    var state = this.checked;
+    setToStorage('OJT_1', state);
 })
 
 lbr1.addEventListener('change', function (e) {

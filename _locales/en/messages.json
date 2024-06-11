@@ -259,6 +259,10 @@
         "message": "OCD",
         "description": "Popup"
     },
+    "OJT": {
+        "message": "OJT",
+        "description": "Popup"
+    },
     "LBR": {
         "message": "Library",
         "description": "Popup"

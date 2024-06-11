@@ -1,10 +1,10 @@
 const data = {};
 const enabled = {};
 function checkPg(now) {
-    if (now == "https://flm.fpt.edu.vn/gui/role/student/ListCurriculum") {
+    if (now.toLowerCase().includes("listcurriculum")) {
         return 0;
     }
-    else if (now == "https://flm.fpt.edu.vn/gui/role/student/SyllabusManagement") {
+    else if (now.toLowerCase().includes("syllabusmanagement")) {
         return 1;
     }
     else {
@@ -113,15 +113,14 @@ function autocomplete(inp, arr) {
 }
 
 
-var id = ["txtSubCode", "txtKeyword"];
-
 async function fetchData() {
     let enable = await chrome.storage.sync.get(['FLM_3']);
     Object.assign(enabled, enable);
     let all = await chrome.storage.local.get(['subjects', 'subjectsName', 'listCurriculum', 'listCurriculumName']);
     Object.assign(data, all);
 }
-fetchData().then(() => {
+
+window.onload = fetchData().then(() => {
     if (enabled.FLM_3 == true) {
         if (checkPg(window.location.href) == 0) {
             const category = document.getElementById("ddlSeachOn");
@@ -130,12 +129,12 @@ fetchData().then(() => {
             //console.log(category);
             category.addEventListener('change', function () {
                 fill.setAttribute("autocomplete", "off");
-                if (category.value == 'Code') {
+                if (category.value.includes('Code')) {
                     //console.log(listCurriculum);
                     autocomplete(fill, data.listCurriculum);
                     //console.log("Code");
                 }
-                else if (category.value == 'Name') {
+                else if (category.value.includes('Name')) {
                     //console.log(listCurriculumName);
                     autocomplete(fill, data.listCurriculumName);
                     //console.log("Name");
@@ -152,11 +151,11 @@ fetchData().then(() => {
             //console.log(category);
             category.addEventListener('change', function () {
                 fill.setAttribute("autocomplete", "off");
-                if (category.value == "Code") {
+                if (category.value.includes('Code')) {
                     autocomplete(fill, data.subjects);
                     //console.log("Code");
                 }
-                else if (category.value == "Name") {
+                else if (category.value.includes('Name')) {
                     autocomplete(fill, data.subjectsName);
                     // console.log("Name");
                 }
@@ -189,6 +188,7 @@ fetchData().then(() => {
     else {
         console.error("Disabled");
     }
+
 });
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
