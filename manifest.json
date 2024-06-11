@@ -96,7 +96,8 @@
 				"*://accounts.google.com/v3/signin/identifier?*www.coursera.org*",
 				"*://accounts.google.com/v3/signin/identifier?*feid.fpt.edu.vn*",
 				"*://accounts.google.com/v3/signin/identifier?*ocd.fpt.edu.vn*",
-				"*://accounts.google.com/v3/signin/identifier?*googleauthensite01.fpt.edu.vn*"
+				"*://accounts.google.com/v3/signin/identifier?*googleauthensite01.fpt.edu.vn*",
+				"*://accounts.google.com/v3/signin/identifier?*ojt.fpt.edu.vn*"
 				
 			],
 			"js": [
