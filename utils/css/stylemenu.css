@@ -15,7 +15,9 @@ div {
     margin-right: 4%;
 
 }
-
+.travelBtn{
+    font-size: 0.7em;
+}
 .dropdown-item:active {
     background-color: rgb(242, 112, 27);
 }
