@@ -16,6 +16,7 @@ const main = async () => {
         // Add more cases if needed
     }
 }
+
 window.onload = main().then(() => {
     const campusList = document.querySelector("body > main > form > div > select");
     const submitBtn = document.querySelector("body > main > form > button");

@@ -379,7 +379,7 @@
 			]
 		},
 		{
-			"matches":["*://ojt.fpt.edu.vn/Guest/CampusSelect"],
+			"matches":["*://ojt.fpt.edu.vn/Guest/CampusSelect*"],
 			"js":[
 				"./utils/storage.js",
 				"./content/ojt_autocampus.js"
@@ -388,6 +388,7 @@
 		},
 		{
 			"matches":["*://ojt.fpt.edu.vn/*"],
+			"exclude_matches":["*://ojt.fpt.edu.vn/Guest/CampusSelect*"],
 			"js":[
 				"./utils/storage.js",
 				"./content/ojt_login.js"
