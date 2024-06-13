@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const dng1_ = await getFromStorage('DNG_1', '');
 	const ocd1_ = await getFromStorage('OCD_1', '');
 	const lbr1_ = await getFromStorage('LBR_1', '');
+	const ojt1_ = await getFromStorage('OJT_1', '');
 	const theme = await getFromStorage('THEME', '');
 	const lang = await getFromStorage('LANG', '');
 	if (campus != 0 && campus != 3 && campus != 4 && campus != 5 && campus != 6 && campus != 7) {
@@ -94,6 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	flm3.checked = flm3_;
 	dng1.checked = dng1_;
 	ocd1.checked = ocd1_;
+	ojt1.checked = ojt1_;
 	lbr1.checked = lbr1_;
 	update(theme);
 	if (lang.includes("vi")) {
