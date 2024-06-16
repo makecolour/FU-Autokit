@@ -1,16 +1,26 @@
-let feedbackExecuted = false;
+var feedbackExecuted = false;
 const label = {};
+
 const submitBtn = document.querySelector('#ctl00_mainContent_btSendFeedback');
+const returnBtn = document.querySelector("#ctl00_lblNavigation > a:nth-child(2)");
 const main = async () => {
+    if(feedbackExecuted) return;
     const enabled2 = await getFromStorage('FAP_2', '');
     const lang = await getFromStorage('LANG', '');
-    if (enabled2 === true && !feedbackExecuted) {
-        fetch(chrome.runtime.getURL(lang)).then(response => response.json()).then(messages => {
-            Object.assign(label, messages);
-            feedback(NUM_FIELDS);
+    if (enabled2 == true) {
+        try {
             feedbackExecuted = true;
-        });
-
+            const response = await fetch(chrome.runtime.getURL(lang));
+            const messages = await response.json();
+            await Object.assign(label, messages);
+            await feedback(NUM_FIELDS);
+            
+            // Ensure this line executes after all the above operations
+            await submitBtn.click();
+            await returnBtn.click();
+        } catch (error) {
+            console.error('Failed to fetch and process:', error);
+        }
     }
 }
 
@@ -30,4 +40,6 @@ function feedback(NUM_FIELDS) {
 
 }
 
-window.onload = main().then(() => {submitBtn.click()});
+window.onload = main().then(async()  => {
+    
+});
