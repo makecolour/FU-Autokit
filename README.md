@@ -37,7 +37,8 @@
    - Tự động đăng nhập
 10. [OJT](https://ojt.fpt.edu.vn/)
     - Tự động đăng nhập
-Và còn nhiều tính năng khác chờ bạn khám phá...
+      
+*Và còn nhiều tính năng khác chờ bạn khám phá...*
 
 ## Hướng dẫn Cài đặt và Sử dụng
 ### Hướng dẫn Cài đặt
