@@ -43,7 +43,7 @@
 ## Hướng dẫn Cài đặt và Sử dụng
 ### Hướng dẫn Cài đặt
 
-**Bước 1**: Tải xuống [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/tag/v3.2).
+**Bước 1**: Tải xuống [bản release mới nhất](https://github.com/makecolour/FU-Autokit/releases/latest).
 
 ![msedge_jGKu8NKwLP](https://github.com/makecolour/FU-Autokit/assets/79389129/0e821939-826f-4fca-a7a4-c13dd640852d)
 
