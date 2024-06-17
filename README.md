@@ -35,7 +35,7 @@
    - Hỗ trợ download file
 9. [On Campus Dormitory](https://ocd.fpt.edu.vn/) 
    - Tự động đăng nhập
-10. [OJT](https://ojt.fpt.edu.vn/)
+10. [OJTMS](https://ojt.fpt.edu.vn/)
     - Tự động đăng nhập
       
 *Và còn nhiều tính năng khác chờ bạn khám phá...*
