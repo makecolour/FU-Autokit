@@ -44,20 +44,19 @@ function sorting() {
       v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
       )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
 
-  
-  // This function is triggered when a `<th>` is clicked
+  // Enhanced function to toggle sorting direction and sort rows
   const onThClick = (th, idx) => {
     const table = th.closest('table');
-    // Select only rows within the <tbody> to sort
     const tbody = table.querySelector('tbody');
+    // Toggle sorting direction stored in a data attribute on the table
+    const isAscending = table.getAttribute('data-sort-asc') === 'true';
+    table.setAttribute('data-sort-asc', !isAscending);
+
     Array.from(tbody.querySelectorAll('tr'))
-      .sort(comparer(idx, this.asc = !this.asc))
+      .sort(comparer(idx, isAscending))
       .forEach(tr => tbody.appendChild(tr));
   };
-  
-  // Attach click event listeners to all `<th>` elements within <thead> to ensure sorting is applied correctly
-  document.querySelectorAll('.table thead th').forEach(th => th.addEventListener('click', () => onThClick(th, th.cellIndex)));
 
-  // Attach click event listeners to all `<th>` elements
-  document.querySelectorAll('.table th').forEach(th => th.addEventListener('click', () => onThClick(th, th.cellIndex)));
+  // Attach click event listeners to all `<th>` elements within <thead>
+  document.querySelectorAll('.table thead th').forEach(th => th.addEventListener('click', () => onThClick(th, th.cellIndex)));
 }

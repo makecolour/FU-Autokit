@@ -30,16 +30,27 @@ function sorting() {
         v2 = v2.replace(pattern, '');
         return v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2);
     })(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
-    
+
+    // Object to store the sorting direction for each column
+    const sortDirection = {};
+
     // This function is triggered when a `<th>` is clicked
     const onThClick = (th, idx) => {
-      const table = th.closest('table');
-      const tbody = table.querySelector('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr:nth-child(n+2)'));
-      rows.sort(comparer(idx, this.asc = !this.asc))
-          .forEach(tr => tbody.appendChild(tr));
+        const table = th.closest('table');
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr:nth-child(n+2)'));
+
+        // Toggle the sorting direction for the current column
+        if (sortDirection[idx] === undefined) {
+            sortDirection[idx] = true; // Default to ascending on first click
+        } else {
+            sortDirection[idx] = !sortDirection[idx];
+        }
+
+        rows.sort(comparer(idx, sortDirection[idx]))
+            .forEach(tr => tbody.appendChild(tr));
     };
-  
+
     // Attach click event listeners to all `<th>` elements in the table header
-    document.querySelectorAll('#ctl00_mainContent_gvSubjects th').forEach(th => th.addEventListener('click', () => onThClick(th, th.cellIndex)));
+    document.querySelectorAll('#ctl00_mainContent_gvSubjects th').forEach((th, index) => th.addEventListener('click', () => onThClick(th, index)));
 }
