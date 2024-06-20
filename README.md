@@ -12,6 +12,7 @@
    - Tự động hoàn thành đánh giá giảng viên [^2]
    - Tính GPA [^3]
    - Tính điểm FE cần đạt để pass môn/đạt điểm trung bình tùy ý [^4]
+   - Sắp xếp các bảng môn học, học phí
 2. [CMS](https://cmshn.fpt.edu.vn/)
    - Tự động đăng nhập
    - Tool CMS cải tiến [^5]
