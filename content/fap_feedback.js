@@ -7,7 +7,7 @@ const main = async () => {
     if(feedbackExecuted) return;
     const enabled2 = await getFromStorage('FAP_2', '');
     const lang = await getFromStorage('LANG', '');
-    if (enabled2 == true) {
+    if (enabled2 === true) {
         try {
             feedbackExecuted = true;
             const response = await fetch(chrome.runtime.getURL(lang));
@@ -16,8 +16,8 @@ const main = async () => {
             await feedback(NUM_FIELDS);
             
             // Ensure this line executes after all the above operations
-            await submitBtn.click();
-            await returnBtn.click();
+            
+            // await returnBtn.click();
         } catch (error) {
             console.error('Failed to fetch and process:', error);
         }
@@ -40,6 +40,11 @@ function feedback(NUM_FIELDS) {
 
 }
 
-window.onload = main().then(async()  => {
-    
+window.onload = main().then(() =>{
+    submitBtn.click();
+   
+}).then(() => {
+    setTimeout(() => {
+        returnBtn.click();
+    }, 200);
 });
